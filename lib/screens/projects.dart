@@ -37,7 +37,7 @@ class _ProjectScreenState extends State<ProjectScreen> {
             child: RawScrollbar(
               controller: scrollController,
               thumbColor: const Color(0xff03767b),
-              isAlwaysShown: true,
+              thumbVisibility: true,
               child: GridView.count(
                 controller: scrollController,
                 padding: const EdgeInsetsDirectional.all(8),

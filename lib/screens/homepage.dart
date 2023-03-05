@@ -211,7 +211,7 @@ class _HomepageState extends State<Homepage> {
               child: RawScrollbar(
                 controller: scrollcontroller2,
                 thumbColor: const Color(0xff03767b),
-                isAlwaysShown: true,
+                thumbVisibility: true,
                 child: GridView.count(
                   controller: scrollcontroller2,
                   padding: const EdgeInsetsDirectional.all(8),
