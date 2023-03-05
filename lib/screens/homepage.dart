@@ -301,3 +301,7 @@ class _HomepageState extends State<Homepage> {
     );
   }
 }
+
+//Friendships are limited and dont last forever so remember the times where it mattered the most you, 
+//remember the times where you smiled together and the times you laughed. 
+//Never take that for granted for one day it may not be there anymore.
