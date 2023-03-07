@@ -9,7 +9,7 @@ import '../widgets/header.dart';
 import '../widgets/navigation_bar.dart';
 import 'LTI/lti_clickk.dart';
 import 'LTI/lti_saphi.dart';
-import 'projects/Energy_Realease_Rate.dart';
+import 'projects/energy_realease_rate.dart';
 import 'projects/aac_project.dart';
 import 'projects/glove_project.dart';
 import 'projects/raspberry_pi_project.dart';
