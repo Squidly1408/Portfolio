@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/projects/Energy_Realease_Rate.dart';
+import 'package:portfolio/screens/projects/energy_realease_rate.dart';
 
 import '../widgets/header.dart';
 import '../widgets/navigation_bar.dart';

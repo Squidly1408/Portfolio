@@ -150,7 +150,7 @@ class _GloveProjectState extends State<GloveProject> {
                             ..onTap = () {
                               launchUrl(
                                 Uri.parse(
-                                    'https://docs.google.com/document/d/1IN-_0PdeBrv8JApcxxaGClsy8lmr4tue/edit?usp=share_link&ouid=109215238090087040433&rtpof=true&sd=true'),
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2nXx1lHU45MHp8qDp?e=tofuvu'),
                               );
                             },
                         ),
@@ -169,7 +169,7 @@ class _GloveProjectState extends State<GloveProject> {
                             ..onTap = () {
                               launchUrl(
                                 Uri.parse(
-                                    'https://docs.google.com/document/d/1vowYMuibGD6BagGQV8-EMxDixm-Ay666/edit?usp=share_link&ouid=109215238090087040433&rtpof=true&sd=true'),
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2nX0fIirRLp-YrJAX?e=BzWfgd'),
                               );
                             },
                         ),

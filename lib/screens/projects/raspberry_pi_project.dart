@@ -152,7 +152,7 @@ class _RaspberryPiProjectScreenState extends State<RaspberryPiProjectScreen> {
                               ..onTap = () {
                                 launchUrl(
                                   Uri.parse(
-                                      'https://docs.google.com/document/d/1hEjWTvE63XhB8fED0sCNxxoqwHplHfnX/edit?usp=share_link&ouid=109215238090087040433&rtpof=true&sd=true'),
+                                      'https://1drv.ms/w/s!AlWOX6vBn5L2nXnA6fk5_khHbf6q?e=TNh3SE'),
                                 );
                               },
                           ),
@@ -171,7 +171,7 @@ class _RaspberryPiProjectScreenState extends State<RaspberryPiProjectScreen> {
                               ..onTap = () {
                                 launchUrl(
                                   Uri.parse(
-                                      'https://docs.google.com/document/d/1bdel28NvLNJvTJsWsGgrv4olkhAh7v2M/edit?usp=share_link&ouid=109215238090087040433&rtpof=true&sd=true'),
+                                      'https://1drv.ms/w/s!AlWOX6vBn5L2nXvWgFyUsbhMx2YV?e=wPck6y'),
                                 );
                               },
                           ),

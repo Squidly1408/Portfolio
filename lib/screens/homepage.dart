@@ -295,6 +295,23 @@ class _HomepageState extends State<Homepage> {
                 Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
             child: const Footer(),
           ),
+          Container(
+            color: const Color.fromARGB(255, 23, 23, 23),
+            height: 35,
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: FittedBox(
+                fit: BoxFit.contain,
+                child: Text(
+                  "I acknowledge and pays respect to the past, present and future Traditional Custodians and Elders of this nation and the continuation of cultural, spiritual and educational practices of Aboriginal and Torres Strait Islander peoples.",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
       bottomNavigationBar: const NavBar(),

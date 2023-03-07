@@ -150,7 +150,7 @@ class _AACProjectState extends State<AACProject> {
                             ..onTap = () {
                               launchUrl(
                                 Uri.parse(
-                                    'https://docs.google.com/document/d/1rhanH2n-5Bo5XICP9lrWQSur7mFUMKyL/edit?usp=share_link&ouid=109215238090087040433&rtpof=true&sd=true'),
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2nXrkp2hK96vVGP6U?e=bCN0qz'),
                               );
                             },
                         ),
@@ -169,7 +169,7 @@ class _AACProjectState extends State<AACProject> {
                             ..onTap = () {
                               launchUrl(
                                 Uri.parse(
-                                    'https://docs.google.com/document/d/1P-noGZgCb-SWiukaL2b8NvdW7VyJIS0p/edit?usp=share_link&ouid=109215238090087040433&rtpof=true&sd=true'),
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2nXciYw6FUz9yB0ut?e=kXIZVv'),
                               );
                             },
                         ),
@@ -188,7 +188,7 @@ class _AACProjectState extends State<AACProject> {
                             ..onTap = () {
                               launchUrl(
                                 Uri.parse(
-                                    'https://docs.google.com/document/d/1bdel28NvLNJvTJsWsGgrv4olkhAh7v2M/edit?usp=share_link&ouid=109215238090087040433&rtpof=true&sd=true'),
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2nXjnxqctCtTapf77?e=H36Lta'),
                               );
                             },
                         ),

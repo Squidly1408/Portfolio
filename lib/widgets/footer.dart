@@ -33,21 +33,24 @@ class _FooterState extends State<Footer> {
                 Uri.parse('https://github.com/Squidly1408?tab=repositories'),
               );
             },
-            child: Column(
-              children: const [
-                Text(
-                  'PH: 0451 142 881',
-                  style: TextStyle(color: Colors.white),
-                ),
-                Text(
-                  'E: lucas.newman140@gmail.com',
-                  style: TextStyle(color: Colors.white),
-                ),
-                Text(
-                  'GitHub LINK',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ],
+            child: FittedBox(
+              fit: BoxFit.contain,
+              child: Column(
+                children: const [
+                  Text(
+                    'PH: 0451 142 881',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    'E: lucas.newman140@gmail.com',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    'GitHub LINK',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
