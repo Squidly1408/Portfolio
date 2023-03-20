@@ -310,19 +310,20 @@ class _RaspberryPiProjectDisplayState extends State<RaspberryPiProjectDisplay> {
                     'lib/assets/images/projects/Raspberry_Pi_project/Raspberry_Pi_Logo.png',
                     fit: BoxFit.contain,
                   ),
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        'Raspberry Pi Project,',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 200,
+                  if (MediaQuery.of(context).size.width > 600)
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                          'Raspberry Pi Project,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 200,
+                          ),
                         ),
                       ),
                     ),
-                  ),
                 ],
               ),
             ),

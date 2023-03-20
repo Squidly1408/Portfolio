@@ -295,19 +295,20 @@ class _AACProjectDisplayState extends State<AACProjectDisplay> {
                     'lib/assets/images/projects/AAC_Project/AAC_Project_logo.png',
                     fit: BoxFit.contain,
                   ),
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        'AAC Project,',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 200,
+                  if (MediaQuery.of(context).size.width > 600)
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                          'AAC Project,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 200,
+                          ),
                         ),
                       ),
                     ),
-                  ),
                 ],
               ),
             ),

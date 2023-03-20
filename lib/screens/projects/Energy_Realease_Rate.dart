@@ -205,19 +205,20 @@ class _EnergyReleaseRateDisplayState extends State<EnergyReleaseRateDisplay> {
                     'lib/assets/images/projects/Energy_Release_rate/Energy_release_Rate_Logo.png',
                     fit: BoxFit.contain,
                   ),
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        'Energy Release Rate,',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 200,
+                  if (MediaQuery.of(context).size.width > 600)
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                          'Energy Release Rate,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 200,
+                          ),
                         ),
                       ),
                     ),
-                  ),
                 ],
               ),
             ),

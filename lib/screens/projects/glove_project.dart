@@ -276,19 +276,20 @@ class _GloveProjectDisplayState extends State<GloveProjectDisplay> {
                     'lib/assets/images/projects/Glove_Project/Glove_Project_logo.png',
                     fit: BoxFit.contain,
                   ),
-                  const Align(
-                    alignment: Alignment.topLeft,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        'Glove Project,',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 200,
+                  if (MediaQuery.of(context).size.width > 600)
+                    const Align(
+                      alignment: Alignment.topLeft,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                          'Glove Project,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 200,
+                          ),
                         ),
                       ),
                     ),
-                  ),
                 ],
               ),
             ),

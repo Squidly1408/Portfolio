@@ -201,19 +201,20 @@ class _LTIClickkDisplayState extends State<LTIClickkDisplay> {
                     'lib/assets/images/LTIs/Clickk/Clickk_logo_banner.png',
                     fit: BoxFit.contain,
                   ),
-                  const Align(
-                    alignment: Alignment.center,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text(
-                        'Clickk,',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 200,
+                  if (MediaQuery.of(context).size.width > 600)
+                    const Align(
+                      alignment: Alignment.center,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Text(
+                          'Clickk,',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 200,
+                          ),
                         ),
                       ),
                     ),
-                  ),
                 ],
               ),
             ),
