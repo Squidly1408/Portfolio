@@ -14,6 +14,7 @@ class AACProject extends StatefulWidget {
 }
 
 class _AACProjectState extends State<AACProject> {
+  String explanationText = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +54,11 @@ class _AACProjectState extends State<AACProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Flutter: Hi';
+                        });
+                      },
                       child: const Text(
                         'Flutter',
                         style: TextStyle(color: Colors.white),
@@ -63,17 +68,11 @@ class _AACProjectState extends State<AACProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Dart',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                    child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Trouble Shooting: Hi';
+                        });
+                      },
                       child: const Text(
                         'Trouble Shooting',
                         style: TextStyle(color: Colors.white),
@@ -83,7 +82,11 @@ class _AACProjectState extends State<AACProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Problem Solving: Hi';
+                        });
+                      },
                       child: const Text(
                         'Problem Solving',
                         style: TextStyle(color: Colors.white),
@@ -93,7 +96,11 @@ class _AACProjectState extends State<AACProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Alternative Communication: Hi';
+                        });
+                      },
                       child: const Text(
                         'Alterntive Communications',
                         style: TextStyle(color: Colors.white),
@@ -101,6 +108,18 @@ class _AACProjectState extends State<AACProject> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.03,
+                  vertical: MediaQuery.of(context).size.height * 0.01),
+              child: Text(
+                explanationText,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                ),
               ),
             ),
             Padding(

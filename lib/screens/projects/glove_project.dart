@@ -14,6 +14,7 @@ class GloveProject extends StatefulWidget {
 }
 
 class _GloveProjectState extends State<GloveProject> {
+  String explanationText = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +54,11 @@ class _GloveProjectState extends State<GloveProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Trouble Shooting: Hi';
+                        });
+                      },
                       child: const Text(
                         'Trouble Shooting',
                         style: TextStyle(color: Colors.white),
@@ -63,7 +68,11 @@ class _GloveProjectState extends State<GloveProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Eagle CAD: Hi';
+                        });
+                      },
                       child: const Text(
                         'Eagle Cad',
                         style: TextStyle(color: Colors.white),
@@ -73,7 +82,11 @@ class _GloveProjectState extends State<GloveProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Python: Hi';
+                        });
+                      },
                       child: const Text(
                         'Python',
                         style: TextStyle(color: Colors.white),
@@ -83,7 +96,11 @@ class _GloveProjectState extends State<GloveProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Problem Solving: Hi';
+                        });
+                      },
                       child: const Text(
                         'Problem Solving',
                         style: TextStyle(color: Colors.white),
@@ -93,14 +110,44 @@ class _GloveProjectState extends State<GloveProject> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Alternative Communication: Hi';
+                        });
+                      },
                       child: const Text(
                         'Alternative Communications',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    child: MaterialButton(
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Arduino: Hi';
+                        });
+                      },
+                      child: const Text(
+                        'Arduino',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.03,
+                  vertical: MediaQuery.of(context).size.height * 0.01),
+              child: Text(
+                explanationText,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                ),
               ),
             ),
             Padding(
