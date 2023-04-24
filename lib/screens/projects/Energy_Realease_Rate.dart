@@ -12,6 +12,7 @@ class EnergyReleaseRate extends StatefulWidget {
 }
 
 class _EnergyReleaseRateState extends State<EnergyReleaseRate> {
+  String explanationText = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +52,11 @@ class _EnergyReleaseRateState extends State<EnergyReleaseRate> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Trouble Shooting: Hi';
+                        });
+                      },
                       child: const Text(
                         'Trouble Shooting',
                         style: TextStyle(color: Colors.white),
@@ -61,7 +66,11 @@ class _EnergyReleaseRateState extends State<EnergyReleaseRate> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Mathematics: Hi';
+                        });
+                      },
                       child: const Text(
                         'Mathematics',
                         style: TextStyle(color: Colors.white),
@@ -71,7 +80,11 @@ class _EnergyReleaseRateState extends State<EnergyReleaseRate> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Physics: Hi';
+                        });
+                      },
                       child: const Text(
                         'Physics',
                         style: TextStyle(color: Colors.white),
@@ -79,6 +92,18 @@ class _EnergyReleaseRateState extends State<EnergyReleaseRate> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.03,
+                  vertical: MediaQuery.of(context).size.height * 0.01),
+              child: Text(
+                explanationText,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                ),
               ),
             ),
             Padding(

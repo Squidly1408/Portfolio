@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/widgets/skills_buttons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../widgets/footer.dart';
@@ -15,6 +16,8 @@ class RaspberryPiProjectScreen extends StatefulWidget {
 }
 
 class _RaspberryPiProjectScreenState extends State<RaspberryPiProjectScreen> {
+  String explanationText = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +57,11 @@ class _RaspberryPiProjectScreenState extends State<RaspberryPiProjectScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Raspberry Pi: Hi';
+                        });
+                      },
                       child: const Text(
                         'Raspberry Pi',
                         style: TextStyle(color: Colors.white),
@@ -64,7 +71,11 @@ class _RaspberryPiProjectScreenState extends State<RaspberryPiProjectScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Trouble Shooting: Hi';
+                        });
+                      },
                       child: const Text(
                         'Trouble Shooting',
                         style: TextStyle(color: Colors.white),
@@ -74,7 +85,11 @@ class _RaspberryPiProjectScreenState extends State<RaspberryPiProjectScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Problem Solving: Hi';
+                        });
+                      },
                       child: const Text(
                         'Problem Solving',
                         style: TextStyle(color: Colors.white),
@@ -82,6 +97,18 @@ class _RaspberryPiProjectScreenState extends State<RaspberryPiProjectScreen> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width * 0.03,
+                  vertical: MediaQuery.of(context).size.height * 0.01),
+              child: Text(
+                explanationText,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                ),
               ),
             ),
             Padding(

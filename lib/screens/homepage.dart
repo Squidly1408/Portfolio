@@ -25,6 +25,7 @@ class _HomepageState extends State<Homepage> {
   final ScrollController scrollcontroller = ScrollController();
   final ScrollController scrollcontroller2 = ScrollController();
   final ScrollController scrollcontroller3 = ScrollController();
+  String explanationText = '';
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +68,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'HTML: Hi';
+                        });
+                      },
                       child: const Text(
                         'HTML',
                         style: TextStyle(color: Colors.white),
@@ -77,7 +82,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'CSS: Hi';
+                        });
+                      },
                       child: const Text(
                         'CSS',
                         style: TextStyle(color: Colors.white),
@@ -87,7 +96,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'JavaScript: Hi';
+                        });
+                      },
                       child: const Text(
                         'JavaSCript',
                         style: TextStyle(color: Colors.white),
@@ -97,7 +110,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Python: Hi';
+                        });
+                      },
                       child: const Text(
                         'Python',
                         style: TextStyle(color: Colors.white),
@@ -107,17 +124,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
-                      child: const Text(
-                        'Dart',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                    child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Flutter: Hi';
+                        });
+                      },
                       child: const Text(
                         'Flutter',
                         style: TextStyle(color: Colors.white),
@@ -127,7 +138,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Fusion 360: Hi';
+                        });
+                      },
                       child: const Text(
                         'Fusion 360',
                         style: TextStyle(color: Colors.white),
@@ -137,7 +152,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Eagle CAD: Hi';
+                        });
+                      },
                       child: const Text(
                         'EAGLE CAD',
                         style: TextStyle(color: Colors.white),
@@ -147,9 +166,13 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Entreprenurial Skills: Hi';
+                        });
+                      },
                       child: const Text(
-                        'Entreprenurial Mindset',
+                        'Entreprenurial Skills',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
@@ -157,7 +180,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'ICT Support: Hi';
+                        });
+                      },
                       child: const Text(
                         'ICT Support',
                         style: TextStyle(color: Colors.white),
@@ -167,7 +194,11 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Trouble Shooting: Hi';
+                        });
+                      },
                       child: const Text(
                         'Trouble Shooting',
                         style: TextStyle(color: Colors.white),
@@ -177,14 +208,58 @@ class _HomepageState extends State<Homepage> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 4.0),
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Raspberry Pi: Hi';
+                        });
+                      },
                       child: const Text(
                         'Raspberry Pi',
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    child: MaterialButton(
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Arduino: Hi';
+                        });
+                      },
+                      child: const Text(
+                        'Arduino',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    child: MaterialButton(
+                      onPressed: () {
+                        setState(() {
+                          explanationText = 'Alternative Communication: Hi';
+                        });
+                      },
+                      child: const Text(
+                        'Alternative Communication',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
                 ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: MediaQuery.of(context).size.width * 0.03,
+                vertical: MediaQuery.of(context).size.height * 0.01),
+            child: Text(
+              explanationText,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 15.0,
               ),
             ),
           ),
