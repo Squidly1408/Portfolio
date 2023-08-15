@@ -1,5 +1,5 @@
-name: portfolio
-description: A new Flutter project.
+name: squidly1408
+description: A Portfolio about Lucas Newman.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -38,6 +38,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.8
   video_player: ^2.5.1
+  gantt_chart: ^0.3.0
+  go_router: ^10.0.0
+  firebase_core: ^2.15.0
+  cloud_firestore: ^4.8.4
 
 dev_dependencies:
   flutter_test:
@@ -64,30 +68,61 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/assets/images/title_image.png
-    - lib/assets/images/projects/Raspberry_Pi_project/Raspberry_Pi_Logo.png
-    - lib/assets/images/projects/Raspberry_Pi_project/Raspberry_pi_Learning_plan.PNG
-    - lib/assets/images/projects/Raspberry_Pi_project/Raspberry_Pi_Proposal_1.png
-    - lib/assets/images/projects/Raspberry_Pi_project/RetroPi_Banner.png
-    - lib/assets/images/projects/Raspberry_Pi_project/Sense-hat.png
-    - lib/assets/images/projects/AAC_Project/AAC_Project_logo.png
-    - lib/assets/images/projects/AAC_Project/AAC_Project_Learning_Plan.PNG
-    - lib/assets/images/projects/AAC_Project/AAC_Project_Proposal.png
-    - lib/assets/images/projects/AAC_Project/AAC_Project_Flutter_logo.png
+    - lib/assets/images/projects/raspberry_pi/Raspberry_Pi_Logo.png
+    - lib/assets/images/projects/raspberry_pi/Raspberry_pi_Learning_plan.PNG
+    - lib/assets/images/projects/raspberry_pi/Raspberry_Pi_Proposal_1.png
+    - lib/assets/images/projects/raspberry_pi/RetroPi_Banner.png
+    - lib/assets/images/projects/raspberry_pi/Sense-hat.png
+    - lib/assets/images/projects/aac/AAC_Project_logo.png
+    - lib/assets/images/projects/aac/AAC_Project_Learning_Plan.PNG
+    - lib/assets/images/projects/aac/AAC_Project_Proposal.png
+    - lib/assets/images/projects/aac/AAC_Project_Flutter_logo.png
     - lib/assets/images/projects/Glove_Project/Glove_Project_logo.png
     - lib/assets/images/projects/Glove_Project/Glove_project_learning_plan.PNG
     - lib/assets/images/projects/Glove_Project/Glove_project_porposal.png
-    - lib/assets/images/LTIs/Saphi/Saphi_logo.png
-    - lib/assets/images/LTIs/Saphi/Saphi_First_Project.PNG
-    - lib/assets/images/LTIs/Saphi/Saphi_Enclosure_Design1.jpg
-    - lib/assets/images/LTIs/Saphi/Saphi_Three_D_Printing.jpg
-    - lib/assets/images/LTIs/Saphi/saphi_photo.jpg
-    - lib/assets/images/LTIs/Clickk/Clickk_logo_banner.png
-    - lib/assets/images/LTIs/Clickk/how_to_do.jpg
-    - lib/assets/images/LTIs/Clickk/street_picture.PNG
-    - lib/assets/images/LTIs/Clickk/me_working_on_website.png
-    - lib/assets/images/LTIs/Clickk/front_final_structre.jpg
+    - lib/assets/images/LTIs/saphi/Saphi_logo.png
+    - lib/assets/images/LTIs/saphi/Saphi_First_Project.PNG
+    - lib/assets/images/LTIs/saphi/Saphi_Enclosure_Design1.jpg
+    - lib/assets/images/LTIs/saphi/Saphi_Three_D_Printing.jpg
+    - lib/assets/images/LTIs/saphi/saphi_photo.jpg
+    - lib/assets/images/LTIs/clickk/Clickk_logo_banner.png
+    - lib/assets/images/LTIs/clickk/how_to_do.jpg
+    - lib/assets/images/LTIs/clickk/street_picture.PNG
+    - lib/assets/images/LTIs/clickk/me_working_on_website.png
+    - lib/assets/images/LTIs/clickk/front_final_structre.jpg
     - lib/assets/images/homepage/homepage_banner.png
-    - lib/assets/images/projects/Energy_Release_rate/Energy_release_Rate_Logo.png
+    - lib/assets/images/projects/energy_released/Energy_release_Rate_Logo.png
+    - lib/assets/images/logo.png
+    - lib/assets/images/projects/python/portfolio banners.png
+    - lib/assets/images/profile_picture.png
+    - lib/assets/images/skills/alternative_communcation_icon.png
+    - lib/assets/images/skills/arduino_logo.png
+    - lib/assets/images/skills/blender_logo.png
+    - lib/assets/images/skills/communication_logo.png
+    - lib/assets/images/skills/css_logo.png
+    - lib/assets/images/skills/dart_logo.png
+    - lib/assets/images/skills/eagle_cad_logo.png
+    - lib/assets/images/skills/empirical_reasoning_logo.png
+    - lib/assets/images/skills/entreprenurial_skills_logo.png
+    - lib/assets/images/skills/flutter_logo.png
+    - lib/assets/images/skills/fusion_360_logo.png
+    - lib/assets/images/skills/html_logo.png
+    - lib/assets/images/skills/ict_support_logo.png
+    - lib/assets/images/skills/javascript_icon.png
+    - lib/assets/images/skills/personal_qualities.png
+    - lib/assets/images/skills/python_logo.png
+    - lib/assets/images/skills/quantativ_reasoning_logo.png
+    - lib/assets/images/skills/raspberry_pi_logo.png
+    - lib/assets/images/skills/social_reasoning_logo.png
+    - lib/assets/images/skills/trouble_shooting_logo.png
+    - lib/assets/images/projects/raspberry_pi/raspberry_pi_small_icon.png
+    - lib/assets/images/projects/python/python_small_icon.png
+    - lib/assets/images/projects/glove_project/glove_project_small_icon.png
+    - lib/assets/images/projects/energy_released/energy_released_small_icon.png
+    - lib/assets/images/projects/aac/aac_small_icon.png
+    - lib/assets/images/LTIs/saphi/saphi_small_icon.png
+    - lib/assets/images/LTIs/clickk/clickk_small_icon.png
+    - lib/assets/images/senior_study/future_pathway_plan/future_pathway_plan_banner.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

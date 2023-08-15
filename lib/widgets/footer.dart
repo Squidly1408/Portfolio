@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:go_router/go_router.dart';
 
 class Footer extends StatefulWidget {
   const Footer({super.key});
@@ -11,50 +11,57 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      automaticallyImplyLeading: false,
-      backgroundColor: const Color.fromARGB(255, 23, 23, 23),
-      title: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SizedBox(
-          height: MediaQuery.of(context).size.height * 0.1,
-          child: Image.asset(
-            'lib/assets/images/title_image.png',
-            fit: BoxFit.contain,
-          ),
-        ),
-      ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-          child: TextButton(
-            onPressed: () {
-              launchUrl(
-                Uri.parse('https://github.com/Squidly1408?tab=repositories'),
-              );
-            },
-            child: FittedBox(
-              fit: BoxFit.contain,
-              child: Column(
-                children: const [
-                  Text(
-                    'PH: 0451 142 881',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'E: lucas.newman140@gmail.com',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    'GitHub LINK',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
+    return BottomAppBar(
+      shadowColor: const Color(0xff2ba84a),
+      color: const Color(0xff171717),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: IconButton(
+              onPressed: () {
+                if (mounted) {
+                  GoRouter.of(context).go('/');
+                }
+              },
+              icon: const Icon(
+                Icons.home_rounded,
+                color: Colors.white,
               ),
             ),
           ),
-        ),
-      ],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10.0),
+            child: IconButton(
+              onPressed: () {
+                if (mounted) {
+                  GoRouter.of(context).go('/projects-list');
+                }
+              },
+              icon: const Icon(
+                Icons.table_rows_rounded,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 1.0, vertical: 1.0),
+            child: MaterialButton(
+              onPressed: () {
+                if (mounted) {
+                  GoRouter.of(context).go('/profile');
+                }
+              },
+              child: const CircleAvatar(
+                backgroundColor: Colors.white,
+                backgroundImage:
+                    AssetImage('lib/assets/images/profile_picture.png'),
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
