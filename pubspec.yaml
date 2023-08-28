@@ -123,6 +123,7 @@ flutter:
     - lib/assets/images/LTIs/saphi/saphi_small_icon.png
     - lib/assets/images/LTIs/clickk/clickk_small_icon.png
     - lib/assets/images/senior_study/future_pathway_plan/future_pathway_plan_banner.png
+    - lib/assets/images/homepage/about_me_bannner.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

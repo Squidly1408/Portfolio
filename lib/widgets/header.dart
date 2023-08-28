@@ -22,6 +22,100 @@ class _HeaderState extends State<Header> {
       actions: [
         Row(
           children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: IconButton(
+                onPressed: () {
+                  if (mounted) {
+                    GoRouter.of(context).go('/');
+                  }
+                },
+                icon: const Icon(
+                  Icons.home_rounded,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            MediaQuery.of(context).size.width > 1000
+                ? Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: DropdownButton(
+                      items: const [
+                        DropdownMenuItem(
+                          value: 'portfolio',
+                          child: Text(
+                            'My protfolio',
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                            ),
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: 'aac',
+                          child: Text(
+                            'AAC Project',
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                            ),
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: 'raspberry-Pi',
+                          child: Text(
+                            'Raspberry Pi',
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                            ),
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: 'python',
+                          child: Text(
+                            'Python Projects',
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                            ),
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: 'energy-release-rate',
+                          child: Text(
+                            'Energy Release Rate',
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                            ),
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: 'auslan-glove',
+                          child: Text(
+                            'Auslan Glove Project',
+                            style: TextStyle(
+                              color: Color(0xffffffff),
+                            ),
+                          ),
+                        ),
+                      ],
+                      onChanged: (value) {
+                        GoRouter.of(context).go('/projects/$value');
+                      },
+                      icon: const Icon(
+                        Icons.arrow_drop_down,
+                        color: Color(0xffffffff),
+                      ),
+                      hint: const Text(
+                        'Projects',
+                        style: TextStyle(
+                          color: Color(0xffffffff),
+                        ),
+                      ),
+                      dropdownColor: const Color(0xff171717),
+                    ),
+                  )
+                : const SizedBox(
+                    width: 0,
+                    height: 0,
+                  ),
             isLoggedIn == false
                 ? Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10.0),
@@ -60,64 +154,6 @@ class _HeaderState extends State<Header> {
                         ),
                       ),
                     ),
-                  ),
-            MediaQuery.of(context).size.width > 1000
-                ? Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: IconButton(
-                      onPressed: () {
-                        if (mounted) {
-                          GoRouter.of(context).go('/');
-                        }
-                      },
-                      icon: const Icon(
-                        Icons.home_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                  )
-                : const SizedBox(
-                    width: 0,
-                    height: 0,
-                  ),
-            MediaQuery.of(context).size.width > 1000
-                ? Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: IconButton(
-                      onPressed: () {
-                        if (mounted) {
-                          GoRouter.of(context).go('/projects-list');
-                        }
-                      },
-                      icon: const Icon(
-                        Icons.table_rows_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                  )
-                : const SizedBox(
-                    width: 0,
-                    height: 0,
-                  ),
-            MediaQuery.of(context).size.width > 1000
-                ? Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: MaterialButton(
-                      onPressed: () {
-                        if (mounted) {
-                          GoRouter.of(context).go('/profile');
-                        }
-                      },
-                      child: const CircleAvatar(
-                        backgroundColor: Colors.white,
-                        backgroundImage:
-                            AssetImage('lib/assets/images/profile_picture.png'),
-                      ),
-                    ),
-                  )
-                : const SizedBox(
-                    width: 0,
-                    height: 0,
                   ),
           ],
         ),

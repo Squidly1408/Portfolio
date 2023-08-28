@@ -1,9 +1,11 @@
-class SkillsData {
+class Projects {
   final String name;
   final String img;
+  final String link;
 
-  SkillsData(
+  Projects(
     this.name,
     this.img,
+    this.link,
   );
 }

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../data/clickk.dart';
+import '../../models/skills.dart';
 import '../../widgets/footer.dart';
 import '../../widgets/header.dart';
-import '../../widgets/image_banner.dart';
-import '../../widgets/text_banner.dart';
+
 import '../profile.dart';
 
 class LTICLickk extends StatefulWidget {
@@ -16,17 +15,53 @@ class LTICLickk extends StatefulWidget {
 }
 
 class _LTICLickkState extends State<LTICLickk> {
-  var skillsScrollController = ScrollController();
+  final projects = [
+    SkillsData(
+      'Creating a website',
+      'lib/assets/images/skills/html_logo.png',
+    ),
+  ];
+
+  final skills = [
+    SkillsData(
+      'Communication',
+      'lib/assets/images/skills/communication_logo.png',
+    ),
+    SkillsData(
+      'CSS',
+      'lib/assets/images/skills/css_logo.png',
+    ),
+    SkillsData(
+      'Entreprenurial \nSkills',
+      'lib/assets/images/skills/entreprenurial_skills_logo.png',
+    ),
+    SkillsData(
+      'HTML',
+      'lib/assets/images/skills/html_logo.png',
+    ),
+    SkillsData(
+      'JavaScript',
+      'lib/assets/images/skills/javascript_icon.png',
+    ),
+    SkillsData(
+      'Personal \nQualities',
+      'lib/assets/images/skills/personal_qualities.png',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff8d818c),
+      backgroundColor: const Color(0xff171717),
+
+      // header section (always visible)
       appBar: PreferredSize(
         preferredSize:
             Size.fromHeight(MediaQuery.of(context).size.height * 0.0801),
         child: const Header(),
       ),
+
+      // footer making sure that its invisible when screen is smaller then 1000 px
       bottomNavigationBar: Visibility(
         visible: MediaQuery.of(context).size.width < 1000,
         child: PreferredSize(
@@ -35,106 +70,196 @@ class _LTICLickkState extends State<LTICLickk> {
           child: const Footer(),
         ),
       ),
+
+      // body
       body: SizedBox(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Image.asset(
-                'lib/assets/images/LTIs/clickk/Clickk_logo_banner.png',
+              // main banner for the page
+              Image.network(
+                'https://i1.wp.com/saphi.engineering/wp-content/uploads/2019/04/SAPHI-Logo-Landscape-02.png?fit=5334%2C1963&ssl=1',
                 fit: BoxFit.fitWidth,
               ),
+              // title and cost of project, flex element so it adapts to smaller screens and turns into a Column optherwise its a Row
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 30,
                 color: const Color(0xff171717),
-                child: const Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(5),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: MediaQuery.of(context).size.width * 0.15,
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Skills:',
+                      'Saphi',
                       style: TextStyle(
-                          color: Colors.white,
-                          decorationStyle: TextDecorationStyle.solid),
+                          color: Color(0xff10d0d6),
+                          fontSize: 50,
+                          decoration: TextDecoration.underline),
                     ),
                   ),
                 ),
               ),
+              // description of the page
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 125,
                 color: const Color(0xff171717),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 5),
-                  child: RawScrollbar(
-                    thumbColor: const Color(0xff03767b),
-                    controller: skillsScrollController,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      controller: skillsScrollController,
-                      itemCount: 5,
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.all(8),
-                          child: SizedBox(
-                            width: 100,
-                            child: Column(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width > 1000
+                          ? MediaQuery.of(context).size.width * 0.15
+                          : 8.0),
+                  child: const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Description',
+                          style: TextStyle(
+                              color: Color(0xffffffff),
+                              fontSize: 25,
+                              decoration: TextDecoration.underline),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          "Clickk is a local business in Newcastle that makes websites for businesses across Australia, they are Serious about creating awesome sites, designs and growth for SMEs.\n\n\n At my time at Clickk I was learning the steps taken by Clickk to create websites, things like creating a theme, finding fonts, getting images, creating a wireframe, etc.\nFrom that I started to create my own website, a website to randomly generate numbers at will.\n\n\n",
+                          style: TextStyle(
+                            color: Color(0xffffffff),
+                            fontSize: 15,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              // Projects I learnt
+              Container(
+                width: MediaQuery.of(context).size.width,
+                color: const Color(0xff171717),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width > 1000
+                          ? MediaQuery.of(context).size.width * 0.15
+                          : 15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Projects',
+                          style: TextStyle(
+                              color: Color(0xffffffff),
+                              fontSize: 25,
+                              decoration: TextDecoration.underline),
+                        ),
+                      ),
+                      GridView.builder(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            childAspectRatio: 1 / 0.4,
+                            crossAxisCount:
+                                MediaQuery.of(context).size.width > 500
+                                    ? MediaQuery.of(context).size.width > 1000
+                                        ? 3
+                                        : 2
+                                    : 1),
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: projects.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
                               children: [
                                 CircleAvatar(
                                   maxRadius: 25,
                                   backgroundColor: Colors.white,
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                        clickkSkillImageData[index].data),
+                                    child: Image.asset(projects[index].img),
                                   ),
                                 ),
-                                Text(clickkSkillTitleData[index].data,
+                                Text(projects[index].name,
                                     textAlign: TextAlign.center,
                                     style:
                                         const TextStyle(color: Colors.white)),
                               ],
                             ),
-                          ),
-                        );
-                      },
-                    ),
+                          );
+                        },
+                      ),
+                    ],
                   ),
                 ),
               ),
-              ListView(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                children: const [
-                  TextBanner(
-                    title: 'About',
-                    text:
-                        'Clickk is a local business in Newcastle that makes websites for businesses across Australia, they are Serious about creating awesome sites, designes and growth for SMEs.\n\n\n',
+              // SKills section
+              Container(
+                width: MediaQuery.of(context).size.width,
+                color: const Color(0xff171717),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width > 1000
+                          ? MediaQuery.of(context).size.width * 0.15
+                          : 15.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+                          'Skills',
+                          style: TextStyle(
+                              color: Color(0xffffffff),
+                              fontSize: 25,
+                              decoration: TextDecoration.underline),
+                        ),
+                      ),
+                      GridView.builder(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            childAspectRatio: 1 / 0.4,
+                            crossAxisCount:
+                                MediaQuery.of(context).size.width > 500
+                                    ? MediaQuery.of(context).size.width > 1000
+                                        ? 3
+                                        : 2
+                                    : 1),
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: skills.length,
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  maxRadius: 25,
+                                  backgroundColor: Colors.white,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Image.asset(skills[index].img),
+                                  ),
+                                ),
+                                Text(skills[index].name,
+                                    textAlign: TextAlign.center,
+                                    style:
+                                        const TextStyle(color: Colors.white)),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ],
                   ),
-                  TextBanner(
-                    title: 'Projects',
-                    text:
-                        'At my time at Clickk I was learning the steps taken by Clickk to create websites, things like creating a theme, finding fonts, getting images, creating a wireframe, etc.\nFrom that I started to create my own website, a website to randomly generate numbers at will.\n\n\n',
-                  ),
-                  ImageBanner(
-                    title: 'How to do sheet',
-                    image: 'lib/assets/images/LTIs/clickk/how_to_do.jpg',
-                  ),
-                  ImageBanner(
-                    title: 'Front Final Structure',
-                    image:
-                        'lib/assets/images/LTIs/clickk/front_final_structre.jpg',
-                  ),
-                  ImageBanner(
-                    title: 'Clickk Street Picture',
-                    image: 'lib/assets/images/LTIs/clickk/street_picture.PNG',
-                  ),
-                  ImageBanner(
-                    title: 'Working on website',
-                    image:
-                        'lib/assets/images/LTIs/clickk/me_working_on_website.png',
-                  ),
-                ],
-              )
+                ),
+              ),
             ],
           ),
         ),

@@ -1,5 +1,3 @@
-import 'package:squidly1408/pages/editable/edit_project.dart';
-
 import '../auth/login.dart';
 import '../models/mentors.dart';
 import '../pages/LTI/clickk.dart';
@@ -22,8 +20,10 @@ import 'models/comment.dart';
 
 import 'models/costs.dart';
 import 'models/project_resources.dart';
+import 'pages/home.dart';
 import 'pages/homepage.dart';
-import 'pages/project_page.dart';
+import 'pages/work_in_progress_project_page.dart';
+import 'pages/projects/portfolio.dart';
 
 void main() async {
   await Firebase.initializeApp(
@@ -41,67 +41,15 @@ GoRouter router = GoRouter(
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const Homepage(),
+        builder: (context, state) => const Home(),
         routes: [
+          GoRoute(
+            path: 'homepage',
+            builder: (context, state) => const Homepage(),
+          ),
           GoRoute(
             path: 'login',
             builder: (context, state) => const Login(),
-          ),
-          GoRoute(
-            path: 'editable-project',
-            builder: (context, state) => EditableProject(
-              title: 'key',
-              cost: 440.60,
-              costLink:
-                  'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html',
-              description:
-                  "The original idea for the glove project came from me finding out about a type of sensor called a flex sensor when scrolling an online store, essentially a resistor like electrical component that increases resistance of an electrical circuit when flexed letting you measure how much its flexed. After finding out about the flex sensor I came up with the idea of using it to measure the percentage that fingers are flexed for a sign-language conversion device. This idea came from working on an augmentative and alternative communication (AAC) program designed to help develop or replace verbal communication. The idea of using electronics to be used for assistive communication is not a new idea, neither is using a glove like device to recognise sign language. It has been done many times and I’ve done it one more time.\n\n\n", //cahnge back to login
-              stepsToComplete: const [
-                'hello0',
-                'hello1',
-                'hello2',
-                'hello3',
-                'hello4'
-              ],
-              resources: [
-                ProjectResources('Learning Plan',
-                    'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html'),
-                ProjectResources('Learning Plan',
-                    'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html'),
-                ProjectResources('Learning Plan',
-                    'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html'),
-                ProjectResources('Learning Plan',
-                    'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html'),
-                ProjectResources('Learning Plan',
-                    'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html'),
-                ProjectResources('Learning Plan',
-                    'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html'),
-                ProjectResources('Learning Planbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
-                    'https://api.flutter.dev/flutter/widgets/GridView/GridView.builder.html'),
-              ],
-              mentors: [
-                Mentors('Dr Jacqueline Bailey ',
-                    'https://www.newcastle.edu.au/profile/jacqueline-d-bailey'),
-                Mentors('Dr Jacqueline Bailey ',
-                    'https://www.newcastle.edu.au/profile/jacqueline-d-bailey'),
-                Mentors('Dr Jacqueline Bailey ',
-                    'https://www.newcastle.edu.au/profile/jacqueline-d-bailey'),
-                Mentors('Dr Jacqueline Bailey ',
-                    'https://www.newcastle.edu.au/profile/jacqueline-d-bailey'),
-                Mentors('Dr Jacqueline Bailey ',
-                    'https://www.newcastle.edu.au/profile/jacqueline-d-bailey'),
-                Mentors('Dr Jacqueline Bailey ',
-                    'https://www.newcastle.edu.au/profile/jacqueline-d-bailey'),
-              ],
-              comments: [
-                Comment('Kylie',
-                    'She is pretty, and beautiful and amazing and all round perfect.'),
-                Comment('Kylie',
-                    'She is pretty, and beautiful and amazing and all round perfect.'),
-                Comment('Kylie',
-                    'She is pretty, and beautiful and amazing and all round perfect.'),
-              ],
-            ),
           ),
           GoRoute(
             path: 'profile',
@@ -111,6 +59,10 @@ GoRouter router = GoRouter(
             path: 'projects',
             builder: (context, state) => const Projects(),
             routes: [
+              GoRoute(
+                path: 'portfolio',
+                builder: (context, state) => const Portfolio(),
+              ),
               GoRoute(
                 path: 'aac',
                 builder: (context, state) => const AACProject(),

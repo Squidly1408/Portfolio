@@ -88,11 +88,11 @@ class _HomepageState extends State<Homepage> {
                                   backgroundColor: Colors.white,
                                   child: Padding(
                                     padding: const EdgeInsets.all(8.0),
-                                    child: Image.asset(
-                                        defaultSkillImageData[index].data),
+                                    child:
+                                        Image.asset(defaultSkills[index].img),
                                   ),
                                 ),
-                                Text(defaultSkillTitleData[index].data,
+                                Text(defaultSkills[index].name,
                                     textAlign: TextAlign.center,
                                     style:
                                         const TextStyle(color: Colors.white)),
