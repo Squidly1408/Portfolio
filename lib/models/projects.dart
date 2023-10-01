@@ -1,11 +1,11 @@
+// temparary project data model
+
 class Projects {
-  final String name;
-  final String img;
-  final String link;
+  final String title;
+  final String key;
 
   Projects(
-    this.name,
-    this.img,
-    this.link,
+    this.title,
+    this.key,
   );
 }

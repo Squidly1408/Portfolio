@@ -9,8 +9,6 @@ import '../../models/skills.dart';
 import '../../widgets/footer.dart';
 import '../../widgets/header.dart';
 
-import '../profile.dart';
-
 class GloveProject extends StatefulWidget {
   const GloveProject({super.key});
 
@@ -630,16 +628,7 @@ class _GloveProjectDisplay1State extends State<GloveProjectDisplay1> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 1.0),
                           child: MaterialButton(
-                            onPressed: () {
-                              if (mounted) {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const Profile(),
-                                  ),
-                                );
-                              }
-                            },
+                            onPressed: () {},
                             child: const CircleAvatar(
                               backgroundColor: Colors.white,
                               backgroundImage: AssetImage(

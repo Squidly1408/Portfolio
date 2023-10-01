@@ -9,8 +9,6 @@ import '../../models/skills.dart';
 import '../../widgets/footer.dart';
 import '../../widgets/header.dart';
 
-import '../profile.dart';
-
 class AACProject extends StatefulWidget {
   const AACProject({super.key});
 
@@ -216,7 +214,7 @@ class _AACProjectState extends State<AACProject> {
                       Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text(
-                          "In addition to my Learning Plan and Proposal, part of my preparation for this project was to create a research document answering the following questions \n\nWhat is AAC?\nWhat are the main types of AAC devices and programs?\nWhy do people use AAC devices and programs?\nwho are the main demographic thay use AAC devices and programs?\nWhat are the beneficial aspects of AAC devices and programs?\nHow Could AAC Programs and devices be improved?\n\n\n After My preparation for this project and researching into Augmentative and Alternative Communication Devices and programs I set out to make my own program. \nI didnt know where to start or even what to use to create my program but after going to my LTI I learnt about Flutter and Dart, which I used to create my program.\nAfter learning Flutter and Dart, and finishing my work I ran into a problem, I accidentally deleted a lot of my work while figuring out Github and how to utilize it. So I had to restart from an old save of my work.\n\n\n While I did complete this project it came with a Few major issues \n\nThese were mostly with saving my work and work life balance, it was already good but I needed to do better because ultimately I had to restart from an old save which sent me back in my project by a lot. \n\nAnother Issue with this project was with my work life balance, even if I heavily catered towards my work it is important to keep a good balance.\n\n\n",
+                          "In addition to my Learning Plan and Proposal, part of my preparation for this project was to create a research document answering the following questions: What is AAC, What are the main types of AAC devices and programs? Why do people use AAC devices and programs? Who are the main demographic thay use AAC devices and programs? What are the beneficial aspects of AAC devices and programs? How Could AAC Programs and devices be improved? After My preparation for this project and researching into Augmentative and Alternative Communication Devices and programs I set out to make my own program. I didnt know where to start or even what to use to create my program but after going to my LTI I learnt about Flutter and Dart, which I used to create my program. After learning Flutter and Dart, and finishing my work I ran into a problem, I accidentally deleted a lot of my work while figuring out Github and how to utilize it. So I had to restart from an old save of my work. While I did complete this project it came with a Few major issues. These were mostly with saving my work and work life balance, it was already good but I needed to do better because ultimately I had to restart from an old save which sent me back in my project by a lot. Another Issue with this project was with my work life balance, even if I heavily catered towards my work it is important to keep a good balance.",
                           style: TextStyle(
                             color: Color(0xffffffff),
                             fontSize: 15,
@@ -617,16 +615,7 @@ class _AacDisplay1State extends State<AacDisplay1> {
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 1.0),
                           child: MaterialButton(
-                            onPressed: () {
-                              if (mounted) {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const Profile(),
-                                  ),
-                                );
-                              }
-                            },
+                            onPressed: () {},
                             child: const CircleAvatar(
                               backgroundColor: Colors.white,
                               backgroundImage: AssetImage(

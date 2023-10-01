@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'data.dart';
-import '../pages/homepage.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -18,16 +17,6 @@ class _LoginState extends State<Login> {
     var password = passwordController.text;
     if (email.toLowerCase() == 'lucas.newman' && password == '1234') {
       logIn();
-      if (mounted) {
-        if (mounted) {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const Homepage(),
-            ),
-          );
-        }
-      }
     }
   }
 

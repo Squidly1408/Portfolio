@@ -1,8 +1,11 @@
+// packages
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import 'package:go_router/go_router.dart';
-
-import '../auth/data.dart';
+// pages
+import '../main.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -12,158 +15,113 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
-  var loggedIn = false;
-
   @override
   Widget build(BuildContext context) {
+    // app bar
     return AppBar(
       shadowColor: const Color(0xff10d0d6),
       titleSpacing: 0,
       actions: [
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // discord link
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: IconButton(
                 onPressed: () {
-                  if (mounted) {
-                    GoRouter.of(context).go('/');
-                  }
+                  launchUrl(
+                    Uri.parse(
+                        'https://discord.com/users/squidly1408'), // add link to discord
+                  );
                 },
-                icon: const Icon(
-                  Icons.home_rounded,
-                  color: Colors.white,
+                icon: FaIcon(
+                  FontAwesomeIcons.discord,
+                  color: secondaryColour3,
                 ),
               ),
             ),
-            MediaQuery.of(context).size.width > 1000
-                ? Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: DropdownButton(
-                      items: const [
-                        DropdownMenuItem(
-                          value: 'portfolio',
-                          child: Text(
-                            'My protfolio',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 'aac',
-                          child: Text(
-                            'AAC Project',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 'raspberry-Pi',
-                          child: Text(
-                            'Raspberry Pi',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 'python',
-                          child: Text(
-                            'Python Projects',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 'energy-release-rate',
-                          child: Text(
-                            'Energy Release Rate',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                        DropdownMenuItem(
-                          value: 'auslan-glove',
-                          child: Text(
-                            'Auslan Glove Project',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
-                            ),
-                          ),
-                        ),
-                      ],
-                      onChanged: (value) {
-                        GoRouter.of(context).go('/projects/$value');
-                      },
-                      icon: const Icon(
-                        Icons.arrow_drop_down,
-                        color: Color(0xffffffff),
-                      ),
-                      hint: const Text(
-                        'Projects',
-                        style: TextStyle(
-                          color: Color(0xffffffff),
-                        ),
-                      ),
-                      dropdownColor: const Color(0xff171717),
-                    ),
-                  )
-                : const SizedBox(
-                    width: 0,
-                    height: 0,
-                  ),
-            isLoggedIn == false
-                ? Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: SizedBox(
-                      width: 70,
-                      child: MaterialButton(
-                        onPressed: () {
-                          if (mounted) {
-                            GoRouter.of(context).go('/login');
-                          }
-                        },
-                        height: 40,
-                        color: const Color(0xff10d0d6),
-                        child: const Text(
-                          'Login',
-                          style: TextStyle(
-                            color: Color(0xff171717),
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
-                : Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: SizedBox(
-                      width: 70,
-                      child: MaterialButton(
-                        onPressed: () {},
-                        height: 40,
-                        color: const Color(0xff10d0d6),
-                        child: const Text(
-                          'Edit',
-                          style: TextStyle(
-                            color: Color(0xff171717),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+
+            // LinkedIn link
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+              child: IconButton(
+                onPressed: () {
+                  launchUrl(
+                    Uri.parse(
+                        'https://www.linkedin.com/in/squidly1408'), // add link to discord
+                  );
+                },
+                icon: FaIcon(
+                  FontAwesomeIcons.linkedinIn,
+                  color: secondaryColour3,
+                ),
+              ),
+            ),
+
+            // GitHub link
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+              child: IconButton(
+                onPressed: () {
+                  launchUrl(
+                    Uri.parse(
+                        'https://github.com/Squidly1408'), // add link to discord
+                  );
+                },
+                icon: FaIcon(
+                  FontAwesomeIcons.github,
+                  color: secondaryColour3,
+                ),
+              ),
+            ),
+
+            // Email link
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+              child: IconButton(
+                onPressed: () async {
+                  String? encodeQueryParameters(Map<String, String> params) {
+                    return params.entries
+                        .map((MapEntry<String, String> e) =>
+                            '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
+                        .join('&');
+                  }
+
+                  final Uri emailUri = Uri(
+                    scheme: 'mailto',
+                    path: 'lucas.newman140@gmail.com',
+                    query: encodeQueryParameters(<String, String>{
+                      'subject': '',
+                      'body': '',
+                    }),
+                  );
+                  if (await canLaunchUrl(emailUri)) {
+                    launchUrl(emailUri);
+                  } else {
+                    throw Exception('Could not launch $emailUri');
+                  }
+                },
+                icon: FaIcon(
+                  FontAwesomeIcons.at,
+                  color: secondaryColour3,
+                ),
+              ),
+            ),
           ],
         ),
       ],
       automaticallyImplyLeading: false,
-      backgroundColor: const Color(0xff171717),
+      backgroundColor: secondaryColour, // black
+
+      // logo
       title: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.0901,
-        child: Image.asset('lib/assets/images/title_image.png',
-            fit: BoxFit.fitHeight),
+        height: 50,
+        child: MaterialButton(
+          onPressed: () {}, // add an onpressed to change the colour scheme
+          child: SvgPicture.asset('lib/assets/images/logo.svg',
+              fit: BoxFit.fitHeight, alignment: Alignment.centerLeft),
+        ),
       ),
     );
   }

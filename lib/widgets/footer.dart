@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../main.dart';
 
 class Footer extends StatefulWidget {
   const Footer({super.key});
@@ -10,56 +13,20 @@ class Footer extends StatefulWidget {
 class _FooterState extends State<Footer> {
   @override
   Widget build(BuildContext context) {
-    return const BottomAppBar(
-      shadowColor: Color(0xff2ba84a),
-      color: Color(0xff171717),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          //   child: IconButton(
-          //     onPressed: () {
-          //       if (mounted) {
-          //         GoRouter.of(context).go('/');
-          //       }
-          //     },
-          //     icon: const Icon(
-          //       Icons.home_rounded,
-          //       color: Colors.white,
-          //     ),
-          //   ),
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          //   child: IconButton(
-          //     onPressed: () {
-          //       if (mounted) {
-          //         GoRouter.of(context).go('/projects-list');
-          //       }
-          //     },
-          //     icon: const Icon(
-          //       Icons.table_rows_rounded,
-          //       color: Colors.white,
-          //     ),
-          //   ),
-          // ),
-          // Padding(
-          //   padding: const EdgeInsets.symmetric(horizontal: 1.0, vertical: 1.0),
-          //   child: MaterialButton(
-          //     onPressed: () {
-          //       if (mounted) {
-          //         GoRouter.of(context).go('/profile');
-          //       }
-          //     },
-          //     child: const CircleAvatar(
-          //       backgroundColor: Colors.white,
-          //       backgroundImage:
-          //           AssetImage('lib/assets/images/profile_picture.png'),
-          //     ),
-          //   ),
-          // )
-        ],
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.symmetric(
+          horizontal: BorderSide(color: mainColour, width: 4),
+        ),
+      ),
+      height: 30,
+      width: MediaQuery.of(context).size.width,
+      child: Center(
+        child: MaterialButton(
+          onPressed: () {}, // add an onpressed to login page
+          child: SvgPicture.asset('lib/assets/images/logo.svg',
+              fit: BoxFit.fitHeight, alignment: Alignment.center),
+        ),
       ),
     );
   }
