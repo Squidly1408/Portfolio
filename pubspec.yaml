@@ -39,13 +39,15 @@ dependencies:
   url_launcher: ^6.1.8
   video_player: ^2.5.1
   gantt_chart: ^0.3.0
-  go_router: ^10.0.0
   firebase_core: ^2.15.0
   cloud_firestore: ^4.8.4
   firebase_database: ^10.2.5
   animated_text_kit: ^4.2.2
   flutter_svg: ^2.0.7
   font_awesome_flutter: ^10.5.0
+  holding_gesture: ^1.2.0
+  go_router: ^11.1.2
+  percent_indicator: ^4.2.3
 
 dev_dependencies:
   flutter_test:
@@ -75,12 +77,18 @@ flutter:
     #logo
     - lib/assets/images/logo.svg
 
-    #banners
+    #homepage banners
     - lib/assets/images/homepage/homepage_banner.png
     - lib/assets/images/homepage/about_me_bannner.png
     - lib/assets/images/homepage/projects_banner.png
     - lib/assets/images/homepage/outlearning_banner.png
     - lib/assets/images/homepage/skills_banner.png
+
+    #project pages banner
+    - lib/assets/images/projects/project_banner.png
+    - lib/assets/images/projects/mentors_banner.png
+    - lib/assets/images/projects/resources_banner.png
+    - lib/assets/images/projects/skills_banner.png
 
     #skills
     - lib/assets/images/skills/1.png
@@ -95,6 +103,27 @@ flutter:
     - lib/assets/images/skills/10.png
     - lib/assets/images/skills/11.png
     - lib/assets/images/skills/12.png
+
+    #project 1 skills
+    - lib/assets/images/project1/1.png
+    - lib/assets/images/project1/2.png
+    - lib/assets/images/project1/3.png
+    - lib/assets/images/project1/4.png
+    - lib/assets/images/project1/5.png
+    - lib/assets/images/project1/6.png
+    - lib/assets/images/project1/7.png
+    - lib/assets/images/project1/8.png
+    - lib/assets/images/project1/9.png
+
+    #project 2 skills
+    - lib/assets/images/project2/1.png
+    - lib/assets/images/project2/2.png
+    - lib/assets/images/project2/3.png
+    - lib/assets/images/project2/4.png
+    - lib/assets/images/project2/5.png
+
+    #replacement image
+    - lib/assets/images/replacement_image.png
        
     
 

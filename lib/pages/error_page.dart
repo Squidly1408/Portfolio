@@ -1,4 +1,9 @@
+// packages
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+// pages
+import '../main.dart';
 
 class ErrorPage extends StatefulWidget {
   const ErrorPage({super.key, required this.error});
@@ -12,40 +17,43 @@ class ErrorPage extends StatefulWidget {
 class _ErrorPageState extends State<ErrorPage> {
   @override
   Widget build(BuildContext context) {
+    // background fade
     return Container(
       height: MediaQuery.of(context).size.height,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [
-            Color(0xff10d0d6),
-            Color(0xff03767b),
-          ],
+          colors: [mainColour2, mainColour],
         ),
       ),
+      // logo / error text
       child: Padding(
         padding: const EdgeInsets.all(5.0),
         child: Card(
-          color: const Color(0xff171717),
+          color: secondaryColour,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // logo
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.3,
-                child: Image.asset(
-                  'lib/assets/images/logo.png',
-                  fit: BoxFit.contain,
-                ),
-              ),
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  child: SvgPicture.asset(
+                    'lib/assets/images/logo.svg',
+                    fit: BoxFit.contain,
+                  )),
+              // error text
               Center(
                   child: Padding(
                 padding: const EdgeInsets.all(10),
                 child: Text(
-                    'Error - Squidly1408.github.io${widget.error} does not exist',
-                    style: const TextStyle(
-                        fontSize: 20, color: Color(0xffffffff))),
+                  'Error - Squidly1408.github.io${widget.error} does not exist',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: secondaryColour3,
+                  ),
+                ),
               ))
             ],
           ),

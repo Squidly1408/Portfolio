@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:holding_gesture/holding_gesture.dart';
+import 'package:go_router/go_router.dart';
 
 // pages
 import '../main.dart';
 
 class Header extends StatefulWidget {
-  const Header({super.key});
+  const Header({
+    super.key,
+    required this.homePage,
+  });
+
+  // If homepage key
+  final bool homePage;
 
   @override
   State<Header> createState() => _HeaderState();
@@ -117,10 +125,20 @@ class _HeaderState extends State<Header> {
       // logo
       title: SizedBox(
         height: 50,
-        child: MaterialButton(
-          onPressed: () {}, // add an onpressed to change the colour scheme
-          child: SvgPicture.asset('lib/assets/images/logo.svg',
-              fit: BoxFit.fitHeight, alignment: Alignment.centerLeft),
+        child: HoldDetector(
+          onHold: () {
+            GoRouter.of(context).go('/login');
+          }, // add proper gorouter change
+          holdTimeout: const Duration(
+            seconds: 5,
+          ),
+          child: widget.homePage
+              ? SvgPicture.asset('lib/assets/images/logo.svg',
+                  fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
+              : Icon(
+                  Icons.home,
+                  color: mainColour2,
+                ),
         ),
       ),
     );

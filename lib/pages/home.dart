@@ -1,12 +1,13 @@
 // packages
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:go_router/go_router.dart';
 
 // pages
 import '../main.dart';
 
 // widgets / models
-import '../models/projects.dart';
-import '../widgets/footer.dart';
+import '../models/project.dart';
 import '../widgets/header.dart';
 
 // stateful widget homepage for future video banner
@@ -17,46 +18,44 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-// temporary projects data
-final projects = [
-  Projects(
+// projects data
+final _projects = [
+  Project(
     'Auslan Glove',
     'auslan',
   ),
-  Projects(
+  Project(
     'AAC app',
     'aac',
   ),
-  Projects(
-    'Auslan Glove',
-    'auslan',
+  Project(
+    '',
+    'project-3',
   ),
-  Projects(
-    'Auslan Glove',
-    'auslan',
+  Project(
+    '',
+    'project-4',
   ),
 ];
 
-// temporary oulearning list
-final outlearning = [
-  Projects(
+// oulearning list
+final _outlearning = [
+  Project(
     'Newcastle University',
-    'uon',
+    'https://www.newcastle.edu.au/',
   ),
-  Projects(
+  Project(
     'SAPHI',
-    'saphi',
+    'https://saphi.engineering/',
   ),
-  Projects(
+  Project(
     'Clickk',
-    'clickk',
+    'https://clickk.com.au/',
   ),
 ];
 
 class _HomeState extends State<Home> {
-  // scrollbar controller
-  ScrollController scrollBar = ScrollController();
-
+  // scaffold
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,20 +64,17 @@ class _HomeState extends State<Home> {
       // added header which acts as a links / navigation to home / logo
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
-        child: Header(),
+        child: Header(
+          homePage: true,
+        ),
       ),
 
-      // Body paragraph / footer
-      // need to add projects section (cards)
-      // need to add internship / outlearning section
-      // need to add scrollable footer
+      // Body paragraph
       // need to insert links to pages / sources and all
       body: SizedBox(
         child: Stack(
           children: [
-            // adding a RawScrollBar to distinguish the scroll bar from the background
             SingleChildScrollView(
-              controller: scrollBar,
               child: Column(
                 children: [
                   // banner
@@ -138,15 +134,19 @@ class _HomeState extends State<Home> {
                                 ),
                                 // projects list
                                 ListView.builder(
-                                  itemCount: projects.length,
+                                  itemCount: _projects.length,
                                   physics: const NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
                                   itemBuilder: (context, index) => TextButton(
-                                    onPressed: () => {},
+                                    onPressed: () => {
+                                      GoRouter.of(context).go(
+                                        '/projects/${_projects[index].key}',
+                                      ),
+                                    },
                                     child: Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Text(
-                                        projects[index].title,
+                                        _projects[index].title,
                                         style: TextStyle(
                                             color: secondaryColour3,
                                             fontSize: MediaQuery.of(context)
@@ -164,7 +164,7 @@ class _HomeState extends State<Home> {
                       )
                     ],
                   ),
-                  // Internships section
+                  // outlearning section
                   Stack(
                     children: [
                       // background image
@@ -190,15 +190,21 @@ class _HomeState extends State<Home> {
                                 ),
                                 // outlearning list
                                 ListView.builder(
-                                  itemCount: outlearning.length,
+                                  itemCount: _outlearning.length,
                                   physics: const NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
                                   itemBuilder: (context, index) => TextButton(
-                                    onPressed: () => {},
+                                    onPressed: () => {
+                                      launchUrl(
+                                        Uri.parse(
+                                          _outlearning[index].key.toString(),
+                                        ),
+                                      ),
+                                    },
                                     child: Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Text(
-                                        outlearning[index].title,
+                                        _outlearning[index].title,
                                         style: TextStyle(
                                             color: secondaryColour3,
                                             fontSize: MediaQuery.of(context)
@@ -273,11 +279,12 @@ class _HomeState extends State<Home> {
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
-                                        padding: const EdgeInsets.all(4.0),
-                                        child: Image.asset(
-                                          'lib/assets/images/skills/${index + 1}.png',
-                                          fit: BoxFit.contain,
-                                        )),
+                                      padding: const EdgeInsets.all(4.0),
+                                      child: Image.asset(
+                                        'lib/assets/images/skills/${index + 1}.png',
+                                        fit: BoxFit.contain,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -286,11 +293,6 @@ class _HomeState extends State<Home> {
                         ),
                       )
                     ],
-                  ),
-                  // scrollable footer
-                  const PreferredSize(
-                    preferredSize: Size.fromHeight(30),
-                    child: Footer(),
                   ),
                 ],
               ),
