@@ -151,41 +151,23 @@ class _Project2State extends State<Project2> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemBuilder: (context, index) => TextButton(
-                                      onPressed: () => {},
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 4.0),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 4.0),
-                                              child: Icon(
-                                                Icons.person_pin_rounded,
+                                    itemBuilder: (context, index) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 4.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            _project.mentors[index].toString(),
+                                            style: TextStyle(
                                                 color: secondaryColour3,
-                                                size: MediaQuery.of(context)
+                                                fontSize: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.02,
-                                              ),
-                                            ),
-                                            Text(
-                                              _project.mentors[index]
-                                                  .toString(),
-                                              style: TextStyle(
-                                                  color: secondaryColour3,
-                                                  fontSize:
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          0.02),
-                                            ),
-                                          ],
-                                        ),
+                                                    0.02),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -194,7 +176,7 @@ class _Project2State extends State<Project2> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   // Resources section

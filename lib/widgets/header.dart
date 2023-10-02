@@ -125,20 +125,26 @@ class _HeaderState extends State<Header> {
       // logo
       title: SizedBox(
         height: 50,
-        child: HoldDetector(
-          onHold: () {
-            GoRouter.of(context).go('/login');
-          }, // add proper gorouter change
-          holdTimeout: const Duration(
-            seconds: 5,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: HoldDetector(
+            onTap: () {
+              GoRouter.of(context).go('/');
+            },
+            onHold: () {
+              GoRouter.of(context).go('/login');
+            }, // add proper gorouter change
+            holdTimeout: const Duration(
+              seconds: 5,
+            ),
+            child: widget.homePage
+                ? SvgPicture.asset('lib/assets/images/logo.svg',
+                    fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
+                : Icon(
+                    Icons.home,
+                    color: mainColour2,
+                  ),
           ),
-          child: widget.homePage
-              ? SvgPicture.asset('lib/assets/images/logo.svg',
-                  fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
-              : Icon(
-                  Icons.home,
-                  color: mainColour2,
-                ),
         ),
       ),
     );

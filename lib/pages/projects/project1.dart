@@ -35,15 +35,15 @@ class _Project1State extends State<Project1> {
     // resources
     [
       Resources(
-        'Learning Plan',
-        'link',
-      ),
-      Resources(
-        'Proposal',
-        'link',
-      ),
-      Resources(
         'Research Document',
+        'https://schoolsnsw-my.sharepoint.com/:w:/r/personal/lucas_wonderley_education_nsw_gov_au/Documents/Research_report-T.2.1%20(1).docx?d=we92c0050f89b4569a476f3111fdabb08&csf=1&web=1&e=Jjofi3',
+      ),
+      Resources(
+        '',
+        'link',
+      ),
+      Resources(
+        '',
         'link',
       ),
       Resources(
@@ -153,41 +153,23 @@ class _Project1State extends State<Project1> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemBuilder: (context, index) => TextButton(
-                                      onPressed: () => {},
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 4.0),
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 4.0),
-                                              child: Icon(
-                                                Icons.person_pin_rounded,
+                                    itemBuilder: (context, index) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 4.0),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            _project.mentors[index].toString(),
+                                            style: TextStyle(
                                                 color: secondaryColour3,
-                                                size: MediaQuery.of(context)
+                                                fontSize: MediaQuery.of(context)
                                                         .size
                                                         .width *
-                                                    0.02,
-                                              ),
-                                            ),
-                                            Text(
-                                              _project.mentors[index]
-                                                  .toString(),
-                                              style: TextStyle(
-                                                  color: secondaryColour3,
-                                                  fontSize:
-                                                      MediaQuery.of(context)
-                                                              .size
-                                                              .width *
-                                                          0.02),
-                                            ),
-                                          ],
-                                        ),
+                                                    0.02),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
@@ -196,7 +178,7 @@ class _Project1State extends State<Project1> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   // Resources section

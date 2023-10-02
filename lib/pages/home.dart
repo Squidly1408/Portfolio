@@ -22,7 +22,7 @@ class Home extends StatefulWidget {
 final _projects = [
   Project(
     'Auslan Glove',
-    'auslan',
+    'auslan-glove',
   ),
   Project(
     'AAC app',
@@ -86,7 +86,11 @@ class _HomeState extends State<Home> {
 
                   // About me banner
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      launchUrl(
+                        Uri.parse('https://schoolsnsw-my.sharepoint.com/:w:/r/personal/lucas_wonderley_education_nsw_gov_au/Documents/Autobiography.docx?d=w1b7e1daeadf94a3499c9a2b8b7207ead&csf=1&web=1&e=lgRFWE'),
+                      );
+                    },
                     child: Padding(
                       padding: const EdgeInsets.only(
                         right: 8,
