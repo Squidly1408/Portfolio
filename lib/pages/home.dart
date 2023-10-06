@@ -42,7 +42,7 @@ final _projects = [
 // oulearning list
 final _outlearning = [
   Project(
-    'Newcastle University',
+    'UON',
     'https://www.newcastle.edu.au/',
   ),
   Project(
