@@ -88,7 +88,8 @@ class _HomeState extends State<Home> {
                   MaterialButton(
                     onPressed: () {
                       launchUrl(
-                        Uri.parse('https://schoolsnsw-my.sharepoint.com/:w:/r/personal/lucas_wonderley_education_nsw_gov_au/Documents/Autobiography.docx?d=w1b7e1daeadf94a3499c9a2b8b7207ead&csf=1&web=1&e=lgRFWE'),
+                        Uri.parse(
+                            'https://schoolsnsw-my.sharepoint.com/:w:/r/personal/lucas_wonderley_education_nsw_gov_au/Documents/Autobiography.docx?d=w1b7e1daeadf94a3499c9a2b8b7207ead&csf=1&web=1&e=lgRFWE'),
                       );
                     },
                     child: Padding(
@@ -197,7 +198,8 @@ class _HomeState extends State<Home> {
                                   itemCount: _outlearning.length,
                                   physics: const NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
-                                  itemBuilder: (context, index) => TextButton(
+                                  itemBuilder: (context, index) =>
+                                      TextButton.icon(
                                     onPressed: () => {
                                       launchUrl(
                                         Uri.parse(
@@ -205,7 +207,11 @@ class _HomeState extends State<Home> {
                                         ),
                                       ),
                                     },
-                                    child: Padding(
+                                    icon: Icon(
+                                      Icons.back_hand,
+                                      color: secondaryColour3,
+                                    ),
+                                    label: Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Text(
                                         _outlearning[index].title,

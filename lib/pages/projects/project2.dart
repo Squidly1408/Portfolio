@@ -213,14 +213,19 @@ class _Project2State extends State<Project2> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemBuilder: (context, index) => TextButton(
+                                    itemBuilder: (context, index) =>
+                                        TextButton.icon(
                                       onPressed: () => {
                                         launchUrl(
                                           Uri.parse(
                                               _project.resources[index].link),
                                         ),
                                       },
-                                      child: Padding(
+                                      icon: Icon(
+                                        Icons.back_hand,
+                                        color: secondaryColour3,
+                                      ),
+                                      label: Padding(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 4.0),
                                         child: TextButton(

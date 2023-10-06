@@ -30,6 +30,15 @@ Color secondaryColour = const Color(0xff171717);
 Color secondaryColour2 = const Color(0xffa6a6a6);
 Color secondaryColour3 = const Color(0xffffffff);
 
+// spare assest for switching to light mode
+Color secondaryColorS = secondaryColour;
+
+themeChange() {
+  secondaryColour3 = secondaryColorS;
+  secondaryColour = secondaryColour3;
+  secondaryColorS = secondaryColour;
+}
+
 // routing - by go router - need to make work
 final GoRouter _router = GoRouter(
   errorBuilder: (context, state) {

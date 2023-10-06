@@ -27,7 +27,7 @@ class _HeaderState extends State<Header> {
   Widget build(BuildContext context) {
     // app bar
     return AppBar(
-      shadowColor: const Color(0xff10d0d6),
+      shadowColor: mainColour,
       titleSpacing: 0,
       actions: [
         Row(
@@ -140,9 +140,12 @@ class _HeaderState extends State<Header> {
             child: widget.homePage
                 ? SvgPicture.asset('lib/assets/images/logo.svg',
                     fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
-                : Icon(
-                    Icons.home,
-                    color: mainColour2,
+                : Align(
+                    alignment: Alignment.centerLeft,
+                    child: Icon(
+                      Icons.home,
+                      color: mainColour2,
+                    ),
                   ),
           ),
         ),
