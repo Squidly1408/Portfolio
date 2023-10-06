@@ -254,7 +254,7 @@ class _HomeState extends State<Home> {
                               children: [
                                 // title
                                 Text(
-                                  'Skills:',
+                                  'Tech Skills:',
                                   style: TextStyle(
                                       color: mainColour,
                                       fontSize:
