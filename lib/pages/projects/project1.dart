@@ -215,28 +215,34 @@ class _Project1State extends State<Project1> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemBuilder: (context, index) => TextButton(
-                                      onPressed: () => {
-                                        launchUrl(
-                                          Uri.parse(
-                                              _project.resources[index].link),
-                                        ),
-                                      },
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 4.0),
-                                        child: TextButton(
-                                          onPressed: () {},
-                                          child: Text(
-                                            _project.resources[index].text
-                                                .toString(),
-                                            style: TextStyle(
-                                                color: secondaryColour3,
-                                                fontSize: MediaQuery.of(context)
-                                                        .size
-                                                        .width *
-                                                    0.02),
+                                    itemBuilder: (context, index) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 4.0),
+                                      child: TextButton.icon(
+                                        onPressed: () => {
+                                          launchUrl(
+                                            Uri.parse(
+                                                _project.resources[index].link),
                                           ),
+                                        },
+                                        // icon
+                                        icon: _project.resources[index].text
+                                                .isNotEmpty
+                                            ? Icon(
+                                                Icons.north_west_rounded,
+                                                color: secondaryColour3,
+                                              )
+                                            : const SizedBox(),
+                                        // text
+                                        label: Text(
+                                          _project.resources[index].text
+                                              .toString(),
+                                          style: TextStyle(
+                                              color: secondaryColour3,
+                                              fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.02),
                                         ),
                                       ),
                                     ),

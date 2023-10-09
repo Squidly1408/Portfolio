@@ -147,13 +147,22 @@ class _HomeState extends State<Home> {
                                   itemCount: _projects.length,
                                   physics: const NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
-                                  itemBuilder: (context, index) => TextButton(
+                                  itemBuilder: (context, index) =>
+                                      TextButton.icon(
                                     onPressed: () => {
                                       GoRouter.of(context).go(
                                         '/projects/${_projects[index].key}',
                                       ),
                                     },
-                                    child: Padding(
+                                    // icon
+                                    icon: _projects[index].title.isNotEmpty
+                                        ? Icon(
+                                            Icons.north_west_rounded,
+                                            color: secondaryColour3,
+                                          )
+                                        : const SizedBox(),
+                                    // text
+                                    label: Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Text(
                                         _projects[index].title,
@@ -212,10 +221,14 @@ class _HomeState extends State<Home> {
                                         ),
                                       ),
                                     },
-                                    icon: Icon(
-                                      Icons.back_hand,
-                                      color: secondaryColour3,
-                                    ),
+                                    // icon
+                                    icon: _outlearning[index].title.isNotEmpty
+                                        ? Icon(
+                                            Icons.north_west_rounded,
+                                            color: secondaryColour3,
+                                          )
+                                        : const SizedBox(),
+                                    // text
                                     label: Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Text(
