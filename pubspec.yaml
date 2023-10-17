@@ -1,5 +1,5 @@
-name: portfolio
-description: A new Flutter project.
+name: squidly1408
+description: A Portfolio about Lucas Newman.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -38,6 +38,16 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.8
   video_player: ^2.5.1
+  gantt_chart: ^0.3.0
+  firebase_core: ^2.15.0
+  cloud_firestore: ^4.8.4
+  firebase_database: ^10.2.5
+  animated_text_kit: ^4.2.2
+  flutter_svg: ^2.0.7
+  font_awesome_flutter: ^10.5.0
+  holding_gesture: ^1.2.0
+  go_router: ^11.1.2
+  percent_indicator: ^4.2.3
 
 dev_dependencies:
   flutter_test:
@@ -63,31 +73,63 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/assets/images/title_image.png
-    - lib/assets/images/projects/Raspberry_Pi_project/Raspberry_Pi_Logo.png
-    - lib/assets/images/projects/Raspberry_Pi_project/Raspberry_pi_Learning_plan.PNG
-    - lib/assets/images/projects/Raspberry_Pi_project/Raspberry_Pi_Proposal_1.png
-    - lib/assets/images/projects/Raspberry_Pi_project/RetroPi_Banner.png
-    - lib/assets/images/projects/Raspberry_Pi_project/Sense-hat.png
-    - lib/assets/images/projects/AAC_Project/AAC_Project_logo.png
-    - lib/assets/images/projects/AAC_Project/AAC_Project_Learning_Plan.PNG
-    - lib/assets/images/projects/AAC_Project/AAC_Project_Proposal.png
-    - lib/assets/images/projects/AAC_Project/AAC_Project_Flutter_logo.png
-    - lib/assets/images/projects/Glove_Project/Glove_Project_logo.png
-    - lib/assets/images/projects/Glove_Project/Glove_project_learning_plan.PNG
-    - lib/assets/images/projects/Glove_Project/Glove_project_porposal.png
-    - lib/assets/images/LTIs/Saphi/Saphi_logo.png
-    - lib/assets/images/LTIs/Saphi/Saphi_First_Project.PNG
-    - lib/assets/images/LTIs/Saphi/Saphi_Enclosure_Design1.jpg
-    - lib/assets/images/LTIs/Saphi/Saphi_Three_D_Printing.jpg
-    - lib/assets/images/LTIs/Saphi/saphi_photo.jpg
-    - lib/assets/images/LTIs/Clickk/Clickk_logo_banner.png
-    - lib/assets/images/LTIs/Clickk/how_to_do.jpg
-    - lib/assets/images/LTIs/Clickk/street_picture.PNG
-    - lib/assets/images/LTIs/Clickk/me_working_on_website.png
-    - lib/assets/images/LTIs/Clickk/front_final_structre.jpg
+
+    #logo
+    - lib/assets/images/logo.svg
+
+    #homepage banners
     - lib/assets/images/homepage/homepage_banner.png
-    - lib/assets/images/projects/Energy_Release_rate/Energy_release_Rate_Logo.png
+    - lib/assets/images/homepage/about_me_bannner.png
+    - lib/assets/images/homepage/projects_banner.png
+    - lib/assets/images/homepage/outlearning_banner.png
+    - lib/assets/images/homepage/skills_banner.png
+
+    #project pages banner
+    - lib/assets/images/projects/project_banner.png
+    - lib/assets/images/projects/mentors_banner.png
+    - lib/assets/images/projects/resources_banner.png
+    - lib/assets/images/projects/skills_banner.png
+
+    #skills
+    - lib/assets/images/skills/1.png
+    - lib/assets/images/skills/2.png
+    - lib/assets/images/skills/3.png
+    - lib/assets/images/skills/4.png
+    - lib/assets/images/skills/5.png
+    - lib/assets/images/skills/6.png
+    - lib/assets/images/skills/7.png
+    - lib/assets/images/skills/8.png
+    - lib/assets/images/skills/9.png
+    - lib/assets/images/skills/10.png
+    - lib/assets/images/skills/11.png
+    - lib/assets/images/skills/12.png
+
+    #project 1 skills
+    - lib/assets/images/project1/1.png
+    - lib/assets/images/project1/2.png
+    - lib/assets/images/project1/3.png
+    - lib/assets/images/project1/4.png
+    - lib/assets/images/project1/5.png
+    - lib/assets/images/project1/6.png
+    - lib/assets/images/project1/7.png
+    - lib/assets/images/project1/8.png
+    - lib/assets/images/project1/9.png
+
+    #project 2 skills
+    - lib/assets/images/project2/1.png
+    - lib/assets/images/project2/2.png
+    - lib/assets/images/project2/3.png
+    - lib/assets/images/project2/4.png
+    - lib/assets/images/project2/5.png
+
+    #replacement image
+    - lib/assets/images/replacement_image.png
+
+    #files
+    - lib/assets/files/Autobiography.docx
+       
+    
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -101,11 +143,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: SourceCodePro
+      fonts:
+        - asset: lib/assets/fonts/SourceCodePro-Medium.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "511183205245",
+    "project_id": "squidly1408",
+    "storage_bucket": "squidly1408.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511183205245:android:bd8e20326fc3493544d214",
+        "android_client_info": {
+          "package_name": "com.example.portfolio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511183205245-gmc5p2ltmgpmhup86qi8e6dcgrmul82g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC5QrLEsm8l5eco0MebOLO294mD7zS7bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511183205245-gmc5p2ltmgpmhup86qi8e6dcgrmul82g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
