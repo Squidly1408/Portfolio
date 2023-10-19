@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:go_router/go_router.dart';
-import 'dart:html' as html;
 
 // pages
 import '../main.dart';
@@ -55,13 +54,6 @@ final _outlearning = [
   ),
 ];
 
-// pdf downloader
-void downloadFile(String url) {
-  html.AnchorElement anchorElement = html.AnchorElement(href: url);
-  anchorElement.download = url;
-  anchorElement.click();
-}
-
 class _HomeState extends State<Home> {
   // scaffold
   @override
@@ -95,7 +87,10 @@ class _HomeState extends State<Home> {
                   // About me banner
                   MaterialButton(
                     onPressed: () {
-                      downloadFile('lib/assets/files/Autobiography.docx');
+                      launchUrl(
+                        Uri.parse(
+                            'https://schoolsnsw-my.sharepoint.com/:w:/g/personal/lucas_wonderley_education_nsw_gov_au/Ea4dfhv5rTRKmcmiuLcgfq0Bu-ko3im69mjnPKlipH7F6w?e=5erRgy'),
+                      );
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(
