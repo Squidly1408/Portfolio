@@ -110,6 +110,83 @@ class _HomeState extends State<Home> {
                     ),
                   ),
 
+                  // future pathway plan & senior project link buttons
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      height:
+                          MediaQuery.of(context).size.width > 500 ? 40 : 100,
+                      child: Flex(
+                        direction: MediaQuery.of(context).size.width > 500
+                            ? Axis.horizontal
+                            : Axis.vertical,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          // future pathway plan button
+                          TextButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStatePropertyAll(mainColour2),
+                              shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                            onPressed: () {
+                              launchUrl(
+                                Uri.parse(
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2qy0S5opNZevUniHm?e=jAAViR'),
+                              );
+                            },
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width < 500
+                                  ? (MediaQuery.of(context).size.width - 40)
+                                  : ((MediaQuery.of(context).size.width * 0.5) -
+                                      40),
+                              child: Center(
+                                child: Text(
+                                  'Future Pathway Plan',
+                                  style: TextStyle(color: secondaryColour),
+                                ),
+                              ),
+                            ),
+                          ),
+                          // senior project button
+                          TextButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStatePropertyAll(mainColour2),
+                              shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                            onPressed: () {
+                              launchUrl(
+                                Uri.parse(
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2qzFFTR6MHaNO9fUX?e=29ap45'),
+                              );
+                            },
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width < 500
+                                  ? (MediaQuery.of(context).size.width - 40)
+                                  : ((MediaQuery.of(context).size.width * 0.5) -
+                                      40),
+                              child: Center(
+                                child: Text(
+                                  'Senior Project',
+                                  style: TextStyle(color: secondaryColour),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
                   // projects / internships
 
                   // projects
