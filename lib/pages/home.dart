@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       launchUrl(
                         Uri.parse(
-                            'https://schoolsnsw-my.sharepoint.com/:w:/g/personal/lucas_wonderley_education_nsw_gov_au/Ea4dfhv5rTRKmcmiuLcgfq0Bu-ko3im69mjnPKlipH7F6w?e=5erRgy'),
+                            'https://1drv.ms/w/s!AlWOX6vBn5L2qzFFTR6MHaNO9fUX?e=29ap45'),
                       );
                     },
                     child: Padding(
