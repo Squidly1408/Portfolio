@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:go_router/go_router.dart';
-import 'dart:html' as html;
 
 // pages
 import '../main.dart';
@@ -55,13 +54,6 @@ final _outlearning = [
   ),
 ];
 
-// pdf downloader
-void downloadFile(String url) {
-  html.AnchorElement anchorElement = html.AnchorElement(href: url);
-  anchorElement.download = url;
-  anchorElement.click();
-}
-
 class _HomeState extends State<Home> {
   // scaffold
   @override
@@ -95,7 +87,10 @@ class _HomeState extends State<Home> {
                   // About me banner
                   MaterialButton(
                     onPressed: () {
-                      downloadFile('lib/assets/files/Autobiography.docx');
+                      launchUrl(
+                        Uri.parse(
+                            'https://1drv.ms/w/s!AlWOX6vBn5L2qzFFTR6MHaNO9fUX?e=29ap45'),
+                      );
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(
@@ -111,6 +106,82 @@ class _HomeState extends State<Home> {
                             fit: BoxFit.fitWidth,
                           ),
                         ),
+                      ),
+                    ),
+                  ),
+
+                  // future pathway plan & senior project link buttons
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      height:
+                          MediaQuery.of(context).size.width > 500 ? 40 : 100,
+                      child: Flex(
+                        direction: MediaQuery.of(context).size.width > 500
+                            ? Axis.horizontal
+                            : Axis.vertical,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          // future pathway plan button
+                          TextButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStatePropertyAll(mainColour2),
+                              shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                            onPressed: () {
+                              launchUrl(
+                                Uri.parse(
+                                    'https://1drv.ms/w/s!AlWOX6vBn5L2qy0S5opNZevUniHm?e=jAAViR'),
+                              );
+                            },
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width < 500
+                                  ? (MediaQuery.of(context).size.width - 40)
+                                  : ((MediaQuery.of(context).size.width * 0.5) -
+                                      40),
+                              child: Center(
+                                child: Text(
+                                  'Future Pathway Plan',
+                                  style: TextStyle(color: secondaryColour),
+                                ),
+                              ),
+                            ),
+                          ),
+                          // senior project button
+                          TextButton(
+                            style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStatePropertyAll(mainColour2),
+                              shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                              ),
+                            ),
+                            onPressed: () {
+                              GoRouter.of(context).go(
+                                '/projects/senior-project',
+                              );
+                            },
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width < 500
+                                  ? (MediaQuery.of(context).size.width - 40)
+                                  : ((MediaQuery.of(context).size.width * 0.5) -
+                                      40),
+                              child: Center(
+                                child: Text(
+                                  'Senior Project',
+                                  style: TextStyle(color: secondaryColour),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

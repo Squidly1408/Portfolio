@@ -125,8 +125,6 @@ flutter:
     #replacement image
     - lib/assets/images/replacement_image.png
 
-    #files
-    - lib/assets/files/Autobiography.docx
        
     
 

@@ -1,5 +1,6 @@
 // packages
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // pages
@@ -9,34 +10,32 @@ import '../../main.dart';
 import '../../models/projects.dart';
 import '../../widgets/header.dart';
 
-class Project1 extends StatefulWidget {
-  const Project1({
-    super.key,
-  });
+class SeniorProject extends StatefulWidget {
+  const SeniorProject({super.key});
 
   @override
-  State<Project1> createState() => _Project1State();
+  State<SeniorProject> createState() => _SeniorProjectState();
 }
 
-class _Project1State extends State<Project1> {
+class _SeniorProjectState extends State<SeniorProject> {
   // project data
   final _project = Projects(
     // title
-    'AAC App',
+    'Senior Project',
     // description
-    'Augmentative and Alternative Communication (AAC) app, this is an app designed for tablets and the like to turn their use into a AAC device designed to help facilitate and improve communication amungst people who require these devices to communicate. My AAC app stands out by focusing on edit-ablility and use-ability as well as allowing the users to customize the experience depending on their certain needs, for instance a person may need bigger buttons due to lack of motor function, or another person may require more buttons on one screen bc they might not have the motor function to swipe across to access extra buttons.',
+    'What is a senior project? Well a senior project is a project undertaken by senior students at Cooks Hill Campus, meant to demonstrate your abilities, skills, and knowledge on your chosen subject. My senior project consists of me completing multiple smaller projects which will all come together to make my portfolio, a portfolio that will help me get a place into the University of Newcastle, and help me get a job in the field of software development. My project range in the field of technology but they share one thing, they all have a use or purpose in the real world.',
     // mentors
     [
-      'Michelle Batey - Speech Patholigist at Early Start',
-      'Anne Spruce- SLSO at Cooks Hill Campus',
-      'Alex Newman-adam - Special Eduction Teacher',
-      'Jackie Newman-adam- Parent',
+      'Dr Jacqueline Bailey - Associate Professor UON',
+      'jamaice Sparks - Advisor at Cooks Hill Campus',
+      'Alex Newman-Adam - Parent',
+      'Jackie Newman-Adam - Parent',
     ],
     // resources
     [
       Resources(
-        'Research Document',
-        'https://schoolsnsw-my.sharepoint.com/:w:/r/personal/lucas_wonderley_education_nsw_gov_au/Documents/Research_report-T.2.1%20(1).docx?d=we92c0050f89b4569a476f3111fdabb08&csf=1&web=1&e=Jjofi3',
+        'Project Proposal',
+        'https://1drv.ms/w/s!AlWOX6vBn5L2qzNFjFLVgI2E7AbG?e=LlucWM',
       ),
       Resources(
         '',
@@ -52,6 +51,24 @@ class _Project1State extends State<Project1> {
       ),
     ],
   );
+  final _projectList = [
+    Resources(
+      'AAC Project',
+      'aac',
+    ),
+    Resources(
+      'Auslan Glove',
+      'auslan-glove',
+    ),
+    Resources(
+      '',
+      'project-3',
+    ),
+    Resources(
+      '',
+      'project-4',
+    ),
+  ];
 
   // scaffold
   @override
@@ -181,12 +198,84 @@ class _Project1State extends State<Project1> {
                       ),
                     ],
                   ),
-                  // Resources section
+                  // projects section
                   Stack(
                     children: [
                       // background image
                       Image.asset(
                         'lib/assets/images/projects/resources_banner.png',
+                        fit: BoxFit.fitWidth,
+                      ),
+                      Positioned.fill(
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.65,
+                            child: Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 8.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  // title
+                                  Text(
+                                    'Projects:',
+                                    style: TextStyle(
+                                        color: mainColour,
+                                        fontSize:
+                                            MediaQuery.of(context).size.width *
+                                                0.04),
+                                  ),
+                                  // outlearning list
+                                  ListView.builder(
+                                    itemCount: _project.mentors.length,
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    shrinkWrap: true,
+                                    itemBuilder: (context, index) => Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 4.0),
+                                      child: TextButton.icon(
+                                        onPressed: () => {
+                                          GoRouter.of(context).go(
+                                            '/projects/${_projectList[index].link.toString()}',
+                                          ),
+                                        },
+                                        // icon
+                                        icon:
+                                            _projectList[index].text.isNotEmpty
+                                                ? Icon(
+                                                    Icons.north_west_rounded,
+                                                    color: secondaryColour3,
+                                                  )
+                                                : const SizedBox(),
+                                        // text
+                                        label: Text(
+                                          _projectList[index].text.toString(),
+                                          style: TextStyle(
+                                              color: secondaryColour3,
+                                              fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.02),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  // Resources section
+                  Stack(
+                    children: [
+                      // background image
+                      Image.asset(
+                        'lib/assets/images/projects/mentors_banner.png',
                         fit: BoxFit.fitWidth,
                       ),
                       Positioned.fill(
@@ -307,14 +396,14 @@ class _Project1State extends State<Project1> {
                                                         1000
                                                     ? 0.05 / 0.05
                                                     : 0.00005 / 0.00005),
-                                    itemCount: 9,
+                                    itemCount: 12,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project1/${index + 1}.png',
+                                        'lib/assets/images/skills/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),

@@ -14,6 +14,7 @@ import 'pages/projects/project1.dart';
 import 'pages/projects/project2.dart';
 import 'pages/projects/project3.dart';
 import 'pages/projects/project4.dart';
+import 'pages/projects/senior_project.dart';
 
 void main() async {
   await Firebase.initializeApp(
@@ -74,11 +75,18 @@ final GoRouter _router = GoRouter(
               path: 'project-3',
               name: 'Squidly1408 - Projects - Project 3',
               builder: (context, state) => const Project3(),
+              redirect: (context, state) => 'prejects',
             ),
             GoRoute(
               path: 'project-4',
               name: 'Squidly1408 - Projects - Project 4',
               builder: (context, state) => const Project4(),
+              redirect: (context, state) => 'prejects',
+            ),
+            GoRoute(
+              path: 'senior-project',
+              name: 'Squidly1408 - Projects - Senior Project',
+              builder: (context, state) => const SeniorProject(),
             ),
           ],
         ),
