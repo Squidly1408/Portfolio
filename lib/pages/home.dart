@@ -164,9 +164,8 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                             onPressed: () {
-                              launchUrl(
-                                Uri.parse(
-                                    'https://1drv.ms/w/s!AlWOX6vBn5L2qzFFTR6MHaNO9fUX?e=29ap45'),
+                              GoRouter.of(context).go(
+                                '/projects/senior-project',
                               );
                             },
                             child: SizedBox(
