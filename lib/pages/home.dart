@@ -52,6 +52,10 @@ final _outlearning = [
     'Clickk',
     'https://clickk.com.au/',
   ),
+  Project(
+    'NuBots',
+    'https://nubook.nubots.net/',
+  ),
 ];
 
 class _HomeState extends State<Home> {
