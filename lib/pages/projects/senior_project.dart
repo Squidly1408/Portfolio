@@ -27,7 +27,7 @@ class _SeniorProjectState extends State<SeniorProject> {
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',
-      'jamaice Sparks - Advisor at Cooks Hill Campus',
+      'Jamaica Sparks - Advisor at Cooks Hill Campus',
       'Alex Newman-Adam - Parent',
       'Jackie Newman-Adam - Parent',
     ],
