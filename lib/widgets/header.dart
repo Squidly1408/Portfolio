@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:holding_gesture/holding_gesture.dart';
 import 'package:go_router/go_router.dart';
 
 // pages
@@ -125,23 +124,18 @@ class _HeaderState extends State<Header> {
       // logo
       title: SizedBox(
         height: 50,
+        width: 80,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: HoldDetector(
-            onTap: () {
+          child: MaterialButton(
+            onPressed: () {
               GoRouter.of(context).go('/');
             },
-            onHold: () {
-              GoRouter.of(context).go('/login');
-            }, // add proper gorouter change
-            holdTimeout: const Duration(
-              seconds: 5,
-            ),
             child: widget.homePage
                 ? SvgPicture.asset('lib/assets/images/logo.svg',
                     fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
                 : Align(
-                    alignment: Alignment.centerLeft,
+                    alignment: Alignment.center,
                     child: Icon(
                       Icons.home,
                       color: mainColour2,

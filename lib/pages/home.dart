@@ -290,11 +290,7 @@ class _HomeState extends State<Home> {
                                   itemBuilder: (context, index) =>
                                       TextButton.icon(
                                     onPressed: () => {
-                                      launchUrl(
-                                        Uri.parse(
-                                          _outlearning[index].key.toString(),
-                                        ),
-                                      ),
+                                      GoRouter.of(context).go('/outlearning')
                                     },
                                     // icon
                                     icon: _outlearning[index].title.isNotEmpty
