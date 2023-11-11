@@ -124,23 +124,30 @@ class _HeaderState extends State<Header> {
       // logo
       title: SizedBox(
         height: 50,
-        width: 80,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: MaterialButton(
-            onPressed: () {
-              GoRouter.of(context).go('/');
-            },
-            child: widget.homePage
-                ? SvgPicture.asset('lib/assets/images/logo.svg',
-                    fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
-                : Align(
-                    alignment: Alignment.center,
-                    child: Icon(
-                      Icons.home,
-                      color: mainColour2,
-                    ),
-                  ),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: MaterialButton(
+                splashColor: mainColour,
+                highlightColor: const Color(0x00000000),
+                onPressed: () {
+                  GoRouter.of(context).go('/');
+                },
+                child: widget.homePage
+                    ? SvgPicture.asset('lib/assets/images/logo.svg',
+                        fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
+                    : Align(
+                        alignment: Alignment.centerLeft,
+                        child: Icon(
+                          Icons.home,
+                          color: mainColour2,
+                        ),
+                      ),
+              ),
+            ),
           ),
         ),
       ),
