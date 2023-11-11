@@ -125,7 +125,14 @@ flutter:
     #replacement image
     - lib/assets/images/replacement_image.png
 
-       
+    #outlearning images
+    - lib/assets/images/outlearning/outlearning_banner.png
+    - lib/assets/images/outlearning/divider.png
+    - lib/assets/images/outlearning/saphi.png
+    - lib/assets/images/outlearning/uon.png
+    - lib/assets/images/outlearning/clickk.png
+    - lib/assets/images/outlearning/nubots.png
+    - lib/assets/images/outlearning/footer_image.png
     
 
   #   - images/a_dot_ham.jpeg
