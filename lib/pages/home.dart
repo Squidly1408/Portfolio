@@ -381,7 +381,7 @@ class _HomeState extends State<Home> {
                                       padding: const EdgeInsets.all(4.0),
                                       child: MaterialButton(
                                         onPressed: () {
-                                          if (index == 1) {
+                                          if (index == 0) {
                                             launchUrl(
                                               Uri.parse(
                                                 'https://roadmap.sh/flutter?s=6537200e035e8d1be72e6e44',
