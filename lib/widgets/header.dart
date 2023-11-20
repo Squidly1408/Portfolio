@@ -136,11 +136,6 @@ class _HeaderState extends State<Header> {
                 onLongPress: () {
                   setState(
                     () {
-                      TextEditingController entry1Controller =
-                          TextEditingController();
-                      TextEditingController entry2Controller =
-                          TextEditingController();
-
                       showDialog(
                         context: context,
                         builder: (context) {
