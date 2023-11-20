@@ -34,7 +34,7 @@ class _Project2State extends State<Project2> {
     [
       Resources(
         'changes documentation',
-        'link',
+        'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
       ),
       Resources(
         'research document',
