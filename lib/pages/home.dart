@@ -379,9 +379,20 @@ class _HomeState extends State<Home> {
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
-                                      child: Image.asset(
-                                        'lib/assets/images/skills/${index + 1}.png',
-                                        fit: BoxFit.contain,
+                                      child: MaterialButton(
+                                        onPressed: () {
+                                          if (index == 1) {
+                                            launchUrl(
+                                              Uri.parse(
+                                                'https://roadmap.sh/flutter?s=6537200e035e8d1be72e6e44',
+                                              ),
+                                            );
+                                          }
+                                        },
+                                        child: Image.asset(
+                                          'lib/assets/images/skills/${index + 1}.png',
+                                          fit: BoxFit.contain,
+                                        ),
                                       ),
                                     ),
                                   ),
