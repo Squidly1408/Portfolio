@@ -133,6 +133,68 @@ class _HeaderState extends State<Header> {
               child: MaterialButton(
                 splashColor: mainColour,
                 highlightColor: const Color(0x00000000),
+                onLongPress: () {
+                  setState(
+                    () {
+                      TextEditingController entry1Controller =
+                          TextEditingController();
+                      TextEditingController entry2Controller =
+                          TextEditingController();
+
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            // card
+                            child: Card(
+                              color: secondaryColour,
+                              child: Center(
+                                child: SingleChildScrollView(
+                                  child: Center(
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        // logo
+                                        SizedBox(
+                                          height: MediaQuery.of(context)
+                                                  .size
+                                                  .height *
+                                              0.3,
+                                          child: SvgPicture.asset(
+                                            'lib/assets/images/logo.svg',
+                                          ),
+                                        ),
+                                        // Text
+                                        Text(
+                                          'Thankyou!!!',
+                                          style: TextStyle(
+                                            color: secondaryColour3,
+                                            fontSize: 50,
+                                          ),
+                                        ),
+                                        Text(
+                                          '- Lucas P.E Newman',
+                                          style: TextStyle(
+                                            color: secondaryColour3,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    },
+                  );
+                },
                 onPressed: () {
                   GoRouter.of(context).go('/');
                 },
