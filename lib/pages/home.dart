@@ -372,15 +372,15 @@ class _HomeState extends State<Home> {
                                                             .width >
                                                         1000
                                                     ? 0.05 / 0.05
-                                                    : 0.00005 / 0.00005),
+                                                    : 0.005 / 0.005),
                                     itemCount: 12,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
-                                      child: MaterialButton(
-                                        onPressed: () {
+                                      child: Listener(
+                                        onPointerUp: (event) {
                                           if (index == 0) {
                                             launchUrl(
                                               Uri.parse(
