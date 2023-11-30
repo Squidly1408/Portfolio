@@ -213,34 +213,35 @@ class _Project4State extends State<Project4> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemBuilder: (context, index) => Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 4.0),
-                                      child: TextButton.icon(
-                                        onPressed: () => {
-                                          launchUrl(
-                                            Uri.parse(
-                                                _project.resources[index].link),
+                                    itemBuilder: (context, index) => Visibility(
+                                      visible: _project
+                                          .resources[index].text.isNotEmpty,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 4.0),
+                                        child: TextButton.icon(
+                                          onPressed: () => {
+                                            launchUrl(
+                                              Uri.parse(_project
+                                                  .resources[index].link),
+                                            ),
+                                          },
+                                          // icon
+                                          icon: Icon(
+                                            Icons.north_west_rounded,
+                                            color: secondaryColour3,
                                           ),
-                                        },
-                                        // icon
-                                        icon: _project.resources[index].text
-                                                .isNotEmpty
-                                            ? Icon(
-                                                Icons.north_west_rounded,
+                                          // text
+                                          label: Text(
+                                            _project.resources[index].text
+                                                .toString(),
+                                            style: TextStyle(
                                                 color: secondaryColour3,
-                                              )
-                                            : const SizedBox(),
-                                        // text
-                                        label: Text(
-                                          _project.resources[index].text
-                                              .toString(),
-                                          style: TextStyle(
-                                              color: secondaryColour3,
-                                              fontSize: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.02),
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.02),
+                                          ),
                                         ),
                                       ),
                                     ),

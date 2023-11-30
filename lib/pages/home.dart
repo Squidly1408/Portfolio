@@ -222,31 +222,31 @@ class _HomeState extends State<Home> {
                                   itemCount: _projects.length,
                                   physics: const NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
-                                  itemBuilder: (context, index) =>
-                                      TextButton.icon(
-                                    onPressed: () => {
-                                      GoRouter.of(context).go(
-                                        '/projects/${_projects[index].key}',
+                                  itemBuilder: (context, index) => Visibility(
+                                    visible: _projects[index].title.isNotEmpty,
+                                    child: TextButton.icon(
+                                      onPressed: () => {
+                                        GoRouter.of(context).go(
+                                          '/projects/${_projects[index].key}',
+                                        ),
+                                      },
+                                      // icon
+                                      icon: Icon(
+                                        Icons.north_west_rounded,
+                                        color: secondaryColour3,
                                       ),
-                                    },
-                                    // icon
-                                    icon: _projects[index].title.isNotEmpty
-                                        ? Icon(
-                                            Icons.north_west_rounded,
-                                            color: secondaryColour3,
-                                          )
-                                        : const SizedBox(),
-                                    // text
-                                    label: Padding(
-                                      padding: const EdgeInsets.all(4.0),
-                                      child: Text(
-                                        _projects[index].title,
-                                        style: TextStyle(
-                                            color: secondaryColour3,
-                                            fontSize: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.02),
+                                      // text
+                                      label: Padding(
+                                        padding: const EdgeInsets.all(4.0),
+                                        child: Text(
+                                          _projects[index].title,
+                                          style: TextStyle(
+                                              color: secondaryColour3,
+                                              fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.02),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -287,29 +287,30 @@ class _HomeState extends State<Home> {
                                   itemCount: _outlearning.length,
                                   physics: const NeverScrollableScrollPhysics(),
                                   shrinkWrap: true,
-                                  itemBuilder: (context, index) =>
-                                      TextButton.icon(
-                                    onPressed: () => {
-                                      GoRouter.of(context).go('/outlearning')
-                                    },
-                                    // icon
-                                    icon: _outlearning[index].title.isNotEmpty
-                                        ? Icon(
-                                            Icons.north_west_rounded,
-                                            color: secondaryColour3,
-                                          )
-                                        : const SizedBox(),
-                                    // text
-                                    label: Padding(
-                                      padding: const EdgeInsets.all(4.0),
-                                      child: Text(
-                                        _outlearning[index].title,
-                                        style: TextStyle(
-                                            color: secondaryColour3,
-                                            fontSize: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.02),
+                                  itemBuilder: (context, index) => Visibility(
+                                    visible:
+                                        _outlearning[index].title.isNotEmpty,
+                                    child: TextButton.icon(
+                                      onPressed: () => {
+                                        GoRouter.of(context).go('/outlearning')
+                                      },
+                                      // icon
+                                      icon: Icon(
+                                        Icons.north_west_rounded,
+                                        color: secondaryColour3,
+                                      ),
+                                      // text
+                                      label: Padding(
+                                        padding: const EdgeInsets.all(4.0),
+                                        child: Text(
+                                          _outlearning[index].title,
+                                          style: TextStyle(
+                                              color: secondaryColour3,
+                                              fontSize: MediaQuery.of(context)
+                                                      .size
+                                                      .width *
+                                                  0.02),
+                                        ),
                                       ),
                                     ),
                                   ),
