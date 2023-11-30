@@ -232,32 +232,33 @@ class _SeniorProjectState extends State<SeniorProject> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemBuilder: (context, index) => Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 4.0),
-                                      child: TextButton.icon(
-                                        onPressed: () => {
-                                          GoRouter.of(context).go(
-                                            '/projects/${_projectList[index].link.toString()}',
+                                    itemBuilder: (context, index) => Visibility(
+                                      visible:
+                                          _projectList[index].text.isNotEmpty,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 4.0),
+                                        child: TextButton.icon(
+                                          onPressed: () => {
+                                            GoRouter.of(context).go(
+                                              '/projects/${_projectList[index].link.toString()}',
+                                            ),
+                                          },
+                                          // icon
+                                          icon: Icon(
+                                            Icons.north_west_rounded,
+                                            color: secondaryColour3,
                                           ),
-                                        },
-                                        // icon
-                                        icon:
-                                            _projectList[index].text.isNotEmpty
-                                                ? Icon(
-                                                    Icons.north_west_rounded,
-                                                    color: secondaryColour3,
-                                                  )
-                                                : const SizedBox(),
-                                        // text
-                                        label: Text(
-                                          _projectList[index].text.toString(),
-                                          style: TextStyle(
-                                              color: secondaryColour3,
-                                              fontSize: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.02),
+                                          // text
+                                          label: Text(
+                                            _projectList[index].text.toString(),
+                                            style: TextStyle(
+                                                color: secondaryColour3,
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.02),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -304,34 +305,38 @@ class _SeniorProjectState extends State<SeniorProject> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemBuilder: (context, index) => Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 4.0),
-                                      child: TextButton.icon(
-                                        onPressed: () => {
-                                          launchUrl(
-                                            Uri.parse(
-                                                _project.resources[index].link),
-                                          ),
-                                        },
-                                        // icon
-                                        icon: _project.resources[index].text
-                                                .isNotEmpty
-                                            ? Icon(
-                                                Icons.north_west_rounded,
+                                    itemBuilder: (context, index) => Visibility(
+                                      visible: _project
+                                          .resources[index].text.isNotEmpty,
+                                      child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 4.0),
+                                        child: TextButton.icon(
+                                          onPressed: () => {
+                                            launchUrl(
+                                              Uri.parse(_project
+                                                  .resources[index].link),
+                                            ),
+                                          },
+                                          // icon
+                                          icon: _project.resources[index].text
+                                                  .isNotEmpty
+                                              ? Icon(
+                                                  Icons.north_west_rounded,
+                                                  color: secondaryColour3,
+                                                )
+                                              : const SizedBox(),
+                                          // text
+                                          label: Text(
+                                            _project.resources[index].text
+                                                .toString(),
+                                            style: TextStyle(
                                                 color: secondaryColour3,
-                                              )
-                                            : const SizedBox(),
-                                        // text
-                                        label: Text(
-                                          _project.resources[index].text
-                                              .toString(),
-                                          style: TextStyle(
-                                              color: secondaryColour3,
-                                              fontSize: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.02),
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.02),
+                                          ),
                                         ),
                                       ),
                                     ),

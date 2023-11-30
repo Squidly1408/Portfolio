@@ -231,12 +231,10 @@ class _HomeState extends State<Home> {
                                         ),
                                       },
                                       // icon
-                                      icon: _projects[index].title.isNotEmpty
-                                          ? Icon(
-                                              Icons.north_west_rounded,
-                                              color: secondaryColour3,
-                                            )
-                                          : const SizedBox(),
+                                      icon: Icon(
+                                        Icons.north_west_rounded,
+                                        color: secondaryColour3,
+                                      ),
                                       // text
                                       label: Padding(
                                         padding: const EdgeInsets.all(4.0),
@@ -297,12 +295,10 @@ class _HomeState extends State<Home> {
                                         GoRouter.of(context).go('/outlearning')
                                       },
                                       // icon
-                                      icon: _outlearning[index].title.isNotEmpty
-                                          ? Icon(
-                                              Icons.north_west_rounded,
-                                              color: secondaryColour3,
-                                            )
-                                          : const SizedBox(),
+                                      icon: Icon(
+                                        Icons.north_west_rounded,
+                                        color: secondaryColour3,
+                                      ),
                                       // text
                                       label: Padding(
                                         padding: const EdgeInsets.all(4.0),
