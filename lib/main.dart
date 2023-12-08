@@ -77,10 +77,9 @@ final GoRouter _router = GoRouter(
               builder: (context, state) => const Project2(),
             ),
             GoRoute(
-              path: 'project-3',
-              name: 'Squidly1408 - Projects - Project 3',
+              path: 'project-database',
+              name: 'Squidly1408 - Projects - Project Database',
               builder: (context, state) => const Project3(),
-              redirect: (context, state) => 'prejects',
             ),
             GoRoute(
               path: 'project-4',

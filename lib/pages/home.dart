@@ -21,19 +21,27 @@ class Home extends StatefulWidget {
 // projects data
 final _projects = [
   Project(
+    // Text
     'Auslan Glove',
+    // link
     'auslan-glove',
   ),
   Project(
+    // text
     'AAC app',
+    // link
     'aac',
   ),
   Project(
-    '',
-    'project-3',
+    // text
+    'Project Database',
+    // link
+    'project-database',
   ),
   Project(
+    // text
     '',
+    // link
     'project-4',
   ),
 ];
