@@ -20,33 +20,33 @@ class _Project3State extends State<Project3> {
   // project data
   final _project = Projects(
     // title
-    'Enter title',
+    'Project Database',
     // description
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique tellus. In dolor lorem, lobortis sed volutpat eget, placerat pulvinar elit. Vivamus ac vestibulum nunc, id ornare augue. Praesent porta nec neque non pretium. Pellentesque sit amet maximus mi. Duis accumsan non tortor maximus pretium. Cras nunc felis, fringilla et mi at, porttitor lobortis mauris. Aenean semper efficitur pretium. Proin neque ipsum, bibendum vel efficitur eget, accumsan non nulla.',
+    "A problem with Cooks Hill Campus’s way of learning, Big Picture Learning, is that the collaboration between student’s projects is minimal. Hence where my social media app comes in, It is designed to allow for collaboration and insight into other students project for teachers and students alike, tailored to Cooks Hill Campus as a school. This project is still going on.",
     // mentors
     [
-      'enter mentors name',
-      'enter mentors name',
-      'enter mentors name',
-      'enter mentors name',
+      'Jamaica Sparks - EX Advisor at Cooks Hill Campus',
+      'Margot Knowles - Advisor at Cooks Hill Campus',
+      '',
+      '',
     ],
     // resources
     [
       Resources(
-        'title',
-        'link',
+        'Github Project',
+        'https://github.com/Squidly1408/project_database',
       ),
       Resources(
-        'title',
-        'link',
+        '',
+        '',
       ),
       Resources(
-        'title',
-        'link',
+        '',
+        '',
       ),
       Resources(
-        'title',
-        'link',
+        '',
+        '',
       ),
     ],
   );
@@ -306,14 +306,14 @@ class _Project3State extends State<Project3> {
                                                         1000
                                                     ? 0.05 / 0.05
                                                     : 0.00005 / 0.00005),
-                                    itemCount: 0,
+                                    itemCount: 3,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project2/${index + 1}.png',
+                                        'lib/assets/images/project3/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),

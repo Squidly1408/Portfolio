@@ -22,7 +22,7 @@ class _Project2State extends State<Project2> {
     // title
     'Auslan Glove',
     // description
-    'A project to test and domonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases.',
+    'A project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases.',
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',
