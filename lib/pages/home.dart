@@ -22,27 +22,27 @@ class Home extends StatefulWidget {
 final _projects = [
   Project(
     // Text
-    'Auslan Glove',
+    'Flutter Projects',
     // link
-    'auslan-glove',
-  ),
-  Project(
-    // text
-    'AAC app',
-    // link
-    'aac',
-  ),
-  Project(
-    // text
-    'Project Database',
-    // link
-    'project-database',
+    'flutter-projects',
   ),
   Project(
     // text
     '',
     // link
-    'project-4',
+    'project-type2',
+  ),
+  Project(
+    // text
+    '',
+    // link
+    'project-type3',
+  ),
+  Project(
+    // text
+    '',
+    // link
+    'project-type4',
   ),
 ];
 
@@ -218,7 +218,7 @@ class _HomeState extends State<Home> {
                               children: [
                                 // title
                                 Text(
-                                  'Projects:',
+                                  'Types of Projects:',
                                   style: TextStyle(
                                       color: mainColour,
                                       fontSize:
@@ -235,7 +235,7 @@ class _HomeState extends State<Home> {
                                     child: TextButton.icon(
                                       onPressed: () => {
                                         GoRouter.of(context).go(
-                                          '/projects/${_projects[index].key}',
+                                          '/${_projects[index].key}',
                                         ),
                                       },
                                       // icon

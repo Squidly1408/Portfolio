@@ -84,11 +84,21 @@ flutter:
     - lib/assets/images/homepage/outlearning_banner.png
     - lib/assets/images/homepage/skills_banner.png
 
-    #project pages banner
+    #project pages banners
     - lib/assets/images/projects/project_banner.png
     - lib/assets/images/projects/mentors_banner.png
     - lib/assets/images/projects/resources_banner.png
     - lib/assets/images/projects/skills_banner.png
+
+    #project types banners
+    - lib/assets/images/project_types/project_type_banner.png
+    - lib/assets/images/project_types/left_middle.png
+    - lib/assets/images/project_types/right_middle.png
+    - lib/assets/images/project_types/left_bottom.png
+    - lib/assets/images/project_types/right_bottom.png
+
+    #project type 1
+    - lib/assets/images/project_type1/project_type_image.png
 
     #skills
     - lib/assets/images/skills/1.png
@@ -105,27 +115,27 @@ flutter:
     - lib/assets/images/skills/12.png
 
     #project 1 skills
-    - lib/assets/images/project1/1.png
-    - lib/assets/images/project1/2.png
-    - lib/assets/images/project1/3.png
-    - lib/assets/images/project1/4.png
-    - lib/assets/images/project1/5.png
-    - lib/assets/images/project1/6.png
-    - lib/assets/images/project1/7.png
-    - lib/assets/images/project1/8.png
-    - lib/assets/images/project1/9.png
+    - lib/assets/images/project_type1/project1/1.png
+    - lib/assets/images/project_type1/project1/2.png
+    - lib/assets/images/project_type1/project1/3.png
+    - lib/assets/images/project_type1/project1/4.png
+    - lib/assets/images/project_type1/project1/5.png
+    - lib/assets/images/project_type1/project1/6.png
+    - lib/assets/images/project_type1/project1/7.png
+    - lib/assets/images/project_type1/project1/8.png
+    - lib/assets/images/project_type1/project1/9.png
 
     #project 2 skills
-    - lib/assets/images/project2/1.png
-    - lib/assets/images/project2/2.png
-    - lib/assets/images/project2/3.png
-    - lib/assets/images/project2/4.png
-    - lib/assets/images/project2/5.png
+    - lib/assets/images/project_type1/project2/1.png
+    - lib/assets/images/project_type1/project2/2.png
+    - lib/assets/images/project_type1/project2/3.png
+    - lib/assets/images/project_type1/project2/4.png
+    - lib/assets/images/project_type1/project2/5.png
 
     #project 3 skills
-    - lib/assets/images/project3/1.png
-    - lib/assets/images/project3/2.png
-    - lib/assets/images/project3/3.png
+    - lib/assets/images/project_type1/project3/1.png
+    - lib/assets/images/project_type1/project3/2.png
+    - lib/assets/images/project_type1/project3/3.png
 
     #replacement image
     - lib/assets/images/replacement_image.png

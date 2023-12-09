@@ -3,49 +3,49 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // pages
-import '../../main.dart';
+import '../../../main.dart';
 
 // widgets
-import '../../models/projects.dart';
-import '../../widgets/header.dart';
+import '../../../models/projects.dart';
+import '../../../widgets/header.dart';
 
-class Project4 extends StatefulWidget {
-  const Project4({super.key});
+class Project2 extends StatefulWidget {
+  const Project2({super.key});
 
   @override
-  State<Project4> createState() => _Project4State();
+  State<Project2> createState() => _Project2State();
 }
 
-class _Project4State extends State<Project4> {
+class _Project2State extends State<Project2> {
   // project data
   final _project = Projects(
     // title
-    'Enter title',
+    'Auslan Glove',
     // description
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique tellus. In dolor lorem, lobortis sed volutpat eget, placerat pulvinar elit. Vivamus ac vestibulum nunc, id ornare augue. Praesent porta nec neque non pretium. Pellentesque sit amet maximus mi. Duis accumsan non tortor maximus pretium. Cras nunc felis, fringilla et mi at, porttitor lobortis mauris. Aenean semper efficitur pretium. Proin neque ipsum, bibendum vel efficitur eget, accumsan non nulla.',
+    'A project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases.',
     // mentors
     [
-      'enter mentors name',
-      'enter mentors name',
-      'enter mentors name',
-      'enter mentors name',
+      'Dr Jacqueline Bailey - Associate Professor UON',
+      'Kiwako Ito - Associate Professor UON ',
+      'Dr Alexandre Mendes - Senior Lecturer UON',
+      '',
     ],
     // resources
     [
       Resources(
-        'title',
+        'changes documentation',
+        'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
+      ),
+      Resources(
+        'research document',
         'link',
       ),
       Resources(
-        'title',
+        '',
         'link',
       ),
       Resources(
-        'title',
-        'link',
-      ),
-      Resources(
-        'title',
+        '',
         'link',
       ),
     ],
@@ -231,6 +231,7 @@ class _Project4State extends State<Project4> {
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
                                           ),
+
                                           // text
                                           label: Text(
                                             _project.resources[index].text
@@ -306,14 +307,14 @@ class _Project4State extends State<Project4> {
                                                         1000
                                                     ? 0.05 / 0.05
                                                     : 0.00005 / 0.00005),
-                                    itemCount: 0,
+                                    itemCount: 5,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project2/${index + 1}.png',
+                                        'lib/assets/images/project_type1/project2/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),
