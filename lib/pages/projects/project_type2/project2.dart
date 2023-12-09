@@ -3,50 +3,50 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // pages
-import '../../main.dart';
+import '../../../main.dart';
 
 // widgets
-import '../../models/projects.dart';
-import '../../widgets/header.dart';
+import '../../../models/projects.dart';
+import '../../../widgets/header.dart';
 
-class Project3 extends StatefulWidget {
-  const Project3({super.key});
+class Project2 extends StatefulWidget {
+  const Project2({super.key});
 
   @override
-  State<Project3> createState() => _Project3State();
+  State<Project2> createState() => _Project2State();
 }
 
-class _Project3State extends State<Project3> {
+class _Project2State extends State<Project2> {
   // project data
   final _project = Projects(
     // title
-    'Project Database',
+    'Auslan Glove',
     // description
-    "A problem with Cooks Hill Campus’s way of learning, Big Picture Learning, is that the collaboration between student’s projects is minimal. Hence where my social media app comes in, It is designed to allow for collaboration and insight into other students project for teachers and students alike, tailored to Cooks Hill Campus as a school. This project is still going on.",
+    'A project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases.',
     // mentors
     [
-      'Jamaica Sparks - EX Advisor at Cooks Hill Campus',
-      'Margot Knowles - Advisor at Cooks Hill Campus',
-      '',
+      'Dr Jacqueline Bailey - Associate Professor UON',
+      'Kiwako Ito - Associate Professor UON ',
+      'Dr Alexandre Mendes - Senior Lecturer UON',
       '',
     ],
     // resources
     [
       Resources(
-        'Github Project',
-        'https://github.com/Squidly1408/project_database',
+        'changes documentation',
+        'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
+      ),
+      Resources(
+        'research document',
+        'link',
       ),
       Resources(
         '',
-        '',
+        'link',
       ),
       Resources(
         '',
-        '',
-      ),
-      Resources(
-        '',
-        '',
+        'link',
       ),
     ],
   );
@@ -231,6 +231,7 @@ class _Project3State extends State<Project3> {
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
                                           ),
+
                                           // text
                                           label: Text(
                                             _project.resources[index].text
@@ -306,14 +307,14 @@ class _Project3State extends State<Project3> {
                                                         1000
                                                     ? 0.05 / 0.05
                                                     : 0.00005 / 0.00005),
-                                    itemCount: 3,
+                                    itemCount: 5,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project3/${index + 1}.png',
+                                        'lib/assets/images/project_type1/project2/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),

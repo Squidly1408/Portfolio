@@ -11,10 +11,11 @@ import 'firebase_options.dart';
 import 'pages/home.dart';
 import '../auth/login.dart';
 import '../pages/error_page.dart';
-import 'pages/projects/project1.dart';
-import 'pages/projects/project2.dart';
-import 'pages/projects/project3.dart';
-import 'pages/projects/project4.dart';
+import 'pages/projects/project_type1.dart';
+import 'pages/projects/project_type1/project1.dart';
+import 'pages/projects/project_type1/project2.dart';
+import 'pages/projects/project_type1/project3.dart';
+import 'pages/projects/project_type1/project4.dart';
 import 'pages/projects/senior_project.dart';
 
 void main() async {
@@ -63,8 +64,8 @@ final GoRouter _router = GoRouter(
           builder: (context, state) => const Outlearning(),
         ),
         GoRoute(
-          path: 'projects',
-          builder: (context, state) => const Home(),
+          path: 'flutter-projects',
+          builder: (context, state) => const ProjectType1(),
           routes: [
             GoRoute(
               path: 'aac',
@@ -87,6 +88,12 @@ final GoRouter _router = GoRouter(
               builder: (context, state) => const Project4(),
               redirect: (context, state) => 'prejects',
             ),
+          ],
+        ),
+        GoRoute(
+          path: 'projects',
+          builder: (context, state) => const Home(),
+          routes: [
             GoRoute(
               path: 'senior-project',
               name: 'Squidly1408 - Projects - Senior Project',

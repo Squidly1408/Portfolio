@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // pages
-import '../../main.dart';
+import '../../../main.dart';
 
 // widgets
-import '../../models/projects.dart';
-import '../../widgets/header.dart';
+import '../../../models/projects.dart';
+import '../../../widgets/header.dart';
 
 class Project1 extends StatefulWidget {
   const Project1({
@@ -317,7 +317,7 @@ class _Project1State extends State<Project1> {
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project1/${index + 1}.png',
+                                        'lib/assets/images/project_type1/project1/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),

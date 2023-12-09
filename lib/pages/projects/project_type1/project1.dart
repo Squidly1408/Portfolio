@@ -3,41 +3,44 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // pages
-import '../../main.dart';
+import '../../../main.dart';
 
 // widgets
-import '../../models/projects.dart';
-import '../../widgets/header.dart';
+import '../../../models/projects.dart';
+import '../../../widgets/header.dart';
 
-class Project2 extends StatefulWidget {
-  const Project2({super.key});
+class Project1 extends StatefulWidget {
+  const Project1({
+    super.key,
+  });
 
   @override
-  State<Project2> createState() => _Project2State();
+  State<Project1> createState() => _Project1State();
 }
 
-class _Project2State extends State<Project2> {
+class _Project1State extends State<Project1> {
   // project data
   final _project = Projects(
     // title
-    'Auslan Glove',
+    'AAC App',
     // description
-    'A project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases.',
+    'Augmentative and Alternative Communication (AAC) app, this is an app designed for tablets and the like to turn their use into a AAC device designed to help facilitate and improve communication amungst people who require these devices to communicate. My AAC app stands out by focusing on edit-ablility and use-ability as well as allowing the users to customize the experience depending on their certain needs, for instance a person may need bigger buttons due to lack of motor function, or another person may require more buttons on one screen bc they might not have the motor function to swipe across to access extra buttons.',
     // mentors
     [
-      'Dr Jacqueline Bailey - Associate Professor UON',
-      'Kiwako Ito - Associate Professor UON ',
-      'Dr Alexandre Mendes - Senior Lecturer UON',
-      '',
+      'Michelle Batey - Speech Patholigist at Early Start',
+      'Anne Spruce - SLSO at Cooks Hill Campus',
+      'Alex Newman-adam - Special Eduction Teacher',
+      'Jackie Newman-adam - Parent',
     ],
     // resources
     [
       Resources(
-        'changes documentation',
-        'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
+        'Research Document',
+        // TODO: add link to research document (AAC App)
+        '',
       ),
       Resources(
-        'research document',
+        '',
         'link',
       ),
       Resources(
@@ -307,14 +310,14 @@ class _Project2State extends State<Project2> {
                                                         1000
                                                     ? 0.05 / 0.05
                                                     : 0.00005 / 0.00005),
-                                    itemCount: 5,
+                                    itemCount: 9,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project2/${index + 1}.png',
+                                        'lib/assets/images/project_type1/project1/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),
