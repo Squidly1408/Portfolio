@@ -28,15 +28,16 @@ class _Project1State extends State<Project1> {
     // mentors
     [
       'Michelle Batey - Speech Patholigist at Early Start',
-      'Anne Spruce- SLSO at Cooks Hill Campus',
+      'Anne Spruce - SLSO at Cooks Hill Campus',
       'Alex Newman-adam - Special Eduction Teacher',
-      'Jackie Newman-adam- Parent',
+      'Jackie Newman-adam - Parent',
     ],
     // resources
     [
       Resources(
         'Research Document',
-        'https://schoolsnsw-my.sharepoint.com/:w:/r/personal/lucas_wonderley_education_nsw_gov_au/Documents/Research_report-T.2.1%20(1).docx?d=we92c0050f89b4569a476f3111fdabb08&csf=1&web=1&e=Jjofi3',
+        // TODO: add link to research document (AAC App)
+        '',
       ),
       Resources(
         '',
