@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:squidly1408/pages/outlearning.dart';
 
 // important docs
 import 'firebase_options.dart';
@@ -11,6 +10,8 @@ import 'firebase_options.dart';
 import 'pages/home.dart';
 import '../auth/login.dart';
 import '../pages/error_page.dart';
+import 'pages/other_projects.dart';
+import 'pages/outlearning.dart';
 import 'pages/projects/project1.dart';
 import 'pages/projects/project2.dart';
 import 'pages/projects/project3.dart';
@@ -61,6 +62,10 @@ final GoRouter _router = GoRouter(
         GoRoute(
           path: 'outlearning',
           builder: (context, state) => const Outlearning(),
+        ),
+        GoRoute(
+          path: 'other-projects',
+          builder: (context, state) => const OtherProjectsPage(),
         ),
         GoRoute(
           path: 'projects',

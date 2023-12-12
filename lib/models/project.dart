@@ -1,4 +1,4 @@
-// temparary project data model
+// project data model
 
 class Project {
   final String title;

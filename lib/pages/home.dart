@@ -259,6 +259,31 @@ class _HomeState extends State<Home> {
                                     ),
                                   ),
                                 ),
+                                TextButton.icon(
+                                  onPressed: () => {
+                                    GoRouter.of(context).go(
+                                      '/other-projects',
+                                    ),
+                                  },
+                                  // icon
+                                  icon: Icon(
+                                    Icons.north_west_rounded,
+                                    color: secondaryColour3,
+                                  ),
+                                  // text
+                                  label: Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      'Other Projects',
+                                      style: TextStyle(
+                                          color: secondaryColour3,
+                                          fontSize: MediaQuery.of(context)
+                                                  .size
+                                                  .width *
+                                              0.02),
+                                    ),
+                                  ),
+                                ),
                               ],
                             ),
                           ),
