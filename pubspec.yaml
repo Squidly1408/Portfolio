@@ -76,6 +76,7 @@ flutter:
 
     #logo
     - lib/assets/images/logo.svg
+    - lib/assets/images/logo_heart.svg
 
     #homepage banners
     - lib/assets/images/homepage/homepage_banner.png

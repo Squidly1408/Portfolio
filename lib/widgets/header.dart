@@ -22,6 +22,9 @@ class Header extends StatefulWidget {
 }
 
 class _HeaderState extends State<Header> {
+  var month = DateTime.now().month;
+  var day = DateTime.now().day;
+
   @override
   Widget build(BuildContext context) {
     // app bar
@@ -194,8 +197,12 @@ class _HeaderState extends State<Header> {
                   GoRouter.of(context).go('/');
                 },
                 child: widget.homePage
-                    ? SvgPicture.asset('lib/assets/images/logo.svg',
-                        fit: BoxFit.fitHeight, alignment: Alignment.centerLeft)
+                    ? SvgPicture.asset(
+                        month == 2 && day == 14
+                            ? 'lib/assets/images/logo_heart.svg'
+                            : 'lib/assets/images/logo.svg',
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.centerLeft)
                     : Align(
                         alignment: Alignment.centerLeft,
                         child: Icon(
