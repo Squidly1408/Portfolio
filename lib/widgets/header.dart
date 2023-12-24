@@ -133,83 +133,103 @@ class _HeaderState extends State<Header> {
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: FittedBox(
               fit: BoxFit.scaleDown,
-              child: MaterialButton(
-                splashColor: mainColour,
-                highlightColor: const Color(0x00000000),
-                onLongPress: () {
-                  setState(
-                    () {
-                      showDialog(
-                        context: context,
-                        builder: (context) {
-                          return Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            // card
-                            child: Card(
-                              color: secondaryColour,
-                              child: Center(
-                                child: SingleChildScrollView(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Visibility(
+                    visible: !widget.homePage,
+                    child: IconButton(
+                      onPressed: () {
+                        GoRouter.of(context).pop();
+                      },
+                      icon: Icon(Icons.arrow_back_ios_new,
+                          color: secondaryColour3, size: 20),
+                    ),
+                  ),
+                  MaterialButton(
+                    minWidth: 0,
+                    splashColor: mainColour,
+                    highlightColor: const Color(0x00000000),
+                    onLongPress: () {
+                      setState(
+                        () {
+                          showDialog(
+                            context: context,
+                            builder: (context) {
+                              return Padding(
+                                padding: const EdgeInsets.all(16.0),
+                                // card
+                                child: Card(
+                                  color: secondaryColour,
                                   child: Center(
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        // logo
-                                        SizedBox(
-                                          height: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
-                                              0.3,
-                                          child: SvgPicture.asset(
-                                            'lib/assets/images/logo.svg',
-                                          ),
+                                    child: SingleChildScrollView(
+                                      child: Center(
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            // logo
+                                            SizedBox(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height *
+                                                  0.3,
+                                              child: SvgPicture.asset(
+                                                'lib/assets/images/logo.svg',
+                                              ),
+                                            ),
+                                            // Text
+                                            Text(
+                                              'Thankyou!!!',
+                                              style: TextStyle(
+                                                color: secondaryColour3,
+                                                fontSize: 50,
+                                              ),
+                                            ),
+                                            Text(
+                                              '- Lucas P.E Newman',
+                                              style: TextStyle(
+                                                color: secondaryColour3,
+                                                fontSize: 20,
+                                              ),
+                                            ),
+                                          ],
                                         ),
-                                        // Text
-                                        Text(
-                                          'Thankyou!!!',
-                                          style: TextStyle(
-                                            color: secondaryColour3,
-                                            fontSize: 50,
-                                          ),
-                                        ),
-                                        Text(
-                                          '- Lucas P.E Newman',
-                                          style: TextStyle(
-                                            color: secondaryColour3,
-                                            fontSize: 20,
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ),
+                              );
+                            },
                           );
                         },
                       );
                     },
-                  );
-                },
-                onPressed: () {
-                  GoRouter.of(context).go('/');
-                },
-                child: widget.homePage
-                    ? SvgPicture.asset(
-                        month == 2 && day == 14
-                            ? 'lib/assets/images/logo_heart.svg'
-                            : 'lib/assets/images/logo.svg',
-                        fit: BoxFit.fitHeight,
-                        alignment: Alignment.centerLeft)
-                    : Align(
-                        alignment: Alignment.centerLeft,
-                        child: Icon(
-                          Icons.home,
-                          color: mainColour2,
-                        ),
-                      ),
+                    onPressed: () {
+                      GoRouter.of(context).go('/');
+                    },
+                    child: widget.homePage
+                        ? SvgPicture.asset(
+                            month == 2 && day == 14
+                                ? 'lib/assets/images/logo_heart.svg'
+                                : 'lib/assets/images/logo.svg',
+                            fit: BoxFit.fitHeight,
+                            alignment: Alignment.centerLeft)
+                        : Align(
+                            alignment: Alignment.centerLeft,
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.home,
+                                  color: mainColour2,
+                                ),
+                              ],
+                            ),
+                          ),
+                  ),
+                ],
               ),
             ),
           ),

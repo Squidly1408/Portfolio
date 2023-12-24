@@ -62,7 +62,7 @@ final GoRouter _router = GoRouter(
         ),
         GoRoute(
           path: 'projects',
-          builder: (context, state) => const Home(),
+          builder: (context, state) => const OtherProjectsPage(),
           routes: [
             GoRoute(
               path: 'aac',
