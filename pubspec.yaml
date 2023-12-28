@@ -39,7 +39,7 @@ dependencies:
   url_launcher: ^6.1.8
   video_player: ^2.5.1
   gantt_chart: ^0.3.0
-  firebase_core: ^2.15.0
+  firebase_core: ^2.24.2
   cloud_firestore: ^4.8.4
   firebase_database: ^10.2.5
   animated_text_kit: ^4.2.2
