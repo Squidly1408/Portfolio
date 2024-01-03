@@ -91,9 +91,17 @@ class _HomeState extends State<Home> {
                 children: [
                   // banner
                   // need to change it to video banner that has hidden controls
-                  Image.asset(
-                    'lib/assets/images/homepage/homepage_banner.png',
-                    fit: BoxFit.fitWidth,
+                  MaterialButton(
+                    onPressed: () {
+                      launchUrl(
+                        Uri.parse(
+                            'https://www.youtube.com/watch?v=yr4ZM_fUJUs'),
+                      );
+                    },
+                    child: Image.asset(
+                      'lib/assets/images/homepage/homepage_banner.png',
+                      fit: BoxFit.fitWidth,
+                    ),
                   ),
 
                   // About me banner
