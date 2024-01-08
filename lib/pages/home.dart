@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
                     onPressed: () {
                       launchUrl(
                         Uri.parse(
-                            'https://www.youtube.com/watch?v=yr4ZM_fUJUs'),
+                            'https://www.youtube.com/watch?v=qrxu_vw6MF4'),
                       );
                     },
                     child: Image.asset(
