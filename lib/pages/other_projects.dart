@@ -32,9 +32,9 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
       [
         Project(
           // Text
-          'Auslan Glove',
+          'SRG',
           // link
-          'auslan-glove',
+          'srg',
         ),
         Project(
           // text
@@ -47,6 +47,12 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
           'Project Database',
           // link
           'project-database',
+        ),
+        Project(
+          // Text
+          'Auslan Glove',
+          // link
+          'auslan-glove',
         ),
       ]);
 

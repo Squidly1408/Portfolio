@@ -22,7 +22,7 @@ class _Project2State extends State<Project2> {
     // title
     'Auslan Glove',
     // description
-    'A project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases.',
+    'This was a project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases. Currently this project is paused in favour of the SRG project.',
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',
@@ -37,7 +37,7 @@ class _Project2State extends State<Project2> {
         'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
       ),
       Resources(
-        'research document',
+        '',
         'link',
       ),
       Resources(

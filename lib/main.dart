@@ -12,6 +12,7 @@ import 'pages/projects/project1.dart';
 import 'pages/projects/project2.dart';
 import 'pages/projects/project3.dart';
 import 'pages/projects/project4.dart';
+import 'pages/projects/project5.dart';
 import 'pages/projects/senior_project.dart';
 
 void main() async {
@@ -80,10 +81,15 @@ final GoRouter _router = GoRouter(
               builder: (context, state) => const Project3(),
             ),
             GoRoute(
-              path: 'project-4',
-              name: 'Squidly1408 - Projects - Project 4',
+              path: 'srg',
+              name: 'Squidly1408 - Projects - Project SRG',
               builder: (context, state) => const Project4(),
-              redirect: (context, state) => 'prejects',
+            ),
+            GoRoute(
+              path: 'project-5',
+              name: 'Squidly1408 - Projects - Project 5',
+              builder: (context, state) => const Project5(),
+              redirect: (context, state) => 'projects',
             ),
             GoRoute(
               path: 'senior-project',

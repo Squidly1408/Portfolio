@@ -9,43 +9,43 @@ import '../../main.dart';
 import '../../models/projects.dart';
 import '../../widgets/header.dart';
 
-class Project4 extends StatefulWidget {
-  const Project4({super.key});
+class Project5 extends StatefulWidget {
+  const Project5({super.key});
 
   @override
-  State<Project4> createState() => _Project4State();
+  State<Project5> createState() => _Project5State();
 }
 
-class _Project4State extends State<Project4> {
+class _Project5State extends State<Project5> {
   // project data
   final _project = Projects(
     // title
-    'SRG',
+    'Enter title',
     // description
-    'The SRG project is a project that started out with the Auslan Glove project, where we were designing a glove that can translate Auslan to a verbal form of communication. The SRG project uses the skills and knowledge from the Auslan glove project into this one. This project is aimed to create a glove that can aid stroke recovery patients by allowing a better form of communication between them and others via the electronics in the glove.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique tellus. In dolor lorem, lobortis sed volutpat eget, placerat pulvinar elit. Vivamus ac vestibulum nunc, id ornare augue. Praesent porta nec neque non pretium. Pellentesque sit amet maximus mi. Duis accumsan non tortor maximus pretium. Cras nunc felis, fringilla et mi at, porttitor lobortis mauris. Aenean semper efficitur pretium. Proin neque ipsum, bibendum vel efficitur eget, accumsan non nulla.',
     // mentors
     [
-      'Dr Jacqueline Bailey - Associate Professor UON',
-      'Dr Alexandre Mendes - Senior Lecturer UON',
-      '',
-      '',
+      'enter mentors name',
+      'enter mentors name',
+      'enter mentors name',
+      'enter mentors name',
     ],
     // resources
     [
       Resources(
-        'changes documentation',
-        'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
-      ),
-      Resources(
-        '',
+        'title',
         'link',
       ),
       Resources(
-        '',
+        'title',
         'link',
       ),
       Resources(
-        '',
+        'title',
+        'link',
+      ),
+      Resources(
+        'title',
         'link',
       ),
     ],
@@ -306,14 +306,14 @@ class _Project4State extends State<Project4> {
                                                         1000
                                                     ? 0.05 / 0.05
                                                     : 0.00005 / 0.00005),
-                                    itemCount: 5,
+                                    itemCount: 0,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project4/${index + 1}.png',
+                                        'lib/assets/images/project2/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),

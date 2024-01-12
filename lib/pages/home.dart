@@ -22,9 +22,9 @@ class Home extends StatefulWidget {
 final _projects = [
   Project(
     // Text
-    'Auslan Glove',
+    'SRG',
     // link
-    'auslan-glove',
+    'srg',
   ),
   Project(
     // text
@@ -37,12 +37,6 @@ final _projects = [
     'Project Database',
     // link
     'project-database',
-  ),
-  Project(
-    // text
-    '',
-    // link
-    'project-4',
   ),
 ];
 

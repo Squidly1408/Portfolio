@@ -135,6 +135,13 @@ flutter:
     - lib/assets/images/project3/2.png
     - lib/assets/images/project3/3.png
 
+    #project 4 skills
+    - lib/assets/images/project4/1.png
+    - lib/assets/images/project4/2.png
+    - lib/assets/images/project4/3.png
+    - lib/assets/images/project4/4.png
+    - lib/assets/images/project4/5.png
+
     #replacement image
     - lib/assets/images/replacement_image.png
 
