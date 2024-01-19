@@ -86,6 +86,7 @@ class _HomeState extends State<Home> {
                   // banner
                   // need to change it to video banner that has hidden controls
                   MaterialButton(
+                    padding: const EdgeInsets.all(0),
                     onPressed: () {
                       launchUrl(
                         Uri.parse(
