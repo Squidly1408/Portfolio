@@ -10,7 +10,6 @@ import '../models/other_projects.dart';
 
 // widgets
 import '../../widgets/header.dart';
-import '../models/project.dart';
 
 class OtherProjectsPage extends StatefulWidget {
   const OtherProjectsPage({
@@ -32,27 +31,35 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
       'Where I keep a full catalog of each of my projects',
       // projects
       [
-        Project(
+        OtherProject(
           // Text
           'SRG',
+          // Description
+          'SRG or Stroke Recovery Glove, is a glove that is aimed to help provide communication to stroke recovery Patients.',
           // link
           'srg',
         ),
-        Project(
+        OtherProject(
           // text
           'AAC app',
+          // Description
+          'An AAC or Augmentative and Alternative Communication App is an app to help build or replace communication everyday.',
           // link
           'aac',
         ),
-        Project(
+        OtherProject(
           // text
           'Project Database',
+          // Description
+          'A database website that lets students and teachers collaborate together.',
           // link
           'project-database',
         ),
-        Project(
+        OtherProject(
           // Text
           'Auslan Glove',
+          // Description
+          'A glove that can understand Australian Sign-language and convert it to a verbal form of communication.',
           // link
           'auslan-glove',
         ),
@@ -156,28 +163,52 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
                                   child: Padding(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 4.0),
-                                    child: TextButton.icon(
+                                    child: TextButton(
                                       onPressed: () => {
                                         GoRouter.of(context).go(
                                           '/projects/${_project.projects[index].key}',
                                         ),
                                       },
-                                      // icon
-                                      icon: Icon(
-                                        Icons.north_west_rounded,
-                                        color: secondaryColour3,
-                                      ),
 
                                       // text
-                                      label: Text(
-                                        _project.projects[index].title
-                                            .toString(),
-                                        style: TextStyle(
-                                            color: secondaryColour3,
-                                            fontSize: MediaQuery.of(context)
-                                                    .size
-                                                    .width *
-                                                0.02),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.north_west_rounded,
+                                                color: secondaryColour3,
+                                                size: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.03,
+                                              ),
+                                              Text(
+                                                _project.projects[index].title
+                                                    .toString(),
+                                                style: TextStyle(
+                                                    color: secondaryColour3,
+                                                    fontSize:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width *
+                                                            0.02),
+                                              ),
+                                            ],
+                                          ),
+                                          Text(
+                                            _project.projects[index].description
+                                                .toString(),
+                                            style: TextStyle(
+                                                color: secondaryColour3,
+                                                fontSize: MediaQuery.of(context)
+                                                        .size
+                                                        .width *
+                                                    0.015),
+                                          ),
+                                        ],
                                       ),
                                     ),
                                   ),
