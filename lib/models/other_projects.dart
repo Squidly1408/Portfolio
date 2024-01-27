@@ -1,7 +1,6 @@
-// Models
-import 'package:squidly1408/models/project.dart';
-
 // project data model
+import 'project.dart';
+
 class OtherProjects {
   final String title;
   final String description;

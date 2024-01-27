@@ -7,10 +7,10 @@ import '../../main.dart';
 
 // models
 import '../models/other_projects.dart';
-import '../models/project.dart';
 
 // widgets
 import '../../widgets/header.dart';
+import '../models/project.dart';
 
 class OtherProjectsPage extends StatefulWidget {
   const OtherProjectsPage({
@@ -22,6 +22,8 @@ class OtherProjectsPage extends StatefulWidget {
 }
 
 class _OtherProjectsPageState extends State<OtherProjectsPage> {
+// TODO: Finsih sentences then add to page
+
   // project data
   final _project = OtherProjects(
       // title
