@@ -245,6 +245,9 @@ class _HomeState extends State<Home> {
                                       icon: Icon(
                                         Icons.north_west_rounded,
                                         color: secondaryColour3,
+                                        size:
+                                            MediaQuery.of(context).size.width *
+                                                0.03,
                                       ),
                                       // text
                                       label: Padding(
@@ -272,6 +275,8 @@ class _HomeState extends State<Home> {
                                   icon: Icon(
                                     Icons.north_west_rounded,
                                     color: secondaryColour3,
+                                    size: MediaQuery.of(context).size.width *
+                                        0.03,
                                   ),
                                   // text
                                   label: Padding(
@@ -334,6 +339,9 @@ class _HomeState extends State<Home> {
                                       icon: Icon(
                                         Icons.north_west_rounded,
                                         color: secondaryColour3,
+                                        size:
+                                            MediaQuery.of(context).size.width *
+                                                0.03,
                                       ),
                                       // text
                                       label: Padding(

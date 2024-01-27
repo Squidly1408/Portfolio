@@ -230,6 +230,10 @@ class _Project5State extends State<Project5> {
                                           icon: Icon(
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.03,
                                           ),
                                           // text
                                           label: Text(

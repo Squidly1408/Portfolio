@@ -233,6 +233,10 @@ class _Project1State extends State<Project1> {
                                           icon: Icon(
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.03,
                                           ),
 
                                           // text
