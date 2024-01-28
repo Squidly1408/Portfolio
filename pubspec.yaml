@@ -74,6 +74,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
 
+    # video
+    - lib/assets/videos/video.mov
+
     #logo
     - lib/assets/images/logo.svg
     - lib/assets/images/logo_heart.svg
