@@ -172,6 +172,8 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Row(
                                             children: [
