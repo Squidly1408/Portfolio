@@ -35,9 +35,8 @@ class _Project1State extends State<Project1> {
     // resources
     [
       Resources(
-        'Research Document',
-        // TODO: add link to research document (AAC App)
-        '',
+        'Research document',
+        'https://1drv.ms/w/s!AlWOX6vBn5L2s3N4rHNAJ-0PVygW?e=FoHHGq',
       ),
       Resources(
         '',

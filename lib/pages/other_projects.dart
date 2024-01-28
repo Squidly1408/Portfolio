@@ -21,8 +21,6 @@ class OtherProjectsPage extends StatefulWidget {
 }
 
 class _OtherProjectsPageState extends State<OtherProjectsPage> {
-// TODO: Finsih sentences then add to page
-
   // project data
   final _project = OtherProjects(
       // title
