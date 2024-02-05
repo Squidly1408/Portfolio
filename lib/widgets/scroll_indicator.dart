@@ -27,12 +27,12 @@ class _ScrollIndicatorState extends State<ScrollIndicator> {
         if (widget.scrollController!.position.atEdge) {
           setState(() {
             _icon = Icons.keyboard_arrow_up_rounded;
-            _atTop = false;
+            _atTop = true;
           });
         } else {
           setState(() {
             _icon = Icons.keyboard_arrow_down_rounded;
-            _atTop = true;
+            _atTop = false;
           });
         }
       }
@@ -54,7 +54,7 @@ class _ScrollIndicatorState extends State<ScrollIndicator> {
           setState(() {
             widget.scrollController!.animateTo(
                 widget.scrollController!.position.maxScrollExtent,
-                duration: const Duration(milliseconds: 5),
+                duration: const Duration(milliseconds: 25),
                 curve: Curves.decelerate);
           });
         }
