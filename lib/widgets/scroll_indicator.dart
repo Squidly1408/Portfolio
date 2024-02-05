@@ -40,7 +40,8 @@ class _ScrollIndicatorState extends State<ScrollIndicator> {
   @override
   Widget build(BuildContext context) {
     return Visibility(
-      visible: MediaQuery.of(context).size.width > 750,
+      visible: MediaQuery.of(context).size.width > 750 &&
+          widget.scrollController!.position.pixels != 0,
       child: FloatingActionButton.small(
         elevation: 5,
         onPressed: () {
