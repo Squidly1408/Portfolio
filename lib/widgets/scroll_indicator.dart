@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:squidly1408/main.dart';
 
@@ -41,26 +39,29 @@ class _ScrollIndicatorState extends State<ScrollIndicator> {
 
   @override
   Widget build(BuildContext context) {
-    return FloatingActionButton.small(
-      elevation: 5,
-      onPressed: () {
-        if (_atTop) {
-          setState(() {
-            widget.scrollController!.animateTo(0,
-                duration: const Duration(milliseconds: 5),
-                curve: Curves.decelerate);
-          });
-        } else {
-          setState(() {
-            widget.scrollController!.animateTo(
-                widget.scrollController!.position.maxScrollExtent,
-                duration: const Duration(milliseconds: 25),
-                curve: Curves.decelerate);
-          });
-        }
-      },
-      backgroundColor: mainColour2,
-      child: Icon(_icon, color: secondaryColour),
+    return Visibility(
+      visible: MediaQuery.of(context).size.width > 750,
+      child: FloatingActionButton.small(
+        elevation: 5,
+        onPressed: () {
+          if (_atTop) {
+            setState(() {
+              widget.scrollController!.animateTo(0,
+                  duration: const Duration(milliseconds: 5),
+                  curve: Curves.decelerate);
+            });
+          } else {
+            setState(() {
+              widget.scrollController!.animateTo(
+                  widget.scrollController!.position.maxScrollExtent,
+                  duration: const Duration(milliseconds: 25),
+                  curve: Curves.decelerate);
+            });
+          }
+        },
+        backgroundColor: mainColour2,
+        child: Icon(_icon, color: secondaryColour),
+      ),
     );
   }
 }
