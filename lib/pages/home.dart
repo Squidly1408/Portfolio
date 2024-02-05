@@ -1,5 +1,6 @@
 // packages
 import 'package:flutter/material.dart';
+import 'package:squidly1408/widgets/scroll_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:go_router/go_router.dart';
 import 'package:video_player/video_player.dart';
@@ -63,6 +64,7 @@ final _outlearning = [
 
 class _HomeState extends State<Home> {
   late VideoPlayerController _videoPlayerController;
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
@@ -78,6 +80,8 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton:
+          ScrollIndicator(scrollController: _scrollController),
       backgroundColor: secondaryColour, // black
 
       // added header which acts as a links / navigation to home / logo
@@ -92,6 +96,7 @@ class _HomeState extends State<Home> {
       // need to insert links to pages / sources and all
       body: SizedBox(
         child: SingleChildScrollView(
+          controller: _scrollController,
           child: Column(
             children: [
               // banner
