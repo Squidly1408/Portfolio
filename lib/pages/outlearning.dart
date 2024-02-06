@@ -39,6 +39,7 @@ class _OutlearningState extends State<Outlearning> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description

@@ -87,6 +87,7 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description

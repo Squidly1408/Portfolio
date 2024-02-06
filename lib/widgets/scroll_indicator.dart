@@ -12,11 +12,12 @@ class _ScrollIndicatorState extends State<ScrollIndicator> {
   IconData _icon = Icons.keyboard_arrow_down_rounded;
   bool _atTop = true;
 
+  @override
   void initState() {
     super.initState();
     widget.scrollController!.addListener(() {
-      bool _istop = widget.scrollController!.position.pixels == 0;
-      if (_istop) {
+      bool istop = widget.scrollController!.position.pixels == 0;
+      if (istop) {
         setState(() {
           _icon = Icons.keyboard_arrow_down_rounded;
           _atTop = true;

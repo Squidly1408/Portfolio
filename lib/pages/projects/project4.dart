@@ -74,6 +74,7 @@ class _Project4State extends State<Project4> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description

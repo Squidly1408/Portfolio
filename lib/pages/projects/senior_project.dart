@@ -93,6 +93,7 @@ class _SeniorProjectState extends State<SeniorProject> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description
