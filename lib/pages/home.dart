@@ -40,6 +40,12 @@ final _projects = [
     // link
     'project-database',
   ),
+  Project(
+    // text
+    'Other Project',
+    // link
+    '',
+  ),
 ];
 
 // oulearning list
@@ -65,6 +71,7 @@ final _outlearning = [
 class _HomeState extends State<Home> {
   late VideoPlayerController _videoPlayerController;
   final ScrollController _scrollController = ScrollController();
+  bool isLoaded = false;
 
   @override
   void initState() {
@@ -72,7 +79,9 @@ class _HomeState extends State<Home> {
     _videoPlayerController =
         VideoPlayerController.asset('lib/assets/videos/video.mov')
           ..initialize().then((value) {
-            setState(() {});
+            setState(() {
+              isLoaded = true;
+            });
           });
   }
 
@@ -107,8 +116,30 @@ class _HomeState extends State<Home> {
                       : _videoPlayerController.play();
                 },
                 child: AspectRatio(
-                    aspectRatio: 2 / 1,
-                    child: VideoPlayer(_videoPlayerController)),
+                  aspectRatio: 2 / 1,
+                  child: isLoaded
+                      ? VideoPlayer(_videoPlayerController)
+                      : Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
+                              child: SizedBox(
+                                height: 70,
+                                width: 70,
+                                child: CircularProgressIndicator(
+                                  color: mainColour,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              'Loading',
+                              style: TextStyle(
+                                color: secondaryColour3,
+                              ),
+                            ),
+                          ],
+                        ),
+                ),
               ),
               // need to change it to video banner that has hidden controls
 
@@ -244,13 +275,26 @@ class _HomeState extends State<Home> {
                               itemCount: _projects.length,
                               physics: const NeverScrollableScrollPhysics(),
                               shrinkWrap: true,
+                              padding: EdgeInsets.all(0),
+                              itemExtent:
+                                  MediaQuery.of(context).size.width * 0.05,
                               itemBuilder: (context, index) => Visibility(
                                 visible: _projects[index].title.isNotEmpty,
                                 child: TextButton.icon(
                                   onPressed: () => {
-                                    GoRouter.of(context).go(
-                                      '/projects/${_projects[index].key}',
-                                    ),
+                                    if (_projects[index].title ==
+                                        'Other Project')
+                                      {
+                                        GoRouter.of(context).go(
+                                          '/other-projects',
+                                        ),
+                                      }
+                                    else
+                                      {
+                                        GoRouter.of(context).go(
+                                          '/projects/${_projects[index].key}',
+                                        ),
+                                      }
                                   },
                                   // icon
                                   icon: Icon(
@@ -261,7 +305,7 @@ class _HomeState extends State<Home> {
                                   ),
                                   // text
                                   label: Padding(
-                                    padding: const EdgeInsets.all(4.0),
+                                    padding: const EdgeInsets.all(2.5),
                                     child: Text(
                                       _projects[index].title,
                                       style: TextStyle(
@@ -272,31 +316,6 @@ class _HomeState extends State<Home> {
                                               0.02),
                                     ),
                                   ),
-                                ),
-                              ),
-                            ),
-                            TextButton.icon(
-                              onPressed: () => {
-                                GoRouter.of(context).go(
-                                  '/other-projects',
-                                ),
-                              },
-                              // icon
-                              icon: Icon(
-                                Icons.north_west_rounded,
-                                color: secondaryColour3,
-                                size: MediaQuery.of(context).size.width * 0.03,
-                              ),
-                              // text
-                              label: Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Text(
-                                  'Other Projects',
-                                  style: TextStyle(
-                                      color: secondaryColour3,
-                                      fontSize:
-                                          MediaQuery.of(context).size.width *
-                                              0.02),
                                 ),
                               ),
                             ),
@@ -335,6 +354,8 @@ class _HomeState extends State<Home> {
                               itemCount: _outlearning.length,
                               physics: const NeverScrollableScrollPhysics(),
                               shrinkWrap: true,
+                              itemExtent:
+                                  MediaQuery.of(context).size.width * 0.05,
                               itemBuilder: (context, index) => Visibility(
                                 visible: _outlearning[index].title.isNotEmpty,
                                 child: TextButton.icon(
