@@ -8,6 +8,7 @@ import '../../main.dart';
 // widgets
 import '../../models/projects.dart';
 import '../../widgets/header.dart';
+import '../../widgets/scroll_indicator.dart';
 
 class Project1 extends StatefulWidget {
   const Project1({
@@ -19,6 +20,8 @@ class Project1 extends StatefulWidget {
 }
 
 class _Project1State extends State<Project1> {
+  final ScrollController _scrollController = ScrollController();
+
   // project data
   final _project = Projects(
     // title
@@ -35,9 +38,8 @@ class _Project1State extends State<Project1> {
     // resources
     [
       Resources(
-        'Research Document',
-        // TODO: add link to research document (AAC App)
-        '',
+        'Research document',
+        'https://1drv.ms/w/s!AlWOX6vBn5L2s3N4rHNAJ-0PVygW?e=FoHHGq',
       ),
       Resources(
         '',
@@ -60,6 +62,8 @@ class _Project1State extends State<Project1> {
     return Scaffold(
       backgroundColor: secondaryColour, // black
 
+      floatingActionButton:
+          ScrollIndicator(scrollController: _scrollController),
       // added header which acts as a links / navigation to home / logo
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
@@ -74,6 +78,7 @@ class _Project1State extends State<Project1> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description
@@ -233,6 +238,10 @@ class _Project1State extends State<Project1> {
                                           icon: Icon(
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.03,
                                           ),
 
                                           // text

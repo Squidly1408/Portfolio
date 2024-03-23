@@ -9,6 +9,7 @@ import '../../main.dart';
 // widgets
 import '../../models/projects.dart';
 import '../../widgets/header.dart';
+import '../../widgets/scroll_indicator.dart';
 
 class SeniorProject extends StatefulWidget {
   const SeniorProject({super.key});
@@ -18,6 +19,7 @@ class SeniorProject extends StatefulWidget {
 }
 
 class _SeniorProjectState extends State<SeniorProject> {
+  final ScrollController _scrollController = ScrollController();
   // project data
   final _project = Projects(
     // title
@@ -75,7 +77,8 @@ class _SeniorProjectState extends State<SeniorProject> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: secondaryColour, // black
-
+      floatingActionButton:
+          ScrollIndicator(scrollController: _scrollController),
       // added header which acts as a links / navigation to home / logo
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
@@ -90,6 +93,7 @@ class _SeniorProjectState extends State<SeniorProject> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description

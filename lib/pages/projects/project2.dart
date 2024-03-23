@@ -8,6 +8,7 @@ import '../../main.dart';
 // widgets
 import '../../models/projects.dart';
 import '../../widgets/header.dart';
+import '../../widgets/scroll_indicator.dart';
 
 class Project2 extends StatefulWidget {
   const Project2({super.key});
@@ -17,12 +18,14 @@ class Project2 extends StatefulWidget {
 }
 
 class _Project2State extends State<Project2> {
+  final ScrollController _scrollController = ScrollController();
+
   // project data
   final _project = Projects(
     // title
     'Auslan Glove',
     // description
-    'A project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases.',
+    'This was a project to test and demonstrate my skills, this project was aimed to create a glove that can understand basic Australian sign-language (Auslan). This project has had many variations but with each new variation we change and improve the glove / electronics / software / cases. Currently this project is paused in favour of the SRG project.',
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',
@@ -37,7 +40,7 @@ class _Project2State extends State<Project2> {
         'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
       ),
       Resources(
-        'research document',
+        '',
         'link',
       ),
       Resources(
@@ -56,7 +59,8 @@ class _Project2State extends State<Project2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: secondaryColour, // black
-
+      floatingActionButton:
+          ScrollIndicator(scrollController: _scrollController),
       // added header which acts as a links / navigation to home / logo
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
@@ -71,6 +75,7 @@ class _Project2State extends State<Project2> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description
@@ -230,6 +235,10 @@ class _Project2State extends State<Project2> {
                                           icon: Icon(
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.03,
                                           ),
 
                                           // text

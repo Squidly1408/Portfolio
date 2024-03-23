@@ -7,6 +7,7 @@ import '../main.dart';
 
 // widgets
 import '../widgets/header.dart';
+import '../widgets/scroll_indicator.dart';
 
 class Outlearning extends StatefulWidget {
   const Outlearning({super.key});
@@ -16,12 +17,14 @@ class Outlearning extends StatefulWidget {
 }
 
 class _OutlearningState extends State<Outlearning> {
+  final ScrollController _scrollController = ScrollController();
   // scaffold
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: secondaryColour, // black
-
+      floatingActionButton:
+          ScrollIndicator(scrollController: _scrollController),
       // added header which acts as a links / navigation to home / logo
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
@@ -36,6 +39,7 @@ class _OutlearningState extends State<Outlearning> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description

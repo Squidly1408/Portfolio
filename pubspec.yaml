@@ -74,8 +74,12 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
 
+    # video
+    - lib/assets/videos/video.mov
+
     #logo
     - lib/assets/images/logo.svg
+    - lib/assets/images/logo_heart.svg
 
     #homepage banners
     - lib/assets/images/homepage/homepage_banner.png
@@ -89,6 +93,13 @@ flutter:
     - lib/assets/images/projects/mentors_banner.png
     - lib/assets/images/projects/resources_banner.png
     - lib/assets/images/projects/skills_banner.png
+
+    #other projects banners
+    - lib/assets/images/other_projects/projects_banner.png
+    - lib/assets/images/other_projects/left_middle.png
+    - lib/assets/images/other_projects/right_middle.png
+    - lib/assets/images/other_projects/left_bottom.png
+    - lib/assets/images/other_projects/right_bottom.png
 
     #skills
     - lib/assets/images/skills/1.png
@@ -126,6 +137,13 @@ flutter:
     - lib/assets/images/project3/1.png
     - lib/assets/images/project3/2.png
     - lib/assets/images/project3/3.png
+
+    #project 4 skills
+    - lib/assets/images/project4/1.png
+    - lib/assets/images/project4/2.png
+    - lib/assets/images/project4/3.png
+    - lib/assets/images/project4/4.png
+    - lib/assets/images/project4/5.png
 
     #replacement image
     - lib/assets/images/replacement_image.png

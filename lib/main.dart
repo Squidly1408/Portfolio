@@ -1,26 +1,21 @@
 // packages
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:squidly1408/pages/outlearning.dart';
-
-// important docs
-import 'firebase_options.dart';
 
 // pages / models
 import 'pages/home.dart';
 import '../auth/login.dart';
 import '../pages/error_page.dart';
+import 'pages/other_projects.dart';
+import 'pages/outlearning.dart';
 import 'pages/projects/project1.dart';
 import 'pages/projects/project2.dart';
 import 'pages/projects/project3.dart';
 import 'pages/projects/project4.dart';
+import 'pages/projects/project5.dart';
 import 'pages/projects/senior_project.dart';
 
 void main() async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
   runApp(const MyApp());
 }
 
@@ -63,8 +58,12 @@ final GoRouter _router = GoRouter(
           builder: (context, state) => const Outlearning(),
         ),
         GoRoute(
+          path: 'other-projects',
+          builder: (context, state) => const OtherProjectsPage(),
+        ),
+        GoRoute(
           path: 'projects',
-          builder: (context, state) => const Home(),
+          builder: (context, state) => const OtherProjectsPage(),
           routes: [
             GoRoute(
               path: 'aac',
@@ -82,10 +81,15 @@ final GoRouter _router = GoRouter(
               builder: (context, state) => const Project3(),
             ),
             GoRoute(
-              path: 'project-4',
-              name: 'Squidly1408 - Projects - Project 4',
+              path: 'srg',
+              name: 'Squidly1408 - Projects - Project SRG',
               builder: (context, state) => const Project4(),
-              redirect: (context, state) => 'prejects',
+            ),
+            GoRoute(
+              path: 'project-5',
+              name: 'Squidly1408 - Projects - Project 5',
+              builder: (context, state) => const Project5(),
+              redirect: (context, state) => 'projects',
             ),
             GoRoute(
               path: 'senior-project',

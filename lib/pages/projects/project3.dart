@@ -8,6 +8,7 @@ import '../../main.dart';
 // widgets
 import '../../models/projects.dart';
 import '../../widgets/header.dart';
+import '../../widgets/scroll_indicator.dart';
 
 class Project3 extends StatefulWidget {
   const Project3({super.key});
@@ -17,10 +18,11 @@ class Project3 extends StatefulWidget {
 }
 
 class _Project3State extends State<Project3> {
+  final ScrollController _scrollController = ScrollController();
   // project data
   final _project = Projects(
     // title
-    'Project Database',
+    'Luvium - CHC',
     // description
     "A problem with Cooks Hill Campus’s way of learning, Big Picture Learning, is that the collaboration between student’s projects is minimal. Hence where my social media app comes in, It is designed to allow for collaboration and insight into other students project for teachers and students alike, tailored to Cooks Hill Campus as a school. This project is still going on.",
     // mentors
@@ -34,11 +36,11 @@ class _Project3State extends State<Project3> {
     [
       Resources(
         'Github Project',
-        'https://github.com/Squidly1408/project_database',
+        'https://github.com/Squidly1408/fic',
       ),
       Resources(
-        '',
-        '',
+        'Website',
+        'https://luvium-chc.github.io/',
       ),
       Resources(
         '',
@@ -56,7 +58,8 @@ class _Project3State extends State<Project3> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: secondaryColour, // black
-
+      floatingActionButton:
+          ScrollIndicator(scrollController: _scrollController),
       // added header which acts as a links / navigation to home / logo
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
@@ -71,6 +74,7 @@ class _Project3State extends State<Project3> {
         child: Stack(
           children: [
             SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   // banner / title / description
@@ -230,6 +234,10 @@ class _Project3State extends State<Project3> {
                                           icon: Icon(
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.03,
                                           ),
                                           // text
                                           label: Text(

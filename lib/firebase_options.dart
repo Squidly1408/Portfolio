@@ -21,11 +21,20 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        return android;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.iOS:
-        return ios;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for macos - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -50,33 +59,5 @@ class DefaultFirebaseOptions {
     projectId: 'squidly1408',
     authDomain: 'squidly1408.firebaseapp.com',
     storageBucket: 'squidly1408.appspot.com',
-  );
-
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAC5QrLEsm8l5eco0MebOLO294mD7zS7bg',
-    appId: '1:511183205245:android:bd8e20326fc3493544d214',
-    messagingSenderId: '511183205245',
-    projectId: 'squidly1408',
-    storageBucket: 'squidly1408.appspot.com',
-  );
-
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAILAojIGlU1PQZpO52ngr66LT18-PcK2Y',
-    appId: '1:511183205245:ios:30007d57139a509b44d214',
-    messagingSenderId: '511183205245',
-    projectId: 'squidly1408',
-    storageBucket: 'squidly1408.appspot.com',
-    iosClientId: '511183205245-0cq74ultbn0mnavtm7nino9gi83kdqvd.apps.googleusercontent.com',
-    iosBundleId: 'com.example.portfolio',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAILAojIGlU1PQZpO52ngr66LT18-PcK2Y',
-    appId: '1:511183205245:ios:30007d57139a509b44d214',
-    messagingSenderId: '511183205245',
-    projectId: 'squidly1408',
-    storageBucket: 'squidly1408.appspot.com',
-    iosClientId: '511183205245-0cq74ultbn0mnavtm7nino9gi83kdqvd.apps.googleusercontent.com',
-    iosBundleId: 'com.example.portfolio',
   );
 }
