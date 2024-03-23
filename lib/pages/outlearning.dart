@@ -199,6 +199,35 @@ class _OutlearningState extends State<Outlearning> {
                   ),
                   // divider
                   Image.asset(
+                    'lib/assets/images/outlearning/divider.png',
+                    fit: BoxFit.fitWidth,
+                  ),
+                  // outlearning banner
+                  MaterialButton(
+                    onPressed: () {
+                      launchUrl(
+                        Uri.parse('https://redcrowdigital.com.au/'),
+                      );
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        right: 8,
+                        top: 8,
+                      ),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            'lib/assets/images/outlearning/redcrow.png',
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  // divider
+                  Image.asset(
                     'lib/assets/images/outlearning/footer_image.png',
                     fit: BoxFit.fitWidth,
                   ),
