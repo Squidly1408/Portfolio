@@ -22,9 +22,9 @@ class _Project4State extends State<Project4> {
   // project data
   final _project = Projects(
     // title
-    'SRG',
+    'SCG',
     // description
-    'The SRG project is a project that started out with the Auslan Glove project, where we were designing a glove that can translate Auslan to a verbal form of communication. The SRG project uses the skills and knowledge from the Auslan glove project into this one. This project is aimed to create a glove that can aid stroke recovery patients by allowing a better form of communication between them and others via the electronics in the glove.',
+    'The SCG project is a project that started out with the Auslan Glove project, where we were designing a glove that can translate Auslan to a verbal form of communication. The SCG project uses the skills and knowledge from the Auslan glove project into this one. This project is aimed to create a glove that can aid stroke recovery patients by allowing a better form of communication between them and others via the electronics in the glove.',
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',

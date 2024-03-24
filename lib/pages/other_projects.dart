@@ -33,11 +33,11 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
       [
         OtherProject(
           // Text
-          'SRG',
+          'SCG',
           // Description
-          'SRG or Stroke Recovery Glove, is a glove that is aimed to help provide communication to stroke recovery Patients.',
+          'SCG or Stroke Recovery Glove, is a glove that is aimed to help provide communication to stroke recovery Patients.',
           // link
-          'srg',
+          'scg',
         ),
         OtherProject(
           // text
@@ -49,11 +49,11 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
         ),
         OtherProject(
           // text
-          'Project Database',
+          'Luvium CHC',
           // Description
           'A database website that lets students and teachers collaborate together.',
           // link
-          'project-database',
+          'luvium-chc',
         ),
         OtherProject(
           // Text

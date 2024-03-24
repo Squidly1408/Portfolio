@@ -24,9 +24,9 @@ class Home extends StatefulWidget {
 final _projects = [
   Project(
     // Text
-    'SRG',
+    'SCG',
     // link
-    'srg',
+    'scg',
   ),
   Project(
     // text
@@ -36,9 +36,9 @@ final _projects = [
   ),
   Project(
     // text
-    'Project Database',
+    'Luvium - CHC',
     // link
-    'project-database',
+    'luvium-chc',
   ),
   Project(
     // text

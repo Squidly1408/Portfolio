@@ -76,13 +76,13 @@ final GoRouter _router = GoRouter(
               builder: (context, state) => const Project2(),
             ),
             GoRoute(
-              path: 'project-database',
-              name: 'Squidly1408 - Projects - Project Database',
+              path: 'luvium-chc',
+              name: 'Squidly1408 - Projects - Luvium CHC',
               builder: (context, state) => const Project3(),
             ),
             GoRoute(
-              path: 'srg',
-              name: 'Squidly1408 - Projects - Project SRG',
+              path: 'scg',
+              name: 'Squidly1408 - Projects - Project SCG',
               builder: (context, state) => const Project4(),
             ),
             GoRoute(

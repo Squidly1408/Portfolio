@@ -29,7 +29,7 @@ class _SeniorProjectState extends State<SeniorProject> {
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',
-      'Jamaica Sparks - Advisor at Cooks Hill Campus',
+      'Will Brown - Advisor at Cooks Hill Campus',
       'Alex Newman-Adam - Parent',
       'Jackie Newman-Adam - Parent',
     ],
@@ -63,8 +63,8 @@ class _SeniorProjectState extends State<SeniorProject> {
       'auslan-glove',
     ),
     Resources(
-      '',
-      'project-3',
+      'Luvium - CHC',
+      'luvium-chc',
     ),
     Resources(
       '',
