@@ -275,7 +275,7 @@ class _HomeState extends State<Home> {
                               itemCount: _projects.length,
                               physics: const NeverScrollableScrollPhysics(),
                               shrinkWrap: true,
-                              padding: EdgeInsets.all(0),
+                              padding: const EdgeInsets.all(0),
                               itemExtent:
                                   MediaQuery.of(context).size.width * 0.05,
                               itemBuilder: (context, index) => Visibility(
