@@ -11,11 +11,15 @@ import '../main.dart';
 class Header extends StatefulWidget {
   const Header({
     super.key,
-    required this.homePage,
+    required this.isProject,
+    required this.requireHome,
   });
 
-  // If homepage key
-  final bool homePage;
+  // If project key
+  final bool isProject;
+
+  // if home button required
+  final bool requireHome;
 
   @override
   State<Header> createState() => _HeaderState();
@@ -137,7 +141,7 @@ class _HeaderState extends State<Header> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Visibility(
-                    visible: !widget.homePage,
+                    visible: widget.isProject,
                     child: IconButton(
                       onPressed: () {
                         GoRouter.of(context).pop();
@@ -210,14 +214,8 @@ class _HeaderState extends State<Header> {
                     onPressed: () {
                       GoRouter.of(context).go('/');
                     },
-                    child: widget.homePage
-                        ? SvgPicture.asset(
-                            month == 2 && day == 14
-                                ? 'lib/assets/images/logo_heart.svg'
-                                : 'lib/assets/images/logo.svg',
-                            fit: BoxFit.fitHeight,
-                            alignment: Alignment.centerLeft)
-                        : Align(
+                    child: widget.requireHome
+                        ? Align(
                             alignment: Alignment.centerLeft,
                             child: Row(
                               children: [
@@ -227,7 +225,13 @@ class _HeaderState extends State<Header> {
                                 ),
                               ],
                             ),
-                          ),
+                          )
+                        : SvgPicture.asset(
+                            month == 2 && day == 14
+                                ? 'lib/assets/images/logo_heart.svg'
+                                : 'lib/assets/images/logo.svg',
+                            fit: BoxFit.fitHeight,
+                            alignment: Alignment.centerLeft),
                   ),
                 ],
               ),

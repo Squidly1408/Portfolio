@@ -77,7 +77,8 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: Header(
-          homePage: false,
+          isProject: false,
+          requireHome: true,
         ),
       ),
 

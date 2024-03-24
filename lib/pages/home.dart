@@ -97,7 +97,8 @@ class _HomeState extends State<Home> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: Header(
-          homePage: true,
+          isProject: false,
+          requireHome: false,
         ),
       ),
 

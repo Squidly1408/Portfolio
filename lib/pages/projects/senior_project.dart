@@ -83,7 +83,8 @@ class _SeniorProjectState extends State<SeniorProject> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: Header(
-          homePage: false,
+          isProject: false,
+          requireHome: true,
         ),
       ),
 

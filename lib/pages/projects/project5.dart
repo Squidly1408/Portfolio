@@ -65,7 +65,8 @@ class _Project5State extends State<Project5> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: Header(
-          homePage: false,
+          isProject: true,
+          requireHome: true,
         ),
       ),
 
