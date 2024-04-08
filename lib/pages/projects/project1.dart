@@ -225,9 +225,14 @@ class _Project1State extends State<Project1> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemExtent:
-                                        MediaQuery.of(context).size.width *
-                                            0.05,
+                                    itemExtent: MediaQuery.of(context)
+                                                .size
+                                                .width >
+                                            1000
+                                        ? MediaQuery.of(context).size.width *
+                                            0.05
+                                        : MediaQuery.of(context).size.width *
+                                            0.07,
                                     itemBuilder: (context, index) => Visibility(
                                       visible: _project
                                           .resources[index].text.isNotEmpty,

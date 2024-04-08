@@ -237,6 +237,14 @@ class _SeniorProjectState extends State<SeniorProject> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
+                                    itemExtent: MediaQuery.of(context)
+                                                .size
+                                                .width >
+                                            1000
+                                        ? MediaQuery.of(context).size.width *
+                                            0.05
+                                        : MediaQuery.of(context).size.width *
+                                            0.07,
                                     itemBuilder: (context, index) => Visibility(
                                       visible:
                                           _projectList[index].text.isNotEmpty,
@@ -253,6 +261,10 @@ class _SeniorProjectState extends State<SeniorProject> {
                                           icon: Icon(
                                             Icons.north_west_rounded,
                                             color: secondaryColour3,
+                                            size: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.03,
                                           ),
                                           // text
                                           label: Text(
@@ -310,6 +322,14 @@ class _SeniorProjectState extends State<SeniorProject> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
+                                    itemExtent: MediaQuery.of(context)
+                                                .size
+                                                .width >
+                                            1000
+                                        ? MediaQuery.of(context).size.width *
+                                            0.05
+                                        : MediaQuery.of(context).size.width *
+                                            0.07,
                                     itemBuilder: (context, index) => Visibility(
                                       visible: _project
                                           .resources[index].text.isNotEmpty,
@@ -329,6 +349,10 @@ class _SeniorProjectState extends State<SeniorProject> {
                                               ? Icon(
                                                   Icons.north_west_rounded,
                                                   color: secondaryColour3,
+                                                  size: MediaQuery.of(context)
+                                                          .size
+                                                          .width *
+                                                      0.03,
                                                 )
                                               : const SizedBox(),
                                           // text

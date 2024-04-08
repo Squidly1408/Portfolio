@@ -156,9 +156,14 @@ class _Project4State extends State<Project4> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemExtent:
-                                        MediaQuery.of(context).size.width *
-                                            0.05,
+                                    itemExtent: MediaQuery.of(context)
+                                                .size
+                                                .width >
+                                            1000
+                                        ? MediaQuery.of(context).size.width *
+                                            0.05
+                                        : MediaQuery.of(context).size.width *
+                                            0.07,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.symmetric(
                                           horizontal: 4.0),
@@ -221,9 +226,14 @@ class _Project4State extends State<Project4> {
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
-                                    itemExtent:
-                                        MediaQuery.of(context).size.width *
-                                            0.05,
+                                    itemExtent: MediaQuery.of(context)
+                                                .size
+                                                .width >
+                                            1000
+                                        ? MediaQuery.of(context).size.width *
+                                            0.05
+                                        : MediaQuery.of(context).size.width *
+                                            0.07,
                                     itemBuilder: (context, index) => Visibility(
                                       visible: _project
                                           .resources[index].text.isNotEmpty,

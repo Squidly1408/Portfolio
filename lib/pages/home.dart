@@ -277,8 +277,10 @@ class _HomeState extends State<Home> {
                               physics: const NeverScrollableScrollPhysics(),
                               shrinkWrap: true,
                               padding: const EdgeInsets.all(0),
-                              itemExtent:
-                                  MediaQuery.of(context).size.width * 0.05,
+                              itemExtent: MediaQuery.of(context).size.width >
+                                      1000
+                                  ? MediaQuery.of(context).size.width * 0.05
+                                  : MediaQuery.of(context).size.width * 0.07,
                               itemBuilder: (context, index) => Visibility(
                                 visible: _projects[index].title.isNotEmpty,
                                 child: TextButton.icon(
@@ -305,17 +307,13 @@ class _HomeState extends State<Home> {
                                         0.03,
                                   ),
                                   // text
-                                  label: Padding(
-                                    padding: const EdgeInsets.all(2.5),
-                                    child: Text(
-                                      _projects[index].title,
-                                      style: TextStyle(
-                                          color: secondaryColour3,
-                                          fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.02),
-                                    ),
+                                  label: Text(
+                                    _projects[index].title,
+                                    style: TextStyle(
+                                        color: secondaryColour3,
+                                        fontSize:
+                                            MediaQuery.of(context).size.width *
+                                                0.02),
                                   ),
                                 ),
                               ),
@@ -355,8 +353,10 @@ class _HomeState extends State<Home> {
                               itemCount: _outlearning.length,
                               physics: const NeverScrollableScrollPhysics(),
                               shrinkWrap: true,
-                              itemExtent:
-                                  MediaQuery.of(context).size.width * 0.05,
+                              itemExtent: MediaQuery.of(context).size.width >
+                                      1000
+                                  ? MediaQuery.of(context).size.width * 0.05
+                                  : MediaQuery.of(context).size.width * 0.07,
                               itemBuilder: (context, index) => Visibility(
                                 visible: _outlearning[index].title.isNotEmpty,
                                 child: TextButton.icon(
@@ -370,17 +370,13 @@ class _HomeState extends State<Home> {
                                         0.03,
                                   ),
                                   // text
-                                  label: Padding(
-                                    padding: const EdgeInsets.all(4.0),
-                                    child: Text(
-                                      _outlearning[index].title,
-                                      style: TextStyle(
-                                          color: secondaryColour3,
-                                          fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .width *
-                                              0.02),
-                                    ),
+                                  label: Text(
+                                    _outlearning[index].title,
+                                    style: TextStyle(
+                                        color: secondaryColour3,
+                                        fontSize:
+                                            MediaQuery.of(context).size.width *
+                                                0.02),
                                   ),
                                 ),
                               ),
