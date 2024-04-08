@@ -1,5 +1,6 @@
 // packages
 import 'package:flutter/material.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:squidly1408/widgets/scroll_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:go_router/go_router.dart';
@@ -124,13 +125,8 @@ class _HomeState extends State<Home> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Center(
-                              child: SizedBox(
-                                height: 70,
-                                width: 70,
-                                child: CircularProgressIndicator(
-                                  color: mainColour,
-                                ),
-                              ),
+                              child: LoadingAnimationWidget.halfTriangleDot(
+                                  color: mainColour, size: 70),
                             ),
                             Text(
                               'Loading',
