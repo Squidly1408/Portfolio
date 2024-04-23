@@ -66,8 +66,8 @@ final GoRouter _router = GoRouter(
           builder: (context, state) => const OtherProjectsPage(),
           routes: [
             GoRoute(
-              path: 'aac',
-              name: 'Squidly1408 - Projects - AAC',
+              path: 'comnu',
+              name: 'Squidly1408 - Projects - Comnu',
               builder: (context, state) => const Project1(),
             ),
             GoRoute(
@@ -76,13 +76,13 @@ final GoRouter _router = GoRouter(
               builder: (context, state) => const Project2(),
             ),
             GoRoute(
-              path: 'luvium-chc',
-              name: 'Squidly1408 - Projects - Luvium CHC',
+              path: 'luvium',
+              name: 'Squidly1408 - Projects - Luvium',
               builder: (context, state) => const Project3(),
             ),
             GoRoute(
-              path: 'scg',
-              name: 'Squidly1408 - Projects - Project SCG',
+              path: 'strocoge',
+              name: 'Squidly1408 - Projects - Strocoge',
               builder: (context, state) => const Project4(),
             ),
             GoRoute(

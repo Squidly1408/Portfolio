@@ -25,9 +25,9 @@ class _Project1State extends State<Project1> {
   // project data
   final _project = Projects(
     // title
-    'AAC App',
+    'Comnu',
     // description
-    'Augmentative and Alternative Communication (AAC) app, this is an app designed for tablets and the like to turn their use into a AAC device designed to help facilitate and improve communication amungst people who require these devices to communicate. My AAC app stands out by focusing on edit-ablility and use-ability as well as allowing the users to customize the experience depending on their certain needs, for instance a person may need bigger buttons due to lack of motor function, or another person may require more buttons on one screen bc they might not have the motor function to swipe across to access extra buttons.',
+    'Comnu is a Augmentative and Alternative Communication (AAC) app, this is an app designed for tablets, to turn them into a AAC device designed to help facilitate and improve communication amongst the people who require these devices to communicate. Comnu stands out by focusing on edit-ability and useability as well as allowing the users to customize the experience depending on their certain needs, for instance a person may need bigger buttons due to lack of motor function, or another person may require more buttons on one screen because they might not have the motor function to swipe across to access extra buttons.',
     // mentors
     [
       'Michelle Batey - Speech Patholigist at Early Start',
@@ -37,6 +37,7 @@ class _Project1State extends State<Project1> {
     ],
     // resources
     [
+      // TODO Fix link
       Resources(
         'Research document',
         'https://1drv.ms/w/s!AlWOX6vBn5L2s3N4rHNAJ-0PVygW?e=FoHHGq',
@@ -126,7 +127,26 @@ class _Project1State extends State<Project1> {
                       )
                     ],
                   ),
-
+                  // Images Banner
+                  MaterialButton(
+                    onPressed: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        right: 8,
+                        top: 8,
+                      ),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(15),
+                          child: Image.asset(
+                            'lib/assets/images/project1/images_banner.png',
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   // Mentors section
                   Stack(
                     children: [

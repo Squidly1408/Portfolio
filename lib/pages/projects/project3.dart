@@ -22,9 +22,9 @@ class _Project3State extends State<Project3> {
   // project data
   final _project = Projects(
     // title
-    'Luvium - CHC',
+    'Luvium',
     // description
-    "A problem with Cooks Hill Campus’s way of learning, Big Picture Learning, is that the collaboration between student’s projects is minimal. Hence where my social media app comes in, It is designed to allow for collaboration and insight into other students project for teachers and students alike, tailored to Cooks Hill Campus as a school. This project is still going on.",
+    "Luvium, a social media app is aimed to find a solution to a drawback of Cooks Hill Campus’s way of learning, Big Picture Education. Currently collaboration between projects and students are rare, which minimizes the skill of working in a team. This is where my app can help, by acting as a platform for students to find similar projects whether in the past or present, this allows for insight and collaboration into their peers projects hence aiding the drawback of collaboration in Cooks Hill Campus.",
     // mentors
     [
       'Jamaica Sparks - EX Advisor at Cooks Hill Campus',
@@ -34,6 +34,7 @@ class _Project3State extends State<Project3> {
     ],
     // resources
     [
+      // TODO fix links
       Resources(
         'Github Project',
         'https://github.com/Squidly1408/fic',

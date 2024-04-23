@@ -22,9 +22,9 @@ class _Project4State extends State<Project4> {
   // project data
   final _project = Projects(
     // title
-    'SCG',
+    'Strocoge',
     // description
-    'The SCG project is a project that started out with the Auslan Glove project, where we were designing a glove that can translate Auslan to a verbal form of communication. The SCG project uses the skills and knowledge from the Auslan glove project into this one. This project is aimed to create a glove that can aid stroke recovery patients by allowing a better form of communication between them and others via the electronics in the glove.',
+    'Stocoge is a project that started out with the Auslan Glove project, where the University of Newcastle and I were designing a glove that can translate Auslan to a verbal form of communication. Strocoge uses the skills and knowledge from the Auslan glove project but with a different goal,  the aim is to create a glove that can aid stroke recovery patients, by allowing a better form of communication between the user and others. It does this via multiple sensors in the glove.',
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',
@@ -34,6 +34,7 @@ class _Project4State extends State<Project4> {
     ],
     // resources
     [
+      // TODO fix link
       Resources(
         'changes documentation',
         'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',

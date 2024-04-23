@@ -25,25 +25,25 @@ class Home extends StatefulWidget {
 final _projects = [
   Project(
     // Text
-    'SCG',
+    'Strocoge',
     // link
-    'scg',
+    'strocoge',
   ),
   Project(
     // text
-    'AAC app',
+    'Comnu',
     // link
-    'aac',
+    'comnu',
   ),
   Project(
     // text
-    'Luvium - CHC',
+    'Luvium',
     // link
-    'luvium-chc',
+    'luvium',
   ),
   Project(
     // text
-    'Other Project',
+    'More Projects',
     // link
     '',
   ),

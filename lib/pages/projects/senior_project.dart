@@ -25,7 +25,7 @@ class _SeniorProjectState extends State<SeniorProject> {
     // title
     'Senior Project',
     // description
-    'What is a senior project? Well a senior project is a project undertaken by senior students at Cooks Hill Campus, meant to demonstrate your abilities, skills, and knowledge on your chosen subject. My senior project consists of me completing multiple smaller projects which will all come together to make my portfolio, a portfolio that will help me get a place into the University of Newcastle, and help me get a job in the field of software development. My project range in the field of technology but they share one thing, they all have a use or purpose in the real world.',
+    'What is a senior project? Well, a senior project is a project undertaken by senior students at Cooks Hill Campus, meant to demonstrate your abilities, skills, and knowledge on your chosen subject. My senior project consists of me completing multiple smaller projects which will all come together to make my portfolio, a portfolio that will help me get a degree in software engineering at The University of Newcastle and help me get a job in the field of software development. My projects range in the field of technology, from custom social media apps to electronics to help others communicate, but all my projects share one thing in common, they all have a purpose in the real world.',
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',
@@ -35,6 +35,7 @@ class _SeniorProjectState extends State<SeniorProject> {
     ],
     // resources
     [
+      // TODO fix link
       Resources(
         'Project Proposal',
         'https://1drv.ms/w/s!AlWOX6vBn5L2qzNFjFLVgI2E7AbG?e=LlucWM',
