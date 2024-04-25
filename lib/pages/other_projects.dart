@@ -33,27 +33,27 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
       [
         OtherProject(
           // Text
-          'SCG',
+          'Strocoge',
           // Description
-          'SCG or Stroke Recovery Glove, is a glove that is aimed to help provide communication to stroke recovery Patients.',
+          'Strocge is a glove that is aimed to help provide communication to stroke recovery Patients.',
           // link
-          'scg',
+          'strocoge',
         ),
         OtherProject(
           // text
-          'AAC app',
+          'Comnu',
           // Description
-          'An AAC or Augmentative and Alternative Communication App is an app to help build or replace communication everyday.',
+          'Comnu is a AAC or Augmentative and Alternative Communication app is an app to help build or replace communication everyday.',
           // link
-          'aac',
+          'comnu',
         ),
         OtherProject(
           // text
-          'Luvium CHC',
+          'Luvium',
           // Description
           'A database website that lets students and teachers collaborate together.',
           // link
-          'luvium-chc',
+          'luvium',
         ),
         OtherProject(
           // Text

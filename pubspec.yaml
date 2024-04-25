@@ -102,9 +102,6 @@ flutter:
     - lib/assets/images/other_projects/left_bottom.png
     - lib/assets/images/other_projects/right_bottom.png
 
-    #project 1 banner
-    - lib/assets/images/project1/images_banner.png
-
     #skills
     - lib/assets/images/skills/1.png
     - lib/assets/images/skills/2.png

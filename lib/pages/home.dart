@@ -53,19 +53,19 @@ final _projects = [
 final _outlearning = [
   Project(
     'UON',
-    'https://www.newcastle.edu.au/',
+    '',
   ),
   Project(
     'SAPHI',
-    'https://saphi.engineering/',
-  ),
-  Project(
-    'Clickk',
-    'https://clickk.com.au/',
+    '',
   ),
   Project(
     'NuBots',
-    'https://nubook.nubots.net/',
+    '',
+  ),
+  Project(
+    'More Outlearning',
+    '',
   ),
 ];
 
@@ -73,6 +73,7 @@ class _HomeState extends State<Home> {
   late VideoPlayerController _videoPlayerController;
   final ScrollController _scrollController = ScrollController();
   bool isLoaded = false;
+  bool ishovering = false;
 
   @override
   void initState() {
@@ -120,7 +121,49 @@ class _HomeState extends State<Home> {
                 child: AspectRatio(
                   aspectRatio: 2 / 1,
                   child: isLoaded
-                      ? VideoPlayer(_videoPlayerController)
+                      ? Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            VideoPlayer(_videoPlayerController),
+                            MouseRegion(
+                              onEnter: (event) {
+                                setState(() {
+                                  ishovering = true;
+                                });
+                              },
+                              onExit: (event) {
+                                setState(() {
+                                  ishovering = false;
+                                });
+                              },
+                              child: SizedBox(
+                                width: 80,
+                                height: 80,
+                                child: Visibility(
+                                  visible: ishovering,
+                                  child: FloatingActionButton.small(
+                                    elevation: 5,
+                                    onPressed: () {
+                                      setState(() {
+                                        !_videoPlayerController.value.isPlaying
+                                            ? _videoPlayerController.pause()
+                                            : _videoPlayerController.play();
+                                      });
+                                    },
+                                    backgroundColor: const Color(0x77171717),
+                                    child: Icon(
+                                      !_videoPlayerController.value.isPlaying
+                                          ? Icons.play_arrow
+                                          : Icons.pause,
+                                      color: secondaryColour3,
+                                      size: 40,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )
                       : Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -138,8 +181,6 @@ class _HomeState extends State<Home> {
                         ),
                 ),
               ),
-              // need to change it to video banner that has hidden controls
-
               // About me banner
               MaterialButton(
                 onPressed: () {
@@ -189,6 +230,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         onPressed: () {
+                          _videoPlayerController.pause();
                           launchUrl(
                             Uri.parse(
                                 'https://1drv.ms/w/s!AlWOX6vBn5L2qy0S5opNZevUniHm?e=jAAViR'),
@@ -219,6 +261,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         onPressed: () {
+                          _videoPlayerController.pause();
                           GoRouter.of(context).go(
                             '/projects/senior-project',
                           );
@@ -280,20 +323,18 @@ class _HomeState extends State<Home> {
                               itemBuilder: (context, index) => Visibility(
                                 visible: _projects[index].title.isNotEmpty,
                                 child: TextButton.icon(
-                                  onPressed: () => {
+                                  onPressed: () {
+                                    _videoPlayerController.pause();
                                     if (_projects[index].title ==
-                                        'Other Project')
-                                      {
-                                        GoRouter.of(context).go(
-                                          '/other-projects',
-                                        ),
-                                      }
-                                    else
-                                      {
-                                        GoRouter.of(context).go(
-                                          '/projects/${_projects[index].key}',
-                                        ),
-                                      }
+                                        'Other Project') {
+                                      GoRouter.of(context).go(
+                                        '/other-projects',
+                                      );
+                                    } else {
+                                      GoRouter.of(context).go(
+                                        '/projects/${_projects[index].key}',
+                                      );
+                                    }
                                   },
                                   // icon
                                   icon: Icon(
@@ -356,8 +397,10 @@ class _HomeState extends State<Home> {
                               itemBuilder: (context, index) => Visibility(
                                 visible: _outlearning[index].title.isNotEmpty,
                                 child: TextButton.icon(
-                                  onPressed: () =>
-                                      {GoRouter.of(context).go('/outlearning')},
+                                  onPressed: () {
+                                    _videoPlayerController.pause();
+                                    GoRouter.of(context).go('/outlearning');
+                                  },
                                   // icon
                                   icon: Icon(
                                     Icons.north_west_rounded,
@@ -436,6 +479,7 @@ class _HomeState extends State<Home> {
                                   padding: const EdgeInsets.all(4.0),
                                   child: Listener(
                                     onPointerUp: (event) {
+                                      _videoPlayerController.pause();
                                       if (index == 0) {
                                         launchUrl(
                                           Uri.parse(

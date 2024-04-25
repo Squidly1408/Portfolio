@@ -35,7 +35,6 @@ class _SeniorProjectState extends State<SeniorProject> {
     ],
     // resources
     [
-      // TODO fix link
       Resources(
         'Project Proposal',
         'https://1drv.ms/w/s!AlWOX6vBn5L2qzNFjFLVgI2E7AbG?e=LlucWM',

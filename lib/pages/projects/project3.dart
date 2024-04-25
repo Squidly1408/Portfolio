@@ -34,7 +34,6 @@ class _Project3State extends State<Project3> {
     ],
     // resources
     [
-      // TODO fix links
       Resources(
         'Github Project',
         'https://github.com/Squidly1408/fic',

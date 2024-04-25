@@ -37,22 +37,21 @@ class _Project1State extends State<Project1> {
     ],
     // resources
     [
-      // TODO Fix link
       Resources(
         'Research document',
         'https://1drv.ms/w/s!AlWOX6vBn5L2s3N4rHNAJ-0PVygW?e=FoHHGq',
       ),
       Resources(
-        '',
-        'link',
+        'Github Version 2',
+        'https://github.com/Squidly1408/aac_v2',
       ),
       Resources(
-        '',
-        'link',
+        'Github Version 3',
+        'https://github.com/Squidly1408/aac_v3',
       ),
       Resources(
-        '',
-        'link',
+        'Github Version 4',
+        'https://github.com/Squidly1408/aaca',
       ),
     ],
   );
@@ -126,26 +125,6 @@ class _Project1State extends State<Project1> {
                         ),
                       )
                     ],
-                  ),
-                  // Images Banner
-                  MaterialButton(
-                    onPressed: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        right: 8,
-                        top: 8,
-                      ),
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(15),
-                          child: Image.asset(
-                            'lib/assets/images/project1/images_banner.png',
-                            fit: BoxFit.fitWidth,
-                          ),
-                        ),
-                      ),
-                    ),
                   ),
                   // Mentors section
                   Stack(

@@ -34,7 +34,6 @@ class _Project4State extends State<Project4> {
     ],
     // resources
     [
-      // TODO fix link
       Resources(
         'changes documentation',
         'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
