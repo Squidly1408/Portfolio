@@ -1,6 +1,7 @@
 // packages
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
@@ -95,26 +96,19 @@ class _HeaderState extends State<Header> {
               padding: const EdgeInsets.symmetric(horizontal: 4.0),
               child: IconButton(
                 onPressed: () async {
-                  String? encodeQueryParameters(Map<String, String> params) {
-                    return params.entries
-                        .map((MapEntry<String, String> e) =>
-                            '${Uri.encodeComponent(e.key)}=${Uri.encodeComponent(e.value)}')
-                        .join('&');
-                  }
-
-                  final Uri emailUri = Uri(
-                    scheme: 'mailto',
-                    path: 'lucas.newman140@gmail.com',
-                    query: encodeQueryParameters(<String, String>{
-                      'subject': '',
-                      'body': '',
-                    }),
+                  Clipboard.setData(const ClipboardData(
+                          text: 'lucas.newman140@gamil.com'))
+                      .then(
+                    (_) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'Email copied to Clipboard',
+                          ),
+                        ),
+                      );
+                    },
                   );
-                  if (await canLaunchUrl(emailUri)) {
-                    launchUrl(emailUri);
-                  } else {
-                    throw Exception('Could not launch $emailUri');
-                  }
                 },
                 icon: FaIcon(
                   FontAwesomeIcons.at,
