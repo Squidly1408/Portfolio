@@ -63,6 +63,14 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
           // link
           'auslan-glove',
         ),
+        OtherProject(
+          // Text
+          'Portfolio',
+          // Description
+          'Yes! I designed, developed, tested, improved, and coded this portfolio that you are currently on.',
+          // link
+          'portfolio',
+        ),
       ]);
 
   // scaffold

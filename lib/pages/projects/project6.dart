@@ -10,45 +10,45 @@ import '../../models/projects.dart';
 import '../../widgets/header.dart';
 import '../../widgets/scroll_indicator.dart';
 
-class Project5 extends StatefulWidget {
-  const Project5({super.key});
+class Project6 extends StatefulWidget {
+  const Project6({super.key});
 
   @override
-  State<Project5> createState() => _Project5State();
+  State<Project6> createState() => _Project6State();
 }
 
-class _Project5State extends State<Project5> {
+class _Project6State extends State<Project6> {
   final ScrollController _scrollController = ScrollController();
 
   // project data
   final _project = Projects(
     // title
-    'Portfolio',
+    'Enter title',
     // description
-    'I designed, developed, coded, tested, this website you are on, I got feedback from my mentors and all that I can, just so I can improve upon its design.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque a tristique tellus. In dolor lorem, lobortis sed volutpat eget, placerat pulvinar elit. Vivamus ac vestibulum nunc, id ornare augue. Praesent porta nec neque non pretium. Pellentesque sit amet maximus mi. Duis accumsan non tortor maximus pretium. Cras nunc felis, fringilla et mi at, porttitor lobortis mauris. Aenean semper efficitur pretium. Proin neque ipsum, bibendum vel efficitur eget, accumsan non nulla.',
     // mentors
     [
-      'Dr Jacqueline Bailey - Associate Professor UON',
-      'Will Brown - Advisor at Cooks Hill Campus',
-      'jamaica Sparks - Ex Advisor at Cooks Hill Campus',
-      '',
+      'enter mentors name',
+      'enter mentors name',
+      'enter mentors name',
+      'enter mentors name',
     ],
     // resources
     [
       Resources(
-        'This Website',
-        'https://squidly1408.github.io/',
-      ),
-      Resources(
-        '',
+        'title',
         'link',
       ),
       Resources(
-        '',
+        'title',
         'link',
       ),
       Resources(
-        '',
+        'title',
+        'link',
+      ),
+      Resources(
+        'title',
         'link',
       ),
     ],
@@ -327,14 +327,14 @@ class _Project5State extends State<Project5> {
                                                         1000
                                                     ? 0.05 / 0.05
                                                     : 0.00005 / 0.00005),
-                                    itemCount: 6,
+                                    itemCount: 0,
                                     physics:
                                         const NeverScrollableScrollPhysics(),
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) => Padding(
                                       padding: const EdgeInsets.all(4.0),
                                       child: Image.asset(
-                                        'lib/assets/images/project5/${index + 1}.png',
+                                        'lib/assets/images/project2/${index + 1}.png',
                                         fit: BoxFit.contain,
                                       ),
                                     ),

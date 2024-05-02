@@ -29,7 +29,7 @@ class _Project3State extends State<Project3> {
     [
       'Jamaica Sparks - EX Advisor at Cooks Hill Campus',
       'Margot Knowles - Advisor at Cooks Hill Campus',
-      '',
+      'Will Brown - Advisor at Cooks Hill Campus',
       '',
     ],
     // resources
