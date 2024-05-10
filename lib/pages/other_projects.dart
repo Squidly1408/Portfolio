@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../main.dart';
 
 // models
+import '../data/page_list.dart';
 import '../models/other_projects.dart';
 
 // widgets
@@ -177,9 +178,8 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
                                         horizontal: 4.0),
                                     child: TextButton(
                                       onPressed: () => {
-                                        GoRouter.of(context).go(
-                                          '/projects/${_project.projects[index].key}',
-                                        ),
+                                        addPage(context,
+                                            '/projects/${_project.projects[index].key}')
                                       },
 
                                       // text

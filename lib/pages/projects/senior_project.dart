@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // pages
+import '../../data/page_list.dart';
 import '../../main.dart';
 
 // widgets
@@ -253,9 +254,8 @@ class _SeniorProjectState extends State<SeniorProject> {
                                             horizontal: 4.0),
                                         child: TextButton.icon(
                                           onPressed: () => {
-                                            GoRouter.of(context).go(
-                                              '/projects/${_projectList[index].link.toString()}',
-                                            ),
+                                            addPage(context,
+                                                '/projects/${_projectList[index].link.toString()}')
                                           },
                                           // icon
                                           icon: Icon(

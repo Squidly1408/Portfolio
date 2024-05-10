@@ -1,6 +1,7 @@
 // packages
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:squidly1408/data/page_list.dart';
 import 'package:squidly1408/widgets/scroll_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:go_router/go_router.dart';
@@ -262,9 +263,7 @@ class _HomeState extends State<Home> {
                         ),
                         onPressed: () {
                           _videoPlayerController.pause();
-                          GoRouter.of(context).go(
-                            '/projects/senior-project',
-                          );
+                          addPage(context, '/projects/senior-project');
                         },
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width < 500
@@ -327,13 +326,10 @@ class _HomeState extends State<Home> {
                                     _videoPlayerController.pause();
                                     if (_projects[index].title ==
                                         'Other Project') {
-                                      GoRouter.of(context).go(
-                                        '/other-projects',
-                                      );
+                                      addPage(context, '/other-projects');
                                     } else {
-                                      GoRouter.of(context).go(
-                                        '/projects/${_projects[index].key}',
-                                      );
+                                      addPage(context,
+                                          '/projects/${_projects[index].key}');
                                     }
                                   },
                                   // icon
@@ -399,7 +395,7 @@ class _HomeState extends State<Home> {
                                 child: TextButton.icon(
                                   onPressed: () {
                                     _videoPlayerController.pause();
-                                    GoRouter.of(context).go('/outlearning');
+                                    addPage(context, '/outlearning');
                                   },
                                   // icon
                                   icon: Icon(

@@ -1,5 +1,6 @@
 // packages
 import 'package:flutter/material.dart';
+import 'package:squidly1408/data/page_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -138,7 +139,7 @@ class _HeaderState extends State<Header> {
                     visible: widget.isProject,
                     child: IconButton(
                       onPressed: () {
-                        GoRouter.of(context).pop();
+                        backPage(context);
                       },
                       icon: Icon(Icons.arrow_back_ios_new,
                           color: secondaryColour3, size: 20),
@@ -206,7 +207,7 @@ class _HeaderState extends State<Header> {
                       );
                     },
                     onPressed: () {
-                      GoRouter.of(context).go('/');
+                      addPage(context, '/');
                     },
                     child: widget.requireHome
                         ? Align(
