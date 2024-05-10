@@ -24,7 +24,7 @@ class _Project4State extends State<Project4> {
     // title
     'Strocoge',
     // description
-    'Stocoge is a project that started out with the Auslan Glove project, where the University of Newcastle and I were designing a glove that can translate Auslan to a verbal form of communication. Strocoge uses the skills and knowledge from the Auslan glove project but with a different goal,  the aim is to create a glove that can aid stroke recovery patients, by allowing a better form of communication between the user and others. It does this via multiple sensors in the glove.',
+    'Strocoge is a project that started out with the Auslan Glove project, where the University of Newcastle and I were designing a glove that can translate Auslan to a verbal form of communication. Strocoge uses the skills and knowledge from the Auslan glove project but with a different goal, the aim is to create a glove that can aid stroke recovery patients, by allowing a better form of communication between the user and others. It does this via multiple sensors in the glove.',
     // mentors
     [
       'Dr Jacqueline Bailey - Associate Professor UON',

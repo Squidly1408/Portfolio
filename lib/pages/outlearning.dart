@@ -72,7 +72,7 @@ class _OutlearningState extends State<Outlearning> {
                                   ),
                                   // description
                                   Text(
-                                    "LTI or Learning Through Internship is a program ran by Big Picture School that gets students to go into the workforce to learn real life and practical skills related to their passions. We find these chances ourselves through online resaerch and contacting business's, organisations, or charities.",
+                                    "LTI or Learning Through Internship is a program run by Big Picture School that gets students to go into the workforce to learn real life and practical skills related to their passions. We find these oppotunities ourselves through online research and contacting business's, organisations, or charities.",
                                     style: TextStyle(
                                         color: secondaryColour3,
                                         fontSize:
