@@ -4,7 +4,6 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:squidly1408/data/page_list.dart';
 import 'package:squidly1408/widgets/scroll_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:go_router/go_router.dart';
 import 'package:video_player/video_player.dart';
 
 // pages
