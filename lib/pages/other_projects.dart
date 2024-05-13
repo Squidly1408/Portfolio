@@ -35,7 +35,7 @@ class _OtherProjectsPageState extends State<OtherProjectsPage> {
           // Text
           'Strocoge',
           // Description
-          'Strocge is a glove that is aimed to help provide communication to stroke recovery Patients.',
+          'Strocoge is a glove that is aimed to help provide communication to stroke recovery Patients.',
           // link
           'strocoge',
         ),
