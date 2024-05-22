@@ -38,10 +38,6 @@ class _Project1State extends State<Project1> {
     // resources
     [
       Resources(
-        'Research document',
-        'https://1drv.ms/w/s!AlWOX6vBn5L2s3N4rHNAJ-0PVygW?e=FoHHGq',
-      ),
-      Resources(
         'Github Version 2',
         'https://github.com/Squidly1408/aac_v2',
       ),
@@ -52,6 +48,10 @@ class _Project1State extends State<Project1> {
       Resources(
         'Github Version 4',
         'https://github.com/Squidly1408/aaca',
+      ),
+      Resources(
+        '',
+        '',
       ),
     ],
   );

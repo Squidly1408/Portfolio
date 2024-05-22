@@ -186,7 +186,7 @@ class _HomeState extends State<Home> {
                 onPressed: () {
                   launchUrl(
                     Uri.parse(
-                        'https://1drv.ms/w/s!AlWOX6vBn5L2qzFFTR6MHaNO9fUX?e=29ap45'),
+                        'https://1drv.ms/w/c/f6929fc1ab5f8e55/EW1Yb_PoObhGl3pfW-w-h3sB6kpTjzxt7jwQJVg3eZrDWA?e=3Rwetp'),
                   );
                 },
                 child: Padding(
@@ -233,7 +233,7 @@ class _HomeState extends State<Home> {
                           _videoPlayerController.pause();
                           launchUrl(
                             Uri.parse(
-                                'https://1drv.ms/w/s!AlWOX6vBn5L2qy0S5opNZevUniHm?e=jAAViR'),
+                                'https://1drv.ms/w/c/f6929fc1ab5f8e55/Efy82lT_vpdLsMLiZCm2LmUBacRHEyxqbxq1iOvoefqwGQ?e=62qTwz'),
                           );
                         },
                         child: SizedBox(

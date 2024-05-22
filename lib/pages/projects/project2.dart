@@ -37,7 +37,7 @@ class _Project2State extends State<Project2> {
     [
       Resources(
         'changes documentation',
-        'https://1drv.ms/w/s!AlWOX6vBn5L2q3Cu5XsWTmvFNy8M?e=0fVDPf',
+        'https://1drv.ms/w/c/f6929fc1ab5f8e55/EWfcislCz9dPv_-Aw0zqIQwBIr0RZadkHSWK1J_hXy8kGQ?e=D20naJ',
       ),
       Resources(
         '',

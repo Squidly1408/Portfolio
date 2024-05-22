@@ -37,7 +37,7 @@ class _SeniorProjectState extends State<SeniorProject> {
     [
       Resources(
         'Project Proposal',
-        'https://1drv.ms/w/s!AlWOX6vBn5L2qzNFjFLVgI2E7AbG?e=LlucWM',
+        'https://1drv.ms/w/c/f6929fc1ab5f8e55/ER9ncuqxWPBPs98E76K57R4BO1vZIQM3mgeboSw7w-aTzA?e=WlFN9y',
       ),
       Resources(
         '',
