@@ -1,16 +1,28 @@
-# portfolio
 
-A new Flutter project.
+![Logo](https://raw.githubusercontent.com/Squidly1408/Squidly1408/main/images/Squidly1408.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# Portfolio 3.0
 
-A few resources to get you started if this is your first Flutter project:
+This is my portfolio for my big picture school, Cooks Hill Campus. It is designed to be used as a pathway into University through the Big Picture Education Scheme run by The University of Newcastle. For this portfolio to meet the requirements of this scheme it includes the following:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* A Link to my Autobiography
+* A link to my Future Pathway Plan
+* A senior Project
+* A Senior Video Profile 
+* All of my Experinces out on Internships
+* My Projects that I want to share
+* And more
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## 🛠 Skills used
+Flutter, Dart, Canva, UI & UX design.
+
+
+\
+\
+\
+\
+\
+If you have any feedback, please reach out to us at Squidly1408@Gmail.com
+
