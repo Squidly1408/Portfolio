@@ -119,7 +119,7 @@ class _HomeState extends State<Home> {
                       : _videoPlayerController.play();
                 },
                 child: AspectRatio(
-                  aspectRatio: 2 / 1,
+                  aspectRatio: 2.3 / 1,
                   child: isLoaded
                       ? Stack(
                           alignment: Alignment.center,
