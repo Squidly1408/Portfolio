@@ -2,7 +2,7 @@
 ![Logo](https://raw.githubusercontent.com/Squidly1408/Squidly1408/main/images/Squidly1408.png)
 
 
-# Portfolio 3.0
+# Portfolio 4.0
 
 This is my portfolio for my big picture school, Cooks Hill Campus. It is designed to be used as a pathway into University through the Big Picture Education Scheme run by The University of Newcastle. For this portfolio to meet the requirements of this scheme it includes the following:
 
